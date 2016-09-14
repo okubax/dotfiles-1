@@ -13,6 +13,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 
 * `conky` -- Lightweight system monitor for X (for dropbox and todo-cli dislays)
 * `dropbox-cli` -- Command line interface for dropbox
+* `iw` -- nl80211 based CLI configuration utility for wireless devices, to get wifi's SSID
 * `lemonbar` -- A featherweight, lemon-scented, bar based on xcb
 * `mpc` -- Client for `mpd`, responsible for telling lemonbar about the currently playing media.
 * `mpd` -- Flexible, powerful, server-side application for playing music with `ncmpcpp` as client
@@ -24,8 +25,9 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `Siji Icon Font` -- Iconic bitmap font, used in `lemonbar`
 * `terminus-font` -- Monospace bitmap font (for X11 and console)
 * `vim` -- Vi Improved, a highly configurable, improved version of the vi text editor
-* `xprop` -- X11 window info program, makes the window title section work
+* `xdotool` -- Command-line X11 automation tool, for the title section of `lemonbar`
 * `xsetroot` -- to set the wallpaper
+* `wmctrl` -- 	A Tool to control your EWMH compliant window manager from command line, for i3 workspaces on `lemonbar`
 
 
 
@@ -42,16 +44,16 @@ cd dotfiles
 
 1. First, install the dependencies listed in the section above.
 
-2. `bin/` contains my custom scripts. Add them to your `$PATH` and ensure that they are executable. 
+2. `bin/` contains custom scripts. Add them to your `$PATH` and ensure that they are executable. 
 
 3. My default shell is zsh and I use the [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) framework to manage my zsh configuration.
 
-4. Terminal colorschemes and wallpaper with script to load random color and match wallpaer to it on every startup is the work of [dkeg](https://github.com/dkeg/crayolo).
+4. Terminal colorschemes, bitmap used for wallpaper and script to load random color and match wallpaer to it on every startup is the work of [dkeg](https://github.com/dkeg/crayolo).
 
 
 ### Wallpaper
 
-Wallpaper is set by the random-color-picker script in the Xresources.d folder, if you don't want this, remove the script (you will have to set a color scheme for yur terminal manually as this scipt handles that.
+Wallpaper is set by the random-color-picker script in the Xresources.d folder, if you don't want this, remove the script (you will have to manually set a color scheme for your terminal manually as this scipt handles that. Or rather, comment out the relevant(setwall) part of the script.
 
 ## Screenshot
 
