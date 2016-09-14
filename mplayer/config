@@ -1,0 +1,66 @@
+# default configuration that applies to every file
+[default]
+
+# use X11 for video output
+vo=xv
+#vo=gl
+#vo=gl2:yuv=0
+#vo=vaapi
+
+# use pulse for audio output, choose oss4 as fallback 
+ao=pulse
+
+# disable lirc
+nolirc=yes
+
+# multithreaded decoding of H264/MPEG-1/2 (valid: 1-8)
+lavdopts=threads=2
+
+# prefer using six channels audio
+# channels = 6
+
+# scale the subtitles to the 3% of the screen size
+subfont-text-scale = 3
+
+# never use font config
+#nofontconfig = 1
+
+# add black borders so the movies have the same aspect ratio of the monitor
+# for wide screen monitors
+#vf-add=expand=::::1:16/9:16
+
+# for non wide screen traditional monitors
+#vf-add=expand=::::1:4/3:16
+
+# sets initial resolution
+#xy = 1200
+xy = 900
+
+# Set subtitle file encoding          # {I use many languages and need accents/umlauts, therefore you need this option}
+unicode=yes                          
+utf8=yes
+
+# disable screensaver
+#heartbeat-cmd="xscreensaver-command -deactivate &" # stop xscreensaver
+#stop-xscreensaver="yes" # stop gnome-screensaver
+#heartbeat-cmd="killall -HUP xss-lock"
+#stop-xscreensaver=false
+
+# correct pitch when speed is faster or slower than 1.0
+af=scaletempo
+
+# allow to seek in a file which is still downloading whilst watching it
+idx=yes
+
+#dvd device
+dvd-device=/dev/sr0
+
+# allow to increase the maximal volume 
+softvol=1
+softvol-max=600
+
+# skip  displaying  some  frames  to  maintain  A/V sync on slow systems
+#framedrop=yes
+
+# more intense frame dropping (breaks decoding)
+#hardframedrop=yes

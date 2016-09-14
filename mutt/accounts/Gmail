@@ -1,0 +1,28 @@
+# IMAP: offlineimap
+set folder      = "~/mail"
+set signature	='~/.mutt/sig'
+set sendmail  = "/usr/bin/msmtp -a Gmail"
+#source ~/.mutt/mailboxes
+set spoolfile = "+Gmail/INBOX"
+set postponed   = "+Gmail/[Google Mail].Drafts"
+set record 		= "+Gmail/Sent\ Items"
+#set trash       = "+Gmail/[Google Mail].Bin"
+set copy        = no
+unset record
+set pgp_sign_as=
+set pgp_autosign=no
+set pgp_replyencrypt=yes
+set pgp_replysign=yes 
+save-hook       .* "=Gmail/[Google Mail].Bin"
+
+#set nouse_domain
+
+# search imap (prefix =b)
+#set simple_search="=b %s"
+
+# query via google contacts
+set query_command="goobook query '%s'"
+bind editor <Tab> complete-query
+macro index,pager a "<pipe-message>goobook add<return>" "add the sender address to Google contacts" 
+
+color status green default

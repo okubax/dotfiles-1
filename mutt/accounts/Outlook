@@ -1,0 +1,23 @@
+# IMAP: offlineimap
+set folder      = "~/mail"
+set sendmail  = "/usr/bin/msmtp -a Outlook"
+set signature	='~/.mutt/sig'
+set spoolfile = "+Outlook/Inbox"
+set postponed   = "+Outlook/Drafts"
+set record 		= "+Outlook/Sent"
+set copy        = yes
+#set trash       = "+Outlook/Deleted"
+save-hook       .* "=Outlook/Deleted"
+
+#set nouse_domain
+
+# search imap (prefix =b)
+set simple_search="=b %s"
+
+# query via google contacts
+set query_command="goobook query '%s'"
+bind editor <Tab> complete-query
+macro index,pager a "<pipe-message>goobook add<return>" "add the sender address to Google contacts"
+
+
+color status blue default

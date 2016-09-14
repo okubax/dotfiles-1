@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#todo
+sleep 10 && conky -c /home/ajibola/.todo/conkyrc ;
+
+#dropbox-cli
+sleep 15 && conky -c /home/ajibola/.dropbox-cli/conkyrc ;

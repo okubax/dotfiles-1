@@ -1,0 +1,69 @@
+! Xresources Configuration
+! 1 Sep 2016
+! vim: set xft=xdefaults:
+
+! XFT - Fonts
+!----------------------------------------------------------------------
+
+Xft.dpi: 96
+Xft.antialias: 1
+Xft.rgba: rgb
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+!Xft.hintstyle:  hintslight
+
+! Colors
+!----------------------------------------------------------------------
+#include "/home/ajibola/.Xresources.d/.colors"  
+
+! Define Colors  
+*background:   bg  
+*foreground:   fg  
+
+*color0:      blk  
+*color8:      bblk  
+*color1:      red  
+*color9:      bred  
+*color2:      grn  
+*color10:     bgrn  
+*color3:      ylw  
+*color11:     bylw  
+*color4:      blu  
+*color12:     bblu  
+*color5:      mag  
+*color13:     bmag  
+*color6:      cyn  
+*color14:     bcyn  
+*color7:      wht  
+*color15:     bwht 
+
+
+! URXVT
+!----------------------------------------------------------------------
+
+URxvt.borderless: false
+URxvt.internalBorder: 3
+URxvt.externalBorder: 3
+URxvt.scrollBar: false
+!URxvt.font: xft:Tewi:pixelsize=12:antialias=true
+!URxvt.boldFont: xft:Tewi:pixelsize=12:antialias=true
+URxvt*font:xft:terminus:pixelsize=9
+URxvt*boldFont:xft:terminus:pixelsize=10
+
+! clickable urls
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard
+URxvt.url-launcher: qutebrowser
+URxvt.matcher.button: 1
+
+! tabs
+URxvt.tabbed.tabbar-bg: -1
+URxvt.tabbed.tabbar-fg: -2
+URxvt.tabbed.tab-bg: -2
+URxvt.tabbed.tab-fg: -1
+URxvt.tabbed.title-bg: -1
+URxvt.tabbed.title-fg: -2
+URxvt.tabbed.autohide: true
+URxvt.tabbed.new-button: false
+URxvt.tabbed.title: true

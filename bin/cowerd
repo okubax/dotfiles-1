@@ -1,0 +1,16 @@
+#!/bin/sh
+# install AUR packages with cower
+
+cd $HOME/downloads/aur && cower -d "$1"
+builddir="$_"
+cd "$builddir" && ${EDITOR:-vi} PKGBUILD
+
+makepkg -si && cd - &>/dev/null
+
+read -p "Remove Build directory? [Y/n]? " yn
+if [ "$yn" = "y" ]; then
+    printf "\n%s\n" "Removing build directory..."
+    rm -rf "$builddir"
+else
+    printf "%s\n" "Build completed."
+fi

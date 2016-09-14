@@ -1,0 +1,5 @@
+!!Colors
+!! Source by .Xresources
+
+!!color options
+#include </home/ajibola/.Xresources.d/colors/shade>

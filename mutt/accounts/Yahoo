@@ -1,0 +1,16 @@
+# IMAP: offlineimap
+set folder      = "~/mail"
+set sendmail  = "/usr/bin/msmtp -a Yahoo"
+set spoolfile = "+Yahoo/Inbox"
+set postponed   = "+Yahoo/Drafts"
+set record 		= "+Yahoo/Sent"
+set copy        = yes
+#set trash       = "+Yahoo/Trash"
+save-hook       .* "=Yahoo/Trash"
+
+#set nouse_domain
+
+# search imap (prefix =b)
+set simple_search="=b %s"
+
+color status yellow default

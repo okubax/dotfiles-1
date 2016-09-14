@@ -1,0 +1,20 @@
+#!/bin/bash
+# neeasade
+# derived from https://github.com/Anachron/i3blocks/blob/master/blocks/mail
+
+MAIL_SERVER="imap.gmail.com:993"
+MAIL_USER="$(pass User/Gmail)"
+MAIL_PASSWORD="$(pass Mail/Gmail)"
+MAIL_FOLDER="INBOX"
+MAIL_FILE="$(mktemp)"
+
+cat<<EOF | openssl s_client -connect "${MAIL_SERVER}" -crlf -ign_eof > "${MAIL_FILE}" 2>/dev/null
+? LOGIN "${MAIL_USER}" "${MAIL_PASSWORD}"
+? STATUS "${MAIL_FOLDER}" (unseen)
+? LOGOUT
+EOF
+
+UNREAD_COUNT=$(cat "${MAIL_FILE}" | grep -i "UNSEEN" | grep -oE "[0-9]*" | head -n 1)
+rm "${MAIL_FILE}"
+
+echo "${UNREAD_COUNT:-0}"

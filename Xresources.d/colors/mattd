@@ -1,0 +1,23 @@
+! -- Title:     mattd
+! -- Author:    dkeg
+! -- Created:   2015 
+! -- Modified:  2016
+
+#define bg      #20201f
+#define fg      #b0b0a2
+#define blk     #242423
+#define bblk    #484847
+#define red     #996140
+#define ylw     #9d8554
+#define grn     #799c6a
+#define blu     #5f656a
+#define mag     #7b6064
+#define cyn     #566e6b
+#define wht     #b0b0a2
+#define bred    #996140
+#define bylw    #9d8554
+#define bgrn    #799c6a
+#define bblu    #5f656a
+#define bmag    #7b6064
+#define bcyn    #566e6b
+#define bwht    #b0b0a2

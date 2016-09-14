@@ -1,0 +1,257 @@
+# i3 config file
+
+# June 26 2016 - okubax https://okubax.co.uk
+
+
+
+#.......
+# Font
+#.......
+font pango:monospace 8
+# See xmodmap
+
+#..........
+# Look
+#..........
+new_window pixel 3
+focus_follows_mouse  yes
+
+for_window [class="^.*"] border pixel 0
+
+# gaps
+#gaps inner 7
+#gaps outer 0
+
+# gaps
+gaps inner 20
+gaps outer 20
+
+client.focused #292929 #292929 #292929 #292929
+client.unfocused #262626 #5a5349 #5a5349 #a8bac4
+client.focused_inactive #26262626 #262626 #262626 #262626
+client.urgent #CCE8D4 #CCE8D4 #CCE8D4 #CCE8D4
+
+#client.focused #292929 #292929 #292929 #292929
+#client.unfocused #262626 #262626 #262626 #262626
+#client.focused_inactive #26262626 #262626 #262626 #262626
+#client.urgent #CCE8D4 #CCE8D4 #CCE8D4 #CCE8D4
+
+#..........
+# Applications
+#..........
+
+# Using bindcode for compatibility
+
+# Principal mod key (Super = Win key)
+# mod1 = Alt (xmodmap to show)
+# mod4 = Winkey (xmodmap to show)
+set $mod Mod4
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# HANDLE POPUPS
+popup_during_fullscreen smart
+
+# take screenshot
+bindsym Print exec $HOME/bin/screen root
+bindsym Mod1+Print exec $HOME/bin/screen active
+
+# change wallpaper
+bindsym $mod+ctrl+w exec change_wallpaper
+
+# key bindings
+bindsym $MOD+Return exec --no-startup-id urxvt
+bindsym $MOD+SHIFT+f exec thunar
+bindsym $mod+w exec qutebrowser
+bindsym Mod1+w exec chromium
+bindsym $mod+b exec $HOME/downloads/tor-browser_en-US/Browser/start-tor-browser
+bindsym $mod+e exec geany
+bindsym Mod1+l exec i3lock -i $HOME/.Xresources.d/gqYvlhK.png
+bindsym Mod1+m exec claws-mail
+bindsym Mod1+e exec urxvt -e mutt
+bindsym $mod+i exec urxvt -e irssi
+bindsym mod1+i exec urxvt -e weechat
+bindsym $mod+c exec gsimplecal
+bindsym Mod1+c exec galculator
+bindsym $MOD+SHIFT+t exec urxvt -e htop
+bindsym $MOD+SHIFT+x exec $HOME/bin/i3_session
+bindsym $MOD+SHIFT+a exec $HOME/downloads/android-dev/android-studio/bin/studio.sh
+bindsym $mod+Shift+b bar mode toggle
+## KEY BINDINGS
+bindsym $MOD+Tab focus right
+# SCRATCHPAD CREATE
+bindsym $MOD+SHIFT+plus move scratchpad
+# Maim
+bindsym --release $mod+s exec --no-startup-id "maim -s -c 1,0,0,0.6 -p 10"
+# SCRATCHPAD SHOW
+bindsym $MOD+plus scratchpad show
+# start dmenu (a program launcher)
+bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b -sb '#b7a462' -sf '#1b1b1b' -nb '#1b1b1b' -nf '#6fa6ab' -nf '#839496' -fn 'Tewi-9'"
+
+# multimedia keys
+bindsym XF86AudioPlay exec "mpc toggle"
+bindsym XF86AudioStop exec "mpc stop"
+bindsym XF86AudioNext exec "mpc next"
+bindsym XF86AudioPrev exec "mpc prev"
+
+# brightness
+bindsym XF86MonBrightnessUp exec "xbacklight +10"
+bindsym XF86MonBrightnessDown exec "xbacklight -10"
+
+# Move to workspace
+assign [instance="xfce4-terminal|urxvt"] $WS1
+assign [instance="Navigator|Dialog"] $WS2
+assign [class="chromium|jetbrains-android-studio|Firefox|qutebrowser"] $WS2
+assign [class="Atom|sublime_text|Brackets"] $WS3
+assign [instance="mousepad|leafpad|geany"] $WS3
+assign [instance="shotwell|simple-scan|brasero|devede|imagination|picard|wxcam|google-musicmanager|goobox"] $WS4
+assign [class="Gthumb|MPlayer|Rhythmbox|mpv|Xfburn|Pitivi|Popcorntime|Gmusicbrowser|Ogmrip|Spotify|Blender"] $WS4
+assign [class="kdenlive|Kamoso|digikam"] $WS4
+assign [class="Thunar|Eclipse|Pinta|Blender|Catfish|Codeblocks"] $WS5
+assign [class="VirtualBox|Qemu-system-x86_64|Gnome-disks|Gnome-boxes|qemu-system-x86_64|Spicy"] $WS6
+assign [instance="syncbackup|bleachbit|gparted|hardinfo|truecrypt"] $WS6
+assign [instance="VCLSalFrame|libreoffice"] $WS7
+assign [class="libreoffice*|Zathura|libreoffice-writer"] $WS7
+assign [class="Claws-mail"] $WS8
+assign [class="Wine|Steam|dontstarve"] $WS9
+
+# Layout
+for_window [class="xpad" instance="scratchpad"] move scratchpad
+for_window [class="MPlayer|Galculator|Gsimplecal|Viewnior|Alarm-clock|Skype|xpad|Java|Clamtk|Blueman-manager|Spotify|Google-musicmanager"] floating enable
+for_window [class="File-roller|Lxappearance|Nitrogen|Arandr|Caffeine|Pavucontrol|emulator64-arm|Transmission-gtk|Kamoso|Cheese|PkgBrowser|Seahorse"] floating enable
+for_window [class="Gimp|Filezilla|Gnome-multi-writer|Rhythmbox|Main.py|Imagewriter|qemu-system-x86_64|Blueberry.py|libprs500"] floating enable
+for_window [title="Xfce-notifyd|TrueCrypt|Catfish|Google Keep|Xarchiver"] floating enable
+for_window [title="File Operation Progress" class="Thunar"] floating enable
+#for_window [title="Share a link on Twitter - Mozilla Firefox" class="Firefox"] floating enable
+#for_window [title="Press This - Mozilla Firefox" class="Firefox"] floating enable
+for_window [window_role="pop-up"] floating enable,move absolute center
+
+#...........
+# Keybinds i3
+#...........
+
+# Back and Forth
+workspace_auto_back_and_forth yes
+
+# kill focused window
+bindsym $mod+q kill
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# move focused window
+bindsym $mod+Shift+H move left
+bindsym $mod+Shift+J move down
+bindsym $mod+Shift+K move up
+bindsym $mod+Shift+L move right
+
+# split in horizontal orientation
+bindsym $mod+bar split h
+
+# split in vertical orientation
+bindsym $mod+underscore split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# change container layout (stacked, tabbed, default)
+bindsym $mod+s layout stacking
+bindsym $mod+x layout tabbed
+bindsym $mod+z layout default
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+d focus child
+
+# assign workspace variables
+set $WS1 I
+set $WS2 II
+set $WS3 III
+set $WS4 IV
+set $WS5 V
+set $WS6 VI
+set $WS7 VII
+set $WS8 VIII
+set $WS9 IX
+set $WS10 X
+
+# switch to workspace
+bindsym $mod+1 workspace $WS1
+bindsym $mod+2 workspace $WS2
+bindsym $mod+3 workspace $WS3
+bindsym $mod+4 workspace $WS4
+bindsym $mod+5 workspace $WS5
+bindsym $mod+6 workspace $WS6
+bindsym $mod+7 workspace $WS7
+bindsym $mod+8 workspace $WS8
+bindsym $mod+9 workspace $WS9
+bindsym $mod+0 workspace $WS10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $WS1
+bindsym $mod+Shift+2 move container to workspace $WS2
+bindsym $mod+Shift+3 move container to workspace $WS3
+bindsym $mod+Shift+4 move container to workspace $WS4
+bindsym $mod+Shift+5 move container to workspace $WS5
+bindsym $mod+Shift+6 move container to workspace $WS6
+bindsym $mod+Shift+7 move container to workspace $WS7
+bindsym $mod+Shift+8 move container to workspace $WS8
+bindsym $mod+Shift+9 move container to workspace $WS9
+bindsym $mod+Shift+0 move container to workspace $WS10
+
+# reload the configuration file
+bindsym $mod+Shift+C reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+R restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+E exit
+
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+	# arrow keys #
+	# bindsym 113 right
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+#bar
+bar {
+  i3bar_command ~/.i3/bar/bar.sh
+}
+
+#i3bar -- for when a system tray is needed
+#bar {
+#    mode hide
+#    hidden_state hide
+#    modifier Mod1
+#    position bottom
+#    workspace_buttons no
+#}
+
+# autostart
+exec --no-startup-id sh conky_displays
+exec sh random-color-picker
+#exec sh ~/.i3/bar/bar.sh
+#exec --no-startup-id sh ~/.fehbg
+#exec --no-startup-id xpad

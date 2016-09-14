@@ -1,0 +1,36 @@
+#
+# ~/.ncmpcpp/config
+#
+
+# connection settings
+lyrics_directory                            = ~/.ncmpcpp/lyrics
+ncmpcpp_directory                           = ~/.ncmpcpp
+mpd_host                                    = localhost
+mpd_port                                    = 6600
+mpd_music_dir                               = ~/music
+mpd_connection_timeout = "5"
+mpd_crossfade_time = "3"
+
+
+# visualizer
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+#visualizer_sync_interval = "1"
+#visualizer_type = "wave" (spectrum/wave)
+visualizer_type = "spectrum" (spectrum/wave)
+
+# song format
+song_list_format = "{$3%n │ $9}{$7%a - $9}{$5%t$9}|{$8%f$9}$R{$6 │ %b$9}{$3 │ %l$9}"
+
+# various settings
+autocenter_mode = "yes"
+progressbar_look = "─╼·"
+user_interface = "alternative"
+alternative_header_first_line_format = "$0$aqqu$/a {$7%a - $9}{$5%t$9}|{$8%f$9} $0$atqq$/a$9"
+alternative_header_second_line_format = "{{$6%b$9}{ [$6%y$9]}}|{%D}"
+
+# color definitions
+main_window_color = "default"
+main_window_highlight_color = "default"
+alternative_ui_separator_color = "yellow"
+progressbar_color = "yellow"
