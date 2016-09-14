@@ -31,7 +31,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 
 
 
-### General
+## General
 
 1. First, install the dependencies listed in the section above.
 
@@ -43,7 +43,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 
 
 
-## Installation
+### Installation
 
 ```
 git clone https://github.com/okubax/dotfiles.git
@@ -53,12 +53,12 @@ cd dotfiles
 ```
 
 
-## Wallpaper
+### Wallpaper
 
 Wallpaper is set by the random-color-picker script in the Xresources.d folder, if you don't want this, remove the script (you will have to manually set a color scheme for your terminal manually as this scipt handles that. Or rather, comment out the relevant(setwall) part of the script.
 
 
 
-## Screenshot
+### Screenshot
 
 ![ScreenShot](https://raw.githubusercontent.com/okubax/dotfiles/master/screenshot.png)
