@@ -40,9 +40,9 @@ cd dotfiles
 
 2. `bin/` contains my custom scripts. Add them to your `$PATH` and ensure that they are executable. 
 
-3. My default shell is zsh and I use the [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) plugin
+3. My default shell is zsh and I use the [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) framework to manage my zsh configuration.
 
-4. Terminal colorschemes and wallpaper with script to load random color and match wallpaer to it on every startup is the work of [dkeg](https://github.com/dkeg/crayolo)
+4. Terminal colorschemes and wallpaper with script to load random color and match wallpaer to it on every startup is the work of [dkeg](https://github.com/dkeg/crayolo).
 
 
 ### Wallpaper
