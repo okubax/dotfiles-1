@@ -30,7 +30,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 ```git clone https://github.com/okubax/dotfiles.git
 cd dotfiles
 ./dots.sh
-```	
+```
 
 ### General
 
@@ -49,4 +49,4 @@ Wallpaper is set by the random-color-picker script in the Xresources.d folder, i
 
 ## Screenshot
 
-![ScreenShot](https://raw.githubusercontent.com/okubax/dotfiles-old/master/screenshot.png)
+![ScreenShot](https://raw.githubusercontent.com/okubax/dotfiles/master/screenshot.png)
