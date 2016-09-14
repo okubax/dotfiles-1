@@ -16,7 +16,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `mpc` -- Client for `mpd`, responsible for telling lemonbar about the currently playing media.
 * `mpd` -- Flexible, powerful, server-side application for playing music with `ncmpcpp` as client
 * `mutt' -- Small but very powerful text-based mail client
-# `msmtp` -- A mini smtp client  
+* `msmtp` -- A mini smtp client  
 * `offlineimap` -- Synchronizes emails between two repositories
 * `ranger` -- Terminal file browser. Used in `bkg` script to easily browse images.
 * [Siji Icon Font](https://github.com/gstk/siji) -- Wonderful icon font, I use it for `lemonbar`.
@@ -27,10 +27,12 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 
 ## Installation
 
+```
 git clone https://github.com/okubax/dotfiles.git
 cd dotfiles
 ./dots.sh
 
+```
 
 ### General
 
