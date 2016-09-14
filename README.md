@@ -28,8 +28,8 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 ## Installation
 
 ```git clone https://github.com/okubax/dotfiles.git
-cd dotfiles
-./dots.sh
+   cd dotfiles
+   ./dots.sh
 ```
 
 ### General
