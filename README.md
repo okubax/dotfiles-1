@@ -31,15 +31,6 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 
 
 
-## Installation
-
-```
-git clone https://github.com/okubax/dotfiles.git
-cd dotfiles
-./dots.sh
-
-```
-
 ### General
 
 1. First, install the dependencies listed in the section above.
@@ -51,9 +42,22 @@ cd dotfiles
 4. Terminal colorschemes, bitmap used for wallpaper and script to load random color and match wallpaer to it on every startup is the work of [dkeg](https://github.com/dkeg/crayolo).
 
 
-### Wallpaper
+
+## Installation
+
+```
+git clone https://github.com/okubax/dotfiles.git
+cd dotfiles
+./dots.sh
+
+```
+
+
+## Wallpaper
 
 Wallpaper is set by the random-color-picker script in the Xresources.d folder, if you don't want this, remove the script (you will have to manually set a color scheme for your terminal manually as this scipt handles that. Or rather, comment out the relevant(setwall) part of the script.
+
+
 
 ## Screenshot
 
