@@ -59,13 +59,13 @@ cd dotfiles
 
 ### Wallpaper
 
-Wallpaper is set by the random-color-picker script in the Xresources.d folder, if you don't want this, remove the script (you will have to manually set a color scheme for your terminal manually as this scipt handles that. Or rather, comment out the relevant(setwall) part of the script.
+Wallpaper is set by the [random-color-picker](/Xresources.d/random-color-picker) script in the [Xresources.d](/Xresources.d) folder, if you don't want this, remove the script (you will have to manually set a color scheme for your terminal manually as this scipt handles that. Or rather, comment out the relevant(setwall) part of the script.
 
 
 
 ### Screenshot
 
-![ScreenShot](https://raw.githubusercontent.com/okubax/dotfiles/master/screenshot.png)
+![ScreenShot](/screenshot.png)
 
 &nbsp;
 
