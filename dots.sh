@@ -29,6 +29,9 @@ ln -s ${BASEDIR}/dropbox-cli $HOME/.dropbox-cli
 # fontconfig
 ln -s ${BASEDIR}/fontconfig $HOME/.config/fontconfig
 
+# fonts
+ln -s ${BASEDIR}/fonts $HOME/.fonts
+
 # i3
 ln -s ${BASEDIR}/i3 $HOME/.i3
 

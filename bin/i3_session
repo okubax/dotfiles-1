@@ -12,7 +12,7 @@ lock() {
 #DMENU='dmenu -i -b -fn -xos4-terminus-medium-r-*--12-*-*-*-*-*-iso10646-1 -nb #000000 -nf #999999 -sb #000000 -sf #31658C'
 #DMENU='dmenu -b -sb '#c5c8c6' -sf '#454a4f' -nb '#454a4f' -nf '#c5c8c6' -fn 'Terminus-10''
 #DMENU='dmenu -b -sb '#E59847' -sf '#073642' -nb '#073642' -nf '#839496' -fn 'Terminus-8''
-DMENU='dmenu -b -sb '#b7a462' -sf '#1b1b1b' -nb '#1b1b1b' -nf '#6fa6ab' -nf '#839496' -fn 'Terminus-9''
+DMENU='dmenu -b -sb '#b7a462' -sf '#1b1b1b' -nb '#1b1b1b' -nf '#6fa6ab' -nf '#839496' -fn 'Tewi-9''
 choice=$(echo -e "lock\nlogout\nsuspend\nhibernate\nreboot\nshutdown" | $DMENU)
 
 case "$choice" in
