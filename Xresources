@@ -47,10 +47,10 @@ URxvt.borderless: false
 URxvt.internalBorder: 3
 URxvt.externalBorder: 3
 URxvt.scrollBar: false
-!URxvt.font: xft:Tewi:pixelsize=12:antialias=true
-!URxvt.boldFont: xft:Tewi:pixelsize=12:antialias=true
-URxvt*font:xft:terminus:pixelsize=9
-URxvt*boldFont:xft:terminus:pixelsize=10
+!URxvt*font:xft:terminus:pixelsize=9
+!URxvt*boldFont:xft:terminus:pixelsize=10
+URxvt.font: xft:Tewi:pixelsize=12:antialias=true
+URxvt.boldFont: xft:Tewi:pixelsize=12:antialias=true
 
 ! clickable urls
 URxvt.perl-ext-common: default,matcher,selection-to-clipboard
