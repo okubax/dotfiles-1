@@ -67,6 +67,11 @@ Wallpaper is set by the random-color-picker script in the Xresources.d folder, i
 
 ![ScreenShot](https://raw.githubusercontent.com/okubax/dotfiles/master/screenshot.png)
 
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 
 
 
