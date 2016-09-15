@@ -43,7 +43,9 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 
 4. You need to have [gnupg](https://www.archlinux.org/packages/core/x86_64/gnupg/) installed and configured properly for [pass](https://www.archlinux.org/packages/community/any/pass/) to work.
 
-5. Terminal [colorschemes](/Xresources.d/colors), [bitmap](/Xresources.d/tile.xbm) used for the wallpaper, and the [script](/Xresources.d/random-color-picker) that is used to load a random color & wallpaper at each wm-start is the work of [dkeg](https://github.com/dkeg/crayolo).
+5. In the lemonbar [config](/i3/bar/bar.sh), the battery section uses `BAT1`, change to `BAT0` for your config if your laptop only has one battery.
+
+6. Terminal [colorschemes](/Xresources.d/colors), [bitmap](/Xresources.d/tile.xbm) used for the wallpaper, and the [script](/Xresources.d/random-color-picker) that is used to load a random color & wallpaper at each wm-start is the work of [dkeg](https://github.com/dkeg/crayolo).
 
 
 
