@@ -4,6 +4,7 @@ dotfiles for my i3 + lemonbar setup on ArchLinux
 
 I use this configuration for my laptop which runs **[i3-gaps window manager](https://github.com/Airblader/i3)** (a fork of i3) on
 **[Arch Linux](https://www.archlinux.org/)**.
+Ideas mostly <del>stolen</del> copied from others and modified to fit my use, I have acknowledged some but if I'm using parts or all of your config, **THANKS!**.
 
 ## Dependencies
 
@@ -22,12 +23,13 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `offlineimap` -- Synchronizes emails between two repositories
 * `pass` -- Stores, retrieves, generates, and synchronizes passwords securely  
 * `ranger` -- A simple, vim-like file manager
-* `Siji Icon Font` -- Iconic bitmap font, used in `lemonbar`
-* `terminus-font` -- Monospace bitmap font (for X11 and console)
+* `Siji Icon Font` -- Iconic bitmap font, used in `lemonbar` | [aur link](https://aur.archlinux.org/packages/siji-git/)
+* `terminus-font` -- Monospace bitmap font (for lemonbar)
+* `tewi-font` -- Bitmap font (for X11 and console)  | [link](https://github.com/lucy/tewi-font)
 * `vim` -- Vi Improved, a highly configurable, improved version of the vi text editor
 * `xdotool` -- Command-line X11 automation tool, for the title section of `lemonbar`
 * `xsetroot` -- to set the wallpaper
-* `wmctrl` -- 	A Tool to control your EWMH compliant window manager from command line, for i3 workspaces on `lemonbar`
+* `wmctrl` -- 	A Tool to control your EWMH compliant window manager from command line (for i3 workspaces on `lemonbar`)
 
 
 
@@ -39,7 +41,9 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 
 3. My default shell is zsh and I use the [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) framework to manage my zsh configuration.
 
-4. Terminal colorschemes, bitmap used for wallpaper and script to load random color and match wallpaer to it on every startup is the work of [dkeg](https://github.com/dkeg/crayolo).
+4. You need to have [gnupg](https://www.archlinux.org/packages/core/x86_64/gnupg/) installed and configured properly for [pass](https://www.archlinux.org/packages/community/any/pass/) to work.
+
+4. Terminal colorschemes, bitmap used for wallpaper and script to load random color and match wallpaper to it on every startup is the work of [dkeg](https://github.com/dkeg/crayolo).
 
 
 
@@ -62,3 +66,8 @@ Wallpaper is set by the random-color-picker script in the Xresources.d folder, i
 ### Screenshot
 
 ![ScreenShot](https://raw.githubusercontent.com/okubax/dotfiles/master/screenshot.png)
+
+
+
+
+*README inspiration from [CopperBadger](https://github.com/CopperBadger/dotfiles)*
