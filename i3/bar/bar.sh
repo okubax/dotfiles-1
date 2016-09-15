@@ -79,8 +79,8 @@ while true; do
 	echo "%{B#c0303048} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#5d6383}$(music)%{B#c0303048} $(windowtitle) %{B-}"
 	sleep 2;
 done |
-#old one was '-g 1690x20+2035+1019'
-lemonbar -p -d -B#c0262626 -F#A0A0A0 -g 1280x20+45+0\
+#old one was '-g 1280x20+45'
+lemonbar -p -d -B#c0262626 -F#A0A0A0 -g 1830x20+45+0\
  -f '-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1'\
  -f '-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1'\
  | bash
