@@ -43,7 +43,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 
 4. You need to have [gnupg](https://www.archlinux.org/packages/core/x86_64/gnupg/) installed and configured properly for [pass](https://www.archlinux.org/packages/community/any/pass/) to work.
 
-4. Terminal colorschemes, bitmap used for wallpaper and script to load random color and match wallpaper to it on every startup is the work of [dkeg](https://github.com/dkeg/crayolo).
+5. Terminal colorschemes, bitmap used for wallpaper and script to load random color and match wallpaper to it on every startup is the work of [dkeg](https://github.com/dkeg/crayolo).
 
 
 
