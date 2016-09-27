@@ -27,7 +27,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `terminus-font` -- Monospace bitmap font (for lemonbar)
 * `tewi-font` -- Bitmap font (for X11 and console)  | [link](https://github.com/lucy/tewi-font)
 * `vim` -- Vi Improved, a highly configurable, improved version of the vi text editor
-* `xdotool` -- Command-line X11 automation tool, for the title section of `lemonbar`
+* `xdotool` -- Command-line X11 automation tool, to show current window title on `lemonbar`
 * `xsetroot` -- to set the wallpaper
 * `wmctrl` -- 	A Tool to control your EWMH compliant window manager from command line (for i3 workspaces on `lemonbar`)
 
