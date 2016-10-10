@@ -14,6 +14,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 
 * `conky` -- Lightweight system monitor for X (for dropbox and todo-cli dislays)
 * `dropbox-cli` -- Command line interface for dropbox
+* `feh` -- to set the wallpaper
 * `iw` -- nl80211 based CLI configuration utility for wireless devices, to get wifi's SSID
 * `lemonbar` -- A featherweight, lemon-scented, bar based on xcb
 * `mpc` -- Client for `mpd`, responsible for telling lemonbar about the currently playing media.
@@ -28,7 +29,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `tewi-font` -- Bitmap font (for X11 and console)  | [link](https://github.com/lucy/tewi-font)
 * `vim` -- Vi Improved, a highly configurable, improved version of the vi text editor
 * `xdotool` -- Command-line X11 automation tool, to show current window title on `lemonbar`
-* `xsetroot` -- to set the wallpaper
+<del>* `xsetroot` -- to set the wallpaper</del>
 * `wmctrl` -- 	A Tool to control your EWMH compliant window manager from command line (for i3 workspaces on `lemonbar`)
 
 
