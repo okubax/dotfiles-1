@@ -8,6 +8,9 @@ ln -s ${BASEDIR}/compton.conf $HOME/.config/compton.conf
 # dunst
 ln -s ${BASEDIR}/dunstrc $HOME/.config/dunstrc
 
+# feh
+ln -s ${BASEDIR}/fehbg $HOME/.fehbg
+
 # goobook
 ln -s ${BASEDIR}/goobookrc $HOME/.goobookrc
 

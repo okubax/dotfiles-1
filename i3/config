@@ -67,7 +67,7 @@ bindsym $mod+w exec qutebrowser
 bindsym Mod1+w exec chromium
 bindsym $mod+b exec $HOME/downloads/tor-browser_en-US/Browser/start-tor-browser
 bindsym $mod+e exec geany
-bindsym Mod1+l exec i3lock -i $HOME/.Xresources.d/gqYvlhK.png
+bindsym Mod1+l exec i3lock -i $HOME/.Xresources.d/lock.png
 bindsym Mod1+m exec claws-mail
 bindsym Mod1+e exec urxvt -e mutt
 bindsym $mod+i exec urxvt -e irssi
@@ -252,6 +252,7 @@ bar {
 # autostart
 exec --no-startup-id sh conky_displays
 exec sh random-color-picker
+exec --no-startup-id sh ~/.fehbg
 #exec sh ~/.i3/bar/bar.sh
 #exec --no-startup-id sh ~/.fehbg
 #exec --no-startup-id xpad
