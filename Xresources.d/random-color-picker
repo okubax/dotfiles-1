@@ -16,14 +16,14 @@ pik() {
   cd $HOME
   xrdb -merge ~/.Xresources
 }
-setwall() {
-  xsetroot -bitmap $HOME/.Xresources.d/tile.xbm -bg "$(xrdb -query | grep  "*background" | awk '{print $2}')" -fg "$(xrdb -query | grep  "*color8" | awk '{print $2}')"
-}
+#setwall() {
+#  xsetroot -bitmap $HOME/.Xresources.d/tile.xbm -bg "$(xrdb -query | grep  "*background" | awk '{print $2}')" -fg "$(xrdb -query | grep  "*color8" | awk '{print $2}')"
+#}
 showme() {
   printcol=$(awk 'NR==5{gsub(/</," ");gsub(/>/," ");print $2}' $HOME/.Xresources.d/.colors | cut -d '/' -f6)
   notify-send "palette in use - $printcol"
 }
 
 pik
-setwall
+#setwall
 showme
