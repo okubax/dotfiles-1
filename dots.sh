@@ -38,9 +38,6 @@ ln -s ${BASEDIR}/fonts $HOME/.fonts
 # i3
 ln -s ${BASEDIR}/i3 $HOME/.i3
 
-# irssi
-ln -s ${BASEDIR}/irssi $HOME/.irssi
-
 # mpd
 ln -s ${BASEDIR}/mpd $HOME/.mpd
 

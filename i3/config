@@ -70,8 +70,7 @@ bindsym $mod+e exec geany
 bindsym Mod1+l exec i3lock -i $HOME/.Xresources.d/lock.png
 bindsym Mod1+m exec claws-mail
 bindsym Mod1+e exec urxvt -e mutt
-bindsym $mod+i exec urxvt -e irssi
-bindsym mod1+i exec urxvt -e weechat
+bindsym $mod+i exec urxvt -e weechat
 bindsym $mod+c exec gsimplecal
 bindsym Mod1+c exec galculator
 bindsym $MOD+SHIFT+t exec urxvt -e htop
