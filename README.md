@@ -71,10 +71,10 @@ cd dotfiles
 
 ### Screenshots
 
-[color palette in use](/Xresources.d/colors/provrb)
+color scheme: [provrb](/Xresources.d/colors/provrb)
 ![Screenshot](/screenshot.png)
 
-[color palette in use](/Xresources.d/colors/harbing)
+color scheme: [harbing](/Xresources.d/colors/harbing)
 ![Screenshot2](/screenshot2.png)
 
 &nbsp;
