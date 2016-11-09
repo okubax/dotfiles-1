@@ -65,17 +65,15 @@ cd dotfiles
 
 <del>Wallpaper is set by the [random-color-picker](/Xresources.d/random-color-picker) script in the [Xresources.d](/Xresources.d) folder, if you don't want this, remove the script (you will have to manually set a color scheme for your terminal manually as this scipt handles that. Or rather, comment out the relevant(setwall) part of the script.</del>
 
-[Wallpaper](http://nanomortis.deviantart.com/art/Deep-Field-509565352) by [NanoMortis](http://nanomortis.deviantart.com/) on [DeviantArt](http://www.deviantart.com)
+Wallpaper from [Unsplash](https://unsplash.com)
 
 
 
 ### Screenshots
 
-color scheme: [provrb](/Xresources.d/colors/provrb)
+color scheme: [depth](/Xresources.d/colors/depth)
 ![Screenshot](/screenshot.png)
 
-color scheme: [harbing](/Xresources.d/colors/harbing)
-![Screenshot2](/screenshot2.png)
 
 &nbsp;
 

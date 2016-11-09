@@ -1,6 +1,6 @@
 # i3 config file
 
-# June 26 2016 - okubax https://okubax.co.uk
+# November 26 2016 - okubax https://okubax.co.uk
 
 
 
@@ -98,7 +98,7 @@ bindsym XF86MonBrightnessDown exec "xbacklight -10"
 # Move to workspace
 assign [instance="xfce4-terminal|urxvt"] $WS1
 assign [instance="Navigator|Dialog"] $WS2
-assign [class="chromium|jetbrains-android-studio|Firefox|qutebrowser"] $WS2
+assign [class="Chromium|jetbrains-android-studio|Firefox|qutebrowser"] $WS2
 assign [class="Atom|sublime_text|Brackets"] $WS3
 assign [instance="mousepad|leafpad|geany"] $WS3
 assign [instance="shotwell|simple-scan|brasero|devede|imagination|picard|wxcam|google-musicmanager|goobox"] $WS4
@@ -250,5 +250,4 @@ exec --no-startup-id sh conky_displays
 exec sh random-color-picker
 exec --no-startup-id sh ~/.fehbg
 #exec sh ~/.i3/bar/bar.sh
-#exec --no-startup-id sh ~/.fehbg
 #exec --no-startup-id xpad
