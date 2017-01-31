@@ -24,7 +24,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `offlineimap` -- Synchronizes emails between two repositories
 * `pass` -- Stores, retrieves, generates, and synchronizes passwords securely  
 * `ranger` -- A simple, vim-like file manager
-* `Siji Icon Font` -- Iconic font designed for Bootstrap, used in `lemonbar` | [aur link](https://aur.archlinux.org/packages/ttf-font-awesome)
+* `Font Awesome` -- Iconic font designed for Bootstrap, used in `lemonbar` | [aur link](https://aur.archlinux.org/packages/ttf-font-awesome)
 * `fira-mono` -- Mozilla's monospace typeface (for lemonbar, X11, and console)
 * `vim` -- Vi Improved, a highly configurable, improved version of the vi text editor
 * `xdotool` -- Command-line X11 automation tool, to show current window title on `lemonbar`
