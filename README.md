@@ -24,12 +24,10 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `offlineimap` -- Synchronizes emails between two repositories
 * `pass` -- Stores, retrieves, generates, and synchronizes passwords securely  
 * `ranger` -- A simple, vim-like file manager
-* `Siji Icon Font` -- Iconic bitmap font, used in `lemonbar` | [aur link](https://aur.archlinux.org/packages/siji-git/)
-* `terminus-font` -- Monospace bitmap font (for lemonbar)
-* `tewi-font` -- Bitmap font (for X11 and console)  | [link](https://github.com/lucy/tewi-font)
+* `Siji Icon Font` -- Iconic font designed for Bootstrap, used in `lemonbar` | [aur link](https://aur.archlinux.org/packages/ttf-font-awesome)
+* `fira-mono` -- Mozilla's monospace typeface (for lemonbar, X11, and console)
 * `vim` -- Vi Improved, a highly configurable, improved version of the vi text editor
 * `xdotool` -- Command-line X11 automation tool, to show current window title on `lemonbar`
-* <del>`xsetroot` -- to set the wallpaper</del>
 * `weechat` -- Fast, light and extensible IRC client
 * `wmctrl` -- 	A Tool to control your EWMH compliant window manager from command line (for i3 workspaces on `lemonbar`)
 
@@ -45,9 +43,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 
 4. You need to have [gnupg](https://www.archlinux.org/packages/core/x86_64/gnupg/) installed and configured properly for [pass](https://www.archlinux.org/packages/community/any/pass/) to work.
 
-5. In the lemonbar [config](/i3/bar/bar.sh), the battery section uses `BAT1`, change to `BAT0` for your config if your laptop only has one battery.
-
-6. [Colorschemes](/Xresources.d/colors) and the [random-color-picker-script](/Xresources.d/random-color-picker) are from [dkeg](https://github.com/dkeg/crayolo).
+5. [Colorschemes](/Xresources.d/colors) and the [random-color-picker-script](/Xresources.d/random-color-picker) are from [dkeg](https://github.com/dkeg/crayolo).
 
 
 
@@ -61,26 +57,15 @@ cd dotfiles
 ```
 
 
+### Screenshot
+
+![Screenshot](/screenshot.png)
+color scheme: [diner](/Xresources.d/colors/depth)
+
+
 ### Wallpaper
 
-<del>Wallpaper is set by the [random-color-picker](/Xresources.d/random-color-picker) script in the [Xresources.d](/Xresources.d) folder, if you don't want this, remove the script (you will have to manually set a color scheme for your terminal manually as this scipt handles that. Or rather, comment out the relevant(setwall) part of the script.</del>
-
-Wallpaper from [Unsplash](https://unsplash.com)
-
-
-
-### Screenshots
-
-color scheme: [depth](/Xresources.d/colors/depth)
-![Screenshot](/screenshot.png)
+Wallpaper from [DeviantART](http://mushcube.deviantart.com/art/Space-380838916)
 
 
 &nbsp;
-
-&nbsp;
-
-&nbsp;
-
-
-
-*README inspiration from [CopperBadger](https://github.com/CopperBadger/dotfiles)*

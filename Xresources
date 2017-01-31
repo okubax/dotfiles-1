@@ -5,7 +5,7 @@
 ! XFT - Fonts
 !----------------------------------------------------------------------
 
-Xft.dpi: 96
+Xft.dpi: 130 
 Xft.antialias: 1
 Xft.rgba: rgb
 Xft.autohint: 0
@@ -16,28 +16,28 @@ Xft.hintstyle: hintfull
 
 ! Colors
 !----------------------------------------------------------------------
-#include "/home/ajibola/.Xresources.d/.colors"  
+#include "$HOME/.Xresources.d/.colors"  
 
 ! Define Colors  
-*background:   bg  
-*foreground:   fg  
+*background:   bg
+*foreground:   fg
 
-*color0:      blk  
-*color8:      bblk  
-*color1:      red  
-*color9:      bred  
-*color2:      grn  
-*color10:     bgrn  
-*color3:      ylw  
-*color11:     bylw  
-*color4:      blu  
-*color12:     bblu  
-*color5:      mag  
-*color13:     bmag  
-*color6:      cyn  
-*color14:     bcyn  
-*color7:      wht  
-*color15:     bwht 
+*color0:      blk
+*color8:      bblk
+*color1:      red
+*color9:      bred
+*color2:      grn
+*color10:     bgrn
+*color3:      ylw
+*color11:     bylw
+*color4:      blu
+*color12:     bblu
+*color5:      mag
+*color13:     bmag
+*color6:      cyn
+*color14:     bcyn
+*color7:      wht
+*color15:     bwht
 
 
 ! URXVT
@@ -47,15 +47,21 @@ URxvt.borderless: false
 URxvt.internalBorder: 3
 URxvt.externalBorder: 3
 URxvt.scrollBar: false
-!URxvt*font:xft:terminus:pixelsize=9
-!URxvt*boldFont:xft:terminus:pixelsize=10
-URxvt.font: xft:Tewi:pixelsize=12:antialias=true
-URxvt.boldFont: xft:Tewi:pixelsize=12:antialias=true
+!URxvt.font: xft:Monospace:pixelsize=12:antialias=true
+!URxvt.boldFont: xft:Monospace:pixelsize=12:antialias=true
+!URxvt.font: xft:Tewi:pixelsize=12:antialias=true
+!URxvt.boldFont: xft:Tewi:pixelsize=12:antialias=true
+URxvt.font: xft:Fira Mono:pixelsize=12:antialias=true
+URxvt.boldFont: xft:Fira Mono:pixelsize=12:antialias=true
 
 ! clickable urls
-URxvt.perl-ext-common: default,matcher,selection-to-clipboard
-URxvt.url-launcher: qutebrowser
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard,clipboard
+URxvt.url-launcher: chromium
 URxvt.matcher.button: 1
+
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 
 ! tabs
 URxvt.tabbed.tabbar-bg: -1
