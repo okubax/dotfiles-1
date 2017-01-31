@@ -11,16 +11,17 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-xset s 180 &
+xset s 120 &
 xset b off &
 xrdb -merge ~/.Xresources &
 unclutter &
 dunst &
-xss-lock -- i3lock -i $HOME/.Xresources.d/gqYvlhK.png &
+xss-lock -- i3lock -i $HOME/.Xresources.d/lock.png &
 dropbox &
 anamnesis --start &
 mpd &
 mpdscribble &
+xrandr --dpi 130 &
 
 exec i3
 

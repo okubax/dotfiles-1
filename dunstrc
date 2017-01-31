@@ -1,6 +1,6 @@
 [global]
-    font = Tewi 9
-    #font = Monospace 8
+    #font = Tewi 9
+    font = Fira Mono 10
 
     # allow a small subset of html markup:
     # <b>bold</b>

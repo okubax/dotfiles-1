@@ -55,35 +55,35 @@ popup_during_fullscreen smart
 
 # take screenshot
 bindsym Print exec $HOME/bin/screen root
-bindsym Mod1+Print exec $HOME/bin/screen active
+bindsym Mod1+p exec $HOME/bin/screen active
 
 # key bindings
 bindsym $MOD+Return exec --no-startup-id urxvt
 bindsym $MOD+SHIFT+f exec thunar
-bindsym $mod+w exec qutebrowser
-bindsym Mod1+w exec chromium
+bindsym $mod+w exec chromium
+bindsym Mod1+w exec firefox
 bindsym $mod+b exec $HOME/downloads/tor-browser_en-US/Browser/start-tor-browser
-bindsym $mod+e exec geany
+bindsym $mod+e exec code
 bindsym Mod1+l exec i3lock -i $HOME/.Xresources.d/lock.png
 bindsym Mod1+m exec claws-mail
 bindsym Mod1+e exec urxvt -e mutt
 bindsym $mod+i exec urxvt -e weechat
 bindsym $mod+c exec gsimplecal
-bindsym Mod1+c exec galculator
+bindsym Mod1+Shift+c exec galculator
 bindsym $MOD+SHIFT+t exec urxvt -e htop
 bindsym $MOD+SHIFT+x exec $HOME/bin/i3_session
-bindsym $MOD+SHIFT+a exec $HOME/downloads/android-dev/android-studio/bin/studio.sh
+bindsym $MOD+SHIFT+a exec $HOME/downloads/android-studio/bin/studio.sh
 bindsym $mod+Shift+b bar mode toggle
 ## KEY BINDINGS
 bindsym $MOD+Tab focus right
 # SCRATCHPAD CREATE
 bindsym $MOD+SHIFT+plus move scratchpad
 # Maim
-bindsym --release $mod+s exec --no-startup-id "maim -s -c 1,0,0,0.6 -p 10"
+bindsym --release $mod+s exec --no-startup-id "maim -s -c 1,0,0,0.6"
 # SCRATCHPAD SHOW
 bindsym $MOD+plus scratchpad show
 # start dmenu (a program launcher)
-bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b -sb '#b7a462' -sf '#1b1b1b' -nb '#1b1b1b' -nf '#6fa6ab' -nf '#839496' -fn 'Tewi-9'"
+bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b -sb '#b7a462' -sf '#1b1b1b' -nb '#1b1b1b' -nf '#6fa6ab' -nf '#839496' -fn 'FiraMono-10'"
 
 # multimedia keys
 bindsym XF86AudioPlay exec "mpc toggle"
@@ -99,7 +99,7 @@ bindsym XF86MonBrightnessDown exec "xbacklight -10"
 assign [instance="xfce4-terminal|urxvt"] $WS1
 assign [instance="Navigator|Dialog"] $WS2
 assign [class="Chromium|jetbrains-android-studio|Firefox|qutebrowser"] $WS2
-assign [class="Atom|sublime_text|Brackets"] $WS3
+assign [class="Atom|sublime_text|Brackets|Code"] $WS3
 assign [instance="mousepad|leafpad|geany"] $WS3
 assign [instance="shotwell|simple-scan|brasero|devede|imagination|picard|wxcam|google-musicmanager|goobox"] $WS4
 assign [class="Gthumb|MPlayer|Rhythmbox|mpv|Xfburn|Pitivi|Popcorntime|Gmusicbrowser|Ogmrip|Spotify|Blender"] $WS4
@@ -233,7 +233,7 @@ bindsym $mod+r mode "resize"
 
 #bar
 bar {
-  i3bar_command ~/.i3/bar/bar.sh
+  i3bar_command ~/.config/i3/bar/bar.sh
 }
 
 #i3bar -- for when a system tray is needed
@@ -249,5 +249,7 @@ bar {
 exec --no-startup-id sh conky_displays
 exec sh random-color-picker
 exec --no-startup-id sh ~/.fehbg
+
+
 #exec sh ~/.i3/bar/bar.sh
 #exec --no-startup-id xpad

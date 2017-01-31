@@ -32,11 +32,8 @@ ln -s ${BASEDIR}/dropbox-cli $HOME/.dropbox-cli
 # fontconfig
 ln -s ${BASEDIR}/fontconfig $HOME/.config/fontconfig
 
-# fonts
-ln -s ${BASEDIR}/fonts $HOME/.fonts
-
 # i3
-ln -s ${BASEDIR}/i3 $HOME/.i3
+ln -s ${BASEDIR}/i3 $HOME/.config/i3
 
 # mpd
 ln -s ${BASEDIR}/mpd $HOME/.mpd
@@ -50,7 +47,6 @@ ln -s ${BASEDIR}/mplayer $HOME/.mplayer
 # msmtp
 ln -s ${BASEDIR}/msmtprc $HOME/.msmtprc
 
-
 # mutt
 ln -s ${BASEDIR}/mutt $HOME/.mutt
 
@@ -63,9 +59,6 @@ ln -s ${BASEDIR}/offlineimaprc $HOME/.offlineimaprc
 
 # pass
 ln -s ${BASEDIR}/pass $HOME/.password-store
-
-# qutebrowser
-ln -s ${BASEDIR}/qutebrowser $HOME/.config/qutebrowser
 
 # ranger
 ln -s ${BASEDIR}/ranger $HOME/.config/ranger

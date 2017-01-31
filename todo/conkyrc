@@ -3,7 +3,7 @@ conky.config = {
     background = true,
     border_width = 5,
     double_buffer = true,
-    font = 'Tewi:size=9',
+    font = 'Fira Mono:size=10',
     gap_x = 50,
     gap_y = 50,
     minimum_height = 5,
