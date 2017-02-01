@@ -60,7 +60,7 @@ cd dotfiles
 ### Screenshot
 
 ![Screenshot](/screenshot.png)
-color scheme: [diner](/Xresources.d/colors/depth)
+color scheme: [chaires](/Xresources.d/colors/chaires)
 
 
 ### Wallpaper
