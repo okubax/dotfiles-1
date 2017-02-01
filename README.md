@@ -65,7 +65,7 @@ color scheme: [diner](/Xresources.d/colors/depth)
 
 ### Wallpaper
 
-Wallpaper from [DeviantART](http://mushcube.deviantart.com/art/Space-380838916)
+Wallpaper from [DeviantART](http://mahm0udwally.deviantart.com/art/Mountain-III-506611364)
 
 
 &nbsp;
