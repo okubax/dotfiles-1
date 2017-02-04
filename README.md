@@ -57,15 +57,16 @@ cd dotfiles
 ```
 
 
-### Screenshot
+### Screenshots
 
 ![Screenshot](/screenshot.png)
-color scheme: [chaires](/Xresources.d/colors/chaires)
+![Screenshot2](/screenshot2.png)
+color scheme: [urban](/Xresources.d/colors/urban)
 
 
 ### Wallpaper
 
-Wallpaper from [DeviantART](http://mahm0udwally.deviantart.com/art/Mountain-III-506611364)
+Wallpaper from [Unsplash](https://unsplash.com/@danieltong?photo=dND3d2rPVc8)
 
 
 &nbsp;
