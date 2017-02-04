@@ -24,8 +24,8 @@ music() {
 	SONG=$(mpc current)
 	if [ -n $SONG ]; then
 		echo -n ""
-	else
-		echo -n " %{F$HIGHLIGHT}$(printf '%b' "\uf001")%{F-} $SONG "
+	else 
+        echo -n " %{F$HIGHLIGHT}$(printf '%b' "\uf01d")%{F-} $SONG "
 	fi
 }
 #Copied from /u/Dylan112
@@ -76,7 +76,8 @@ bat() {
     fi
 }
 while true; do
-	echo "%{B#c0303048} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#5d6383}$(music)%{B#c0303048} $(windowtitle) %{B-}"
+    echo "%{B#c0303048} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#4c516d}$(music)%{B#c0303048} $(windowtitle) %{B-}"
+	#echo "%{B#c0303048} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#5d6383}$(music)%{B#c0303048} $(windowtitle) %{B-}"
 	sleep 2;
 done |
 # -f '-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1'\
