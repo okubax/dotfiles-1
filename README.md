@@ -61,12 +61,12 @@ cd dotfiles
 
 ![Screenshot](/screenshot.png)
 ![Screenshot2](/screenshot2.png)
-color scheme: [urban](/Xresources.d/colors/urban)
+color scheme: [prevail](/Xresources.d/colors/prevail)
 
 
 ### Wallpaper
 
-Wallpaper from [Unsplash](https://unsplash.com/@danieltong?photo=dND3d2rPVc8)
+Wallpaper from [Unsplash](https://unsplash.com/@joshua?photo=3qFbe7PUlx0)
 
 
 &nbsp;
