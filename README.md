@@ -66,7 +66,7 @@ color scheme: [prevail](/Xresources.d/colors/prevail)
 
 ### Wallpaper
 
-Wallpaper from [Unsplash](https://unsplash.com/@joshua?photo=3qFbe7PUlx0)
+Wallpaper [link](http://imgur.com/cUjdq8s)
 
 
 &nbsp;
