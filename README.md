@@ -61,7 +61,7 @@ cd dotfiles
 
 ![Screenshot](/screenshot.png)
 ![Screenshot2](/screenshot2.png)
-color scheme: [prevail](/Xresources.d/colors/prevail)
+color scheme: [victory](/Xresources.d/colors/victory)
 
 
 ### Wallpaper
