@@ -66,7 +66,7 @@ color scheme: [victory](/Xresources.d/colors/victory)
 
 ### Wallpaper
 
-Wallpaper [link](http://imgur.com/cUjdq8s)
+Wallpaper [link](http://imgur.com/dF54a7I)
 
 
 &nbsp;
