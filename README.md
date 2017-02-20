@@ -57,11 +57,10 @@ cd dotfiles
 ```
 
 
-### Screenshots
+### Screenshot
 
 ![Screenshot](/screenshot.png)
-![Screenshot2](/screenshot2.png)
-color scheme: [victory](/Xresources.d/colors/victory)
+color scheme: [stv](/Xresources.d/colors/stv)
 
 
 ### Wallpaper
