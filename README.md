@@ -60,6 +60,13 @@ cd dotfiles
 ### Screenshot
 
 ![Screenshot](/screenshot.png)
+
+Application Launcher (demnu)
+![app_launcher](/screenshot2.png)
+
+Lockscreen (i3lock)
+![lockscreen](/screenshot3.png)
+
 color scheme: [mattd](/Xresources.d/colors/mattd)
 
 
