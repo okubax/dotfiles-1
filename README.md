@@ -60,7 +60,7 @@ cd dotfiles
 ### Screenshot
 
 ![Screenshot](/screenshot.png)
-color scheme: [stv](/Xresources.d/colors/mattd)
+color scheme: [mattd](/Xresources.d/colors/mattd)
 
 
 ### Wallpaper
