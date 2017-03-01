@@ -72,7 +72,8 @@ color scheme: [mattd](/Xresources.d/colors/mattd)
 
 ### Wallpaper
 
-Wallpaper [link](http://imgur.com/dF54a7I)
+Wallpaper [link](http://imgur.com/dyNX6S0)
+Lockscreen Background [link](http://imgur.com/PIm2VNY)
 
 
 &nbsp;
