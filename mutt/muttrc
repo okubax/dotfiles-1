@@ -103,8 +103,8 @@ folder-hook Yahoo/*		source ~/.mutt/accounts/Yahoo
 
 # }}}
 # Index View Options {{{ 
-set date_format = %m.%d.%y"
-set index_format = "[%Z] %D %-20.20F %s"
+set date_format = %d.%m"
+set index_format="(%Z) %{%b %d} %-15.15L %?M?<%M> ?%s"
 set sort = threads                         # like gmail
 set sort_aux = reverse-last-date-received  # like gmail
 set uncollapse_jump                        # don't collapse on an unread message
