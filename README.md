@@ -22,7 +22,8 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `mutt` -- Small but very powerful text-based mail client
 * `msmtp` -- A mini smtp client
 * `offlineimap` -- Synchronizes emails between two repositories
-* `pass` -- Stores, retrieves, generates, and synchronizes passwords securely  
+* `pass` -- Stores, retrieves, generates, and synchronizes passwords securely
+* `playerctl` -- mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others  
 * `ranger` -- A simple, vim-like file manager
 * `Font Awesome` -- Iconic font designed for Bootstrap, used in `lemonbar` | [aur link](https://aur.archlinux.org/packages/ttf-font-awesome)
 * `fira-mono` -- Mozilla's monospace typeface (for lemonbar, X11, and console)
