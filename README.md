@@ -44,8 +44,9 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 
 4. You need to have [gnupg](https://www.archlinux.org/packages/core/x86_64/gnupg/) installed and configured properly for [pass](https://www.archlinux.org/packages/community/any/pass/) to work.
 
-5. [Colorschemes](/Xresources.d/colors) and the [random-color-picker-script](/Xresources.d/random-color-picker) are from [dkeg](https://github.com/dkeg/crayolo).
+5. [Colorschemes](/Xresources.d/colors) are from [base16-xresources](https://github.com/chriskempson/base16-xresources).
 
+6. [Random-color-picker-script](/Xresources.d/random-color-picker) from [dkeg](https://github.com/dkeg/crayolo).
 
 
 ### Installation
@@ -60,10 +61,11 @@ cd dotfiles
 
 ### Screenshot
 
-![Screenshot](/screenshot.png)
+clean desktop with dmenu
+![screen1](/screenshot.png)
 
-Application Launcher (demnu)
-![app_launcher](/screenshot2.png)
+busy (ncmpcpp,vim,weechat)
+![screen2](/screenshot2.png)
 
 Lockscreen (i3lock)
 ![lockscreen](/screenshot3.png)
