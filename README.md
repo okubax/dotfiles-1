@@ -70,7 +70,7 @@ busy (ncmpcpp,vim,weechat)
 Lockscreen (i3lock)
 ![lockscreen](/screenshot3.png)
 
-color scheme: [mattd](/Xresources.d/colors/mattd)
+color scheme: [base16-materia](/Xresources.d/colors/base16-materia-256.Xresources)
 
 
 ### Wallpaper
