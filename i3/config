@@ -90,10 +90,20 @@ bindsym XF86AudioPlay exec "mpc toggle"
 bindsym XF86AudioStop exec "mpc stop"
 bindsym XF86AudioNext exec "mpc next"
 bindsym XF86AudioPrev exec "mpc prev"
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+#Spotify
+bindsym mod1+a exec playerctl play
+bindsym mod1+s exec playerctl pause
+bindsym mod1+x exec playerctl next
+bindsym mod1+z exec playerctl previous
 
 # brightness
-bindsym XF86MonBrightnessUp exec "xbacklight +10"
-bindsym XF86MonBrightnessDown exec "xbacklight -10"
+#bindsym XF86MonBrightnessUp exec "xbacklight +10"
+#bindsym XF86MonBrightnessDown exec "xbacklight -10"
+bindsym Mod1+d exec --no-startup-id sudo bright_down
+bindsym Mod1+i exec --no-startup-id sudo bright_up
 
 # Move to workspace
 assign [instance="xfce4-terminal|urxvt"] $WS1
