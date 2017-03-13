@@ -2,7 +2,7 @@
 HIGHLIGHT="#ffffff"
 clock() {
 	TIME=$(date "+%H:%M")
-	DATE=$(date "+%a %D")
+    DATE=$(date "+%a %d/%m/%y")
 	echo -n "%{F$HIGHLIGHT}$(printf '%b' "\uf017")%{F-} $TIME  %{F$HIGHLIGHT}$(printf '%b' "\uf073")%{F-} $DATE"
 }
 volume() {
@@ -49,7 +49,7 @@ windowtitle(){
 	TITLE=$(xdotool getactivewindow getwindowname 2>/dev/null | sed -n 1p || echo "")
 	TITLECUT=$(xdotool getactivewindow getwindowname 2>/dev/null | sed -n 1p | sed 's/\///g;s/-//g;s/ /\\/g' | cut -c 1-6 || echo "")
 
-	if [ $TITLECUT = "glenn@" ]; then
+	if [ "$TITLECUT" = "glenn@" ]; then
 		echo "$(printf '%b' "\ue1d9") $(echo "$TITLE" | cut -c 15-50)"
 	else
 		echo "$TITLE" | cut -c 1-50
@@ -76,7 +76,7 @@ bat() {
     fi
 }
 while true; do
-    echo "%{B#c0303048} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#4c516d}$(music)%{B#c0303048} $(windowtitle) %{B-}"
+    echo "%{B#c0303048} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#3b3b4b}$(music)%{B#c0303048} $(windowtitle) %{B-}"
 	#echo "%{B#c0303048} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#5d6383}$(music)%{B#c0303048} $(windowtitle) %{B-}"
 	sleep 2;
 done |
