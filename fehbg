@@ -1,2 +1,2 @@
 #!/bin/sh
-feh  --bg-fill '$HOME/.Xresources.d/lock.png &' 
+feh  --bg-fill '/home/ajibola/.wallpapers/nord.png' 

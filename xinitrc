@@ -4,11 +4,11 @@
 #
 # Executed by startx (run your window manager from here)
 
-if [ -d /etc/X11/xinit/xinitrc.d ]; then
-  for f in /etc/X11/xinit/xinitrc.d/*; do
-    [ -x "$f" ] && . "$f"
-  done
-  unset f
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
 fi
 
 xset s 120 &
@@ -21,7 +21,7 @@ dropbox &
 anamnesis --start &
 mpd &
 mpdscribble &
-xrandr --dpi 130 &
+xrandr --dpi 120 &
 
 exec i3
 
