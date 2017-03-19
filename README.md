@@ -44,9 +44,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 
 4. You need to have [gnupg](https://www.archlinux.org/packages/core/x86_64/gnupg/) installed and configured properly for [pass](https://www.archlinux.org/packages/community/any/pass/) to work.
 
-5. [Colorschemes](/Xresources.d/colors) are from [base16-xresources](https://github.com/chriskempson/base16-xresources).
-
-6. [Random-color-picker-script](/Xresources.d/random-color-picker) from [dkeg](https://github.com/dkeg/crayolo).
+5. [Colorscheme](/Xresources.d/colors/nord) is from [articiestudio](https://github.com/arcticicestudio/nord).
 
 
 ### Installation
@@ -70,13 +68,11 @@ busy (ncmpcpp,vim,weechat)
 Lockscreen (i3lock)
 ![lockscreen](/screenshot3.png)
 
-color scheme: [base16-materia](/Xresources.d/colors/base16-materia-256.Xresources)
-
 
 ### Wallpaper
 
-Wallpaper [link](http://imgur.com/dyNX6S0)  
-Lockscreen Background [link](http://imgur.com/PIm2VNY)
+[Wallpaper] [link](/nord.png)  
+[Lockscreen Image](/lock.png)
 
 
 &nbsp;
