@@ -4,8 +4,7 @@
 
 ! XFT - Fonts
 !----------------------------------------------------------------------
-
-Xft.dpi: 130 
+Xft.dpi: 120 
 Xft.antialias: 1
 Xft.rgba: rgb
 Xft.autohint: 0
@@ -16,33 +15,10 @@ Xft.hintstyle: hintfull
 
 ! Colors
 !----------------------------------------------------------------------
-#include "$HOME/.Xresources.d/.colors"  
-
-! Define Colors  
-*background:   bg
-*foreground:   fg
-
-*color0:      blk
-*color8:      bblk
-*color1:      red
-*color9:      bred
-*color2:      grn
-*color10:     bgrn
-*color3:      ylw
-*color11:     bylw
-*color4:      blu
-*color12:     bblu
-*color5:      mag
-*color13:     bmag
-*color6:      cyn
-*color14:     bcyn
-*color7:      wht
-*color15:     bwht
-
+#include "/home/ajibola/.Xresources.d/colors/nord"  
 
 ! URXVT
 !----------------------------------------------------------------------
-
 URxvt.borderless: false
 URxvt.internalBorder: 3
 URxvt.externalBorder: 3

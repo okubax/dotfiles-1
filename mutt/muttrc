@@ -25,11 +25,8 @@ set thorough_search      # strip headers and eval mimes before searching
 set smart_wrap			 # wrap long lines
 
 # }}}
-# Color Scheme {{{ 
-source ~/.mutt/colors/monokai
-#source ~/.mutt/colors/vombatidae
-#source ~/.mutt/colors/solarized-dark-256
-#source ~/.mutt/colors/solarized-dark-16
+# Color Scheme {{{
+source ~/.mutt/colors/okubax.mutt
 
 
 # }}}
