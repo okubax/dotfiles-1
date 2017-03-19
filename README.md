@@ -69,8 +69,6 @@ Lockscreen (i3lock)
 ![lockscreen](/screenshot3.png)
 
 
-### Wallpaper
-
 [Wallpaper](/nord.png)  
 [Lockscreen Image](/lock.png)
 
