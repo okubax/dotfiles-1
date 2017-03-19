@@ -1,16 +1,32 @@
 # todo.txt configuration for Conky highlighting.
-export BLACK='${color 002B36}'
-export RED='${color dc322f}'
-export GREEN='${color 799F26}'
-export BLUE='${color 4D73AA}'
-export PURPLE='${color d33682}'
-export CYAN='${color 2AA198}'
-export LIGHT_GREY='${color cccccc}'
-export DARK_GREY='${color 666666}'
-export ORANGE='${color e59847}'
-export WHITE='${color 839496}'
+export BLACK='${color 2E3440}'
+export RED='${color BF616A}'
+export GREEN='${color A3BE8C}'
+export BLUE='${color 5E81AC}'
+export PURPLE='${color B48EAD}'
+export CYAN='${color 8FBCBB}'
+export LIGHT_GREY='${color 4C566A}'
+export DARK_GREY='${color 3B4252}'
+export ORANGE='${color D08770}'
+export WHITE='${color ECEFF4}'
 export DEFAULT='${color}'
 source ~/.todo/todo.cfg
+
+
+
+# todo.txt configuration for Conky highlighting.
+#export BLACK='${color 002B36}'
+#export RED='${color dc322f}'
+#export GREEN='${color 799F26}'
+#export BLUE='${color 4D73AA}'
+#export PURPLE='${color d33682}'
+#export CYAN='${color 2AA198}'
+#export LIGHT_GREY='${color cccccc}'
+#export DARK_GREY='${color 666666}'
+#export ORANGE='${color e59847}'
+#export WHITE='${color 839496}'
+#export DEFAULT='${color}'
+#source ~/.todo/todo.cfg
 
 
 #export BLACK='${color black}'

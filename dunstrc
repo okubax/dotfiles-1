@@ -123,7 +123,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # browser for opening urls in context menu
-    browser = /usr/bin/firefox -new-tab
+    browser = /usr/bin/chromium -new-tab
 
 [frame]
     width = 0
@@ -155,8 +155,8 @@
     timeout = 10
 
 [urgency_normal]
-    background = "#b7a462"
-    foreground = "#1b1b1b"
+    background = "#2E3440"
+    foreground = "#D8DEE9"
 #	background = "#00252e"
 #	foreground = "#839496"
 #    background = "#285577"
