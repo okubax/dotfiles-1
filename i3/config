@@ -1,6 +1,6 @@
 # i3 config file
 
-# Feb 2017 - okubax https://okubax.co.uk
+# March 2017 - okubax https://okubax.co.uk
 
 
 
@@ -8,7 +8,7 @@
 # Font
 #.......
 font pango:monospace 8
-# See xmodmap
+
 
 #..........
 # Look
@@ -16,31 +16,17 @@ font pango:monospace 8
 new_window pixel 3
 focus_follows_mouse  yes
 
-for_window [class="^.*"] border pixel 0
-
-# gaps
-#gaps inner 7
-#gaps outer 0
+#for_window [class="^.*"] border pixel 0
 
 # gaps
 gaps inner 20
 gaps outer 20
 
-client.focused #292929 #292929 #292929 #292929
-client.unfocused #262626 #5a5349 #5a5349 #a8bac4
-client.focused_inactive #26262626 #262626 #262626 #262626
-client.urgent #CCE8D4 #CCE8D4 #CCE8D4 #CCE8D4
-
-#client.focused #292929 #292929 #292929 #292929
-#client.unfocused #262626 #262626 #262626 #262626
-#client.focused_inactive #26262626 #262626 #262626 #262626
-#client.urgent #CCE8D4 #CCE8D4 #CCE8D4 #CCE8D4
-
-#..........
-# Applications
-#..........
-
-# Using bindcode for compatibility
+# Window colors
+client.focused              #2E3440 #2E3440 #ffffff #2E3440
+client.focused_inactive     #212121 #212121 #868686 #212121
+client.unfocused            #212121 #212121 #868686 #212121
+client.urgent               #e00032 #e00032 #ffffff #e00032
 
 # Principal mod key (Super = Win key)
 # mod1 = Alt (xmodmap to show)
@@ -53,11 +39,10 @@ floating_modifier $mod
 # HANDLE POPUPS
 popup_during_fullscreen smart
 
-# take screenshot
-bindsym Print exec $HOME/bin/screen root
-bindsym Mod1+p exec $HOME/bin/screen active
 
-# key bindings
+#.......
+# Key Bindings
+#.......
 bindsym $MOD+Return exec --no-startup-id urxvt
 bindsym $MOD+SHIFT+f exec thunar
 bindsym $mod+w exec chromium
@@ -74,16 +59,14 @@ bindsym $MOD+SHIFT+t exec urxvt -e htop
 bindsym $MOD+SHIFT+x exec $HOME/bin/i3_session
 bindsym $MOD+SHIFT+a exec $HOME/downloads/android-studio/bin/studio.sh
 bindsym $mod+Shift+b bar mode toggle
-## KEY BINDINGS
 bindsym $MOD+Tab focus right
 # SCRATCHPAD CREATE
 bindsym $MOD+SHIFT+plus move scratchpad
-# Maim
-bindsym --release $mod+s exec --no-startup-id "maim -s -c 1,0,0,0.6"
 # SCRATCHPAD SHOW
 bindsym $MOD+plus scratchpad show
 # start dmenu (a program launcher)
-bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b -sb '#b7a462' -sf '#1b1b1b' -nb '#1b1b1b' -nf '#6fa6ab' -nf '#839496' -fn 'FiraMono-10'"
+bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b -sb '#5E81AC' -sf '#ffffff' -nb '#262626' -nf '#ffffff' -nf '#ffffff' -fn 'FiraMono-10'"
+#bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b -sb '#b7a462' -sf '#1b1b1b' -nb '#1b1b1b' -nf '#6fa6ab' -nf '#839496' -fn 'FiraMono-10'"
 
 # multimedia keys
 bindsym XF86AudioPlay exec "mpc toggle"
@@ -104,6 +87,10 @@ bindsym mod1+z exec playerctl previous
 #bindsym XF86MonBrightnessDown exec "xbacklight -10"
 bindsym Mod1+d exec --no-startup-id sudo bright_down
 bindsym Mod1+i exec --no-startup-id sudo bright_up
+
+# take screenshot
+bindsym Print exec $HOME/bin/screen root
+bindsym Mod1+p exec $HOME/bin/screen active
 
 # Move to workspace
 assign [instance="xfce4-terminal|urxvt"] $WS1
@@ -257,7 +244,6 @@ bar {
 
 # autostart
 exec --no-startup-id sh conky_displays
-exec sh random-color-picker
 exec --no-startup-id sh ~/.fehbg
 
 
