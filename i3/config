@@ -26,7 +26,7 @@ gaps outer 20
 client.focused              #2E3440 #2E3440 #ffffff #2E3440
 client.focused_inactive     #212121 #212121 #868686 #212121
 client.unfocused            #212121 #212121 #868686 #212121
-client.urgent               #e00032 #e00032 #ffffff #e00032
+client.urgent               #BF616A #BF616A #ffffff #BF616A
 
 # Principal mod key (Super = Win key)
 # mod1 = Alt (xmodmap to show)
