@@ -1,5 +1,5 @@
 #!/bin/bash
-HIGHLIGHT="#ffffff"
+HIGHLIGHT="#D8DEE9"
 clock() {
 	TIME=$(date "+%H:%M")
     DATE=$(date "+%a %d/%m/%y")
@@ -37,7 +37,7 @@ workspace() {
                 | awk '/ / {print $2 $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20}' ORS=''\
                 | sed -e 's/\s*  //g' \
                 -e 's/\*[ 0-9A-Za-z]*[^ -~]*/  &  /g' \
-                -e 's/\-[ 0-9A-Za-z]*[^ -~]*/%{F#3b3b4b}%{A:i3-msg workspace &:}  &  %{A}%{F#A0A0A0}/g' \
+                -e 's/\-[ 0-9A-Za-z]*[^ -~]*/%{F#525252}%{A:i3-msg workspace &:}  &  %{A}%{F#A0A0A0}/g' \
                 -e 's/\*//g' \
                 -e 's/ -/ /g' \
                 )
@@ -76,7 +76,8 @@ bat() {
     fi
 }
 while true; do
-    echo "%{B#c0303048} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#3b3b4b}$(music)%{B#c0303048} $(windowtitle) %{B-}"
+    echo "%{B#2E3440} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#3B4252}$(music)%{B#2E3440} $(windowtitle) %{B-}"
+#    echo "%{B#c0303048} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#3b3b4b}$(music)%{B#c0303048} $(windowtitle) %{B-}"
 	#echo "%{B#c0303048} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#5d6383}$(music)%{B#c0303048} $(windowtitle) %{B-}"
 	sleep 2;
 done |
@@ -89,7 +90,7 @@ done |
 # | zsh
  
  
-lemonbar -p -d -B#c0262626 -F#A0A0A0 -g 1834x20+45+0\
+lemonbar -p -d -B#2E3440 -F#A0A0A0 -g 1834x25+45+0\
  -f FiraMono:size=11\
  -f FontAwesome:size=13\
  eDP-1\
