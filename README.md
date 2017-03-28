@@ -58,7 +58,7 @@ cd dotfiles
 
 
 ### Screenshot
-1![screenshot](/screenshot.png)
+![screenshot](/screenshot.png)
 
 
 [Wallpaper](/Deer1-1280.jpg)  
