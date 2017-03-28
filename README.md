@@ -58,19 +58,11 @@ cd dotfiles
 
 
 ### Screenshot
-
-clean desktop with dmenu
-![screen1](/screenshot.png)
-
-busy (ncmpcpp,vim,weechat)
-![screen2](/screenshot2.png)
-
-Lockscreen (i3lock)
-![lockscreen](/screenshot3.png)
+1![screenshot](/screenshot.png)
 
 
-[Wallpaper](/nord.png)  
-[Lockscreen Image](/lock.png)
+[Wallpaper](/Deer1-1280.jpg)  
+[Lockscreen Image](/i3lock_wall.png)
 
 
 &nbsp;
