@@ -4,7 +4,6 @@ maxsyncaccounts = 4
 pythonfile = ~/.offlineimap.py
 
 [Account Gmail]
-status_backend = sqlite
 localrepository = Gmail-Local
 remoterepository = Gmail-Remote
 autorefresh = 5
@@ -29,7 +28,6 @@ holdconnectionopen = true
 
                                
 [Account Outlook]
-status_backend = sqlite
 localrepository = Outlook-Local
 remoterepository = Outlook-Remote
 autorefresh = 30
@@ -54,7 +52,6 @@ realdelete = yes
 
 
 [Account Yahoo]
-status_backend = sqlite
 localrepository = Yahoo-Local
 remoterepository = Yahoo-Remote
 autorefresh = 60
