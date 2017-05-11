@@ -13,6 +13,7 @@ alias pacc="sudo pacman -Sc"		# '[c]lean cache'	- delete all not currently insta
 alias paclf="pacman -Ql"		# '[l]ist [f]iles'	- list all files installed by a given package
 #alias pacexpl="/usr/bin/pacman -D --asexp"	# 'mark as [expl]icit'	- mark one or more packages as explicitly installed
 #alias pacimpl="/usr/bin/pacman -D --asdep"	# 'mark as [impl]icit'	- mark one or more packages as non explicitly installed
+alias paclc="sudo pacman -U" # install local package
 
 ## Cower
 alias cows="cower -s"			# find aur packages
@@ -98,17 +99,40 @@ alias nets3="sudo nethogs"
 # Look for high priority errors in the systemd journal
 alias errors="sudo journalctl -p 3 -xb"
 
+listd() {
+  echo -e "${BLD}${RED} --> SYSTEM LEVEL <--${NRM}"
+  find /etc/systemd/system -mindepth 1 -type d | sed '/getty.target/d' | xargs ls -gG --color
+  [[ -d "$HOME"/.config/systemd/user/default.target.wants ]] &&
+    (echo -e "${BLD}${RED} --> USER LEVEL <--${NRM}" ; \
+    find "$HOME"/.config/systemd/user -mindepth 1 -type d | xargs ls -gG --color)
+}
+
 # systemd commands
-alias start="sudo systemctl start"
-alias stop="sudo systemctl stop"
-alias status="systemctl status"
+# systemlevel
+start() { sudo systemctl start "$1"; }
+stop() { sudo systemctl stop "$1"; }
+restart() { sudo systemctl restart "$1"; }
+status() { sudo systemctl status "$1"; }
+enabled() { sudo systemctl enable "$1"; listd; }
+disabled() { sudo systemctl disable "$1"; listd; }
+
+Start() { sudo systemctl start "$1"; sudo systemctl status "$1"; }
+Stop() { sudo systemctl stop "$1"; sudo systemctl status "$1"; }
+Restart() { sudo systemctl restart "$1"; sudo systemctl status "$1"; }
+
+# userlevel
+ustart() { systemctl --user start "$1"; }
+ustop() { systemctl --user stop "$1"; }
+ustatus() { systemctl --user status "$1"; }
+uenabled() { systemctl --user enable "$1"; }
+udisabled() { systemctl --user disable "$1"; }
 
 # google calender (gcalcli)
 alias calm="gcalcli calm"
 alias calw="gcalcli calw"
 alias cald="gcalcli agenda"
-alias calquick="gcalcli quick --calendar 'ajibola okubanjo'"
-alias caladd="gcalcli add --calendar 'ajibola okubanjo'"
+alias calquick="gcalcli quick --calendar ''"
+alias caladd="gcalcli add --calendar ''"
 
 # httpd & mysqld
 #alias starth="sudo systemctl start httpd"
@@ -132,6 +156,13 @@ source ~/bin/todo_completion
 export TODOTXT_DEFAULT_ACTION=ls
 alias t='todo.sh -d ~/.todo/todo.cfg'
 #complete -F _todo t
+
+#fix permissions
+fix() {
+  [[ -d "$1" ]] &&
+  find "$1" -type d -print0 | xargs -0 chmod 755 && find "$1" -type f -print0 | xargs -0 chmod 644 ||
+    echo "$1 is not a directory."
+}
 
 # generate random password
 alias genpass="strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 10 | tr -d '\n'; echo"
@@ -171,13 +202,15 @@ alias vi3="vim ~/.config/i3/config"
 alias vbar="vim ~/.config/i3/bar/bar.sh"
 alias vmutt="vim ~/.mutt/muttrc"
 
+
 # Saves journal logs to file
 getlog() { local file=~/logs/system/log-$(date +%Y%m%d-%H:%M).txt; sudo journalctl -b | grep --line-buffered -v "offimap"> "$file" && vim "$file"; }
 
 #export commands
 export PATH=${PATH}:$HOME/bin:$HOME/.local/bin/
-export PATH=${PATH}:$HOME/Android/Sdk/tools/
-export PATH=${PATH}:$HOME/Android/Sdk/platform-tools/
+export PATH=${PATH}:$HOME/development/android/sdk/platform-tools/
+export PATH=${PATH}:$HOME/development/android/sdk/tools/
+export ANDROID_HOME=$HOME/development/android/sdk
 export PATH=${PATH}:$HOME/vm/qemu-scripts/
 export QEMU_AUDIO_DRV=pa
 #export PATH=$PATH:$HOME/.config/composer/vendor/bin
