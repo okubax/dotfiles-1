@@ -76,11 +76,8 @@ alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 #net_monitor
 alias whichport="sudo netstat -tulpn"
 alias netmon="netstat -nputwc"
-alias nets='sudo netstat -nlptu'
-alias nets2='sudo lsof -i'
 alias wifo="sudo iftop -i wlp1s0"
-alias wifo2="slurm -i wlp1s0"
-alias nets3="sudo nethogs"
+alias wistat="slurm -i wlp1s0"
 #xampp
 alias starth="sudo /opt/lampp/lampp start"
 alias stoph="sudo /opt/lampp/lampp stop"
