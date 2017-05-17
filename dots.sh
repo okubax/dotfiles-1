@@ -35,6 +35,9 @@ ln -s ${BASEDIR}/fontconfig $HOME/.config/fontconfig
 # i3
 ln -s ${BASEDIR}/i3 $HOME/.config/i3
 
+# irssi
+ln -s ${BASEDIR}/irssi $HOME/.irssi
+
 # mpd
 ln -s ${BASEDIR}/mpd $HOME/.mpd
 
@@ -72,9 +75,6 @@ ln -s ${BASEDIR}/todo $HOME/.todo
 # vim
 ln -s ${BASEDIR}/vimrc $HOME/.vimrc
 ln -s ${BASEDIR}/vim/ $HOME/.vim
-
-# weechat
-ln -s ${BASEDIR}/weechat $HOME/.weechat
 
 #Xresources.d
 ln -s ${BASEDIR}/Xresources.d $HOME/.Xresources.d

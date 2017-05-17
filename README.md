@@ -16,6 +16,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `dropbox-cli` -- Command line interface for dropbox
 * `feh` -- to set the wallpaper
 * `iw` -- nl80211 based CLI configuration utility for wireless devices, to get wifi's SSID
+* `irssi` -- 	Modular text mode IRC client with Perl scripting
 * `lemonbar` -- A featherweight, lemon-scented, bar based on xcb
 * `mpc` -- Client for `mpd`, responsible for telling lemonbar about the currently playing media.
 * `mpd` -- Flexible, powerful, server-side application for playing music with `ncmpcpp` as client
@@ -29,7 +30,6 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `fira-mono` -- Mozilla's monospace typeface (for lemonbar, X11, and console)
 * `vim` -- Vi Improved, a highly configurable, improved version of the vi text editor
 * `xdotool` -- Command-line X11 automation tool, to show current window title on `lemonbar`
-* `weechat` -- Fast, light and extensible IRC client
 * `wmctrl` -- 	A Tool to control your EWMH compliant window manager from command line (for i3 workspaces on `lemonbar`)
 
 
