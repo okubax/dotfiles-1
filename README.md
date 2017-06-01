@@ -17,7 +17,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `feh` -- to set the wallpaper
 * `iw` -- nl80211 based CLI configuration utility for wireless devices, to get wifi's SSID
 * `irssi` -- 	Modular text mode IRC client with Perl scripting
-* `lemonbar` -- A featherweight, lemon-scented, bar based on xcb
+* `lemonbar-sm` -- Fork of lemonbar, with xft support and the ability to select monitor | [aur link](https://aur.archlinux.org/packages/lemonbar-sm-git/)
 * `mpc` -- Client for `mpd`, responsible for telling lemonbar about the currently playing media.
 * `mpd` -- Flexible, powerful, server-side application for playing music with `ncmpcpp` as client
 * `mutt` -- Small but very powerful text-based mail client
