@@ -52,12 +52,12 @@ bindsym $mod+e exec code
 bindsym Mod1+l exec i3lock -i $HOME/.Xresources.d/lock.png
 bindsym Mod1+m exec claws-mail
 bindsym Mod1+e exec urxvt -e mutt
-bindsym $mod+i exec urxvt -e weechat
+bindsym $mod+i exec urxvt -e irssi
 bindsym $mod+c exec gsimplecal
 bindsym Mod1+Shift+c exec galculator
 bindsym $MOD+SHIFT+t exec urxvt -e htop
 bindsym $MOD+SHIFT+x exec $HOME/bin/i3_session
-bindsym $MOD+SHIFT+a exec $HOME/downloads/android-studio/bin/studio.sh
+bindsym $MOD+SHIFT+a exec $HOME/development/android-studio/bin/studio.sh
 bindsym $mod+Shift+b bar mode toggle
 bindsym $MOD+Tab focus right
 # SCRATCHPAD CREATE
@@ -65,7 +65,7 @@ bindsym $MOD+SHIFT+plus move scratchpad
 # SCRATCHPAD SHOW
 bindsym $MOD+plus scratchpad show
 # start dmenu (a program launcher)
-bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b -sb '#2E3440' -sf '#D8DEE9' -nb '#3B4252' -nf '#ffffff' -fn 'FiraMono-10'"
+bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b -sb '#B48EAD' -sf '#D8DEE9' -nb '#3B4252' -nf '#D8DEE9' -fn 'FiraMono-10'"
 #bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b -sb '#b7a462' -sf '#1b1b1b' -nb '#1b1b1b' -nf '#6fa6ab' -nf '#839496' -fn 'FiraMono-10'"
 
 # multimedia keys
@@ -91,6 +91,7 @@ bindsym Mod1+i exec --no-startup-id sudo bright_up
 # take screenshot
 bindsym Print exec $HOME/bin/screen root
 bindsym Mod1+p exec $HOME/bin/screen active
+bindsym Mod1+f exec $HOME/bin/screen2
 
 # Move to workspace
 assign [instance="xfce4-terminal|urxvt"] $WS1
@@ -106,7 +107,6 @@ assign [class="VirtualBox|Qemu-system-x86_64|Gnome-disks|Gnome-boxes|qemu-system
 assign [instance="syncbackup|bleachbit|gparted|hardinfo|truecrypt"] $WS6
 assign [instance="VCLSalFrame|libreoffice"] $WS7
 assign [class="libreoffice*|Zathura|libreoffice-writer"] $WS7
-assign [class="Claws-mail"] $WS8
 assign [class="Wine|Steam|dontstarve"] $WS9
 
 # Layout
@@ -210,6 +210,10 @@ bindsym $mod+Shift+C reload
 bindsym $mod+Shift+R exec pkill lemonbar && i3-msg restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+E exit
+# manually start lemonbar
+bindsym mod1+j exec $HOME/.config/i3/bar/bar.sh | zsh
+# kill lemonbar
+bindsym mod1+k exec pkill lemonbar
 
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -245,7 +249,4 @@ bar {
 # autostart
 exec --no-startup-id sh conky_displays
 exec --no-startup-id sh ~/.fehbg
-
-
-#exec sh ~/.i3/bar/bar.sh
 #exec --no-startup-id xpad
