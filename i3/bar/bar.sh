@@ -2,7 +2,7 @@
 HIGHLIGHT="#D8DEE9"
 clock() {
 	TIME=$(date "+%H:%M")
-    DATE=$(date "+%a %d/%m/%y")
+    DATE=$(date "+%a, %b %d")
 	echo -n "%{F$HIGHLIGHT}$(printf '%b' "\uf017")%{F-} $TIME  %{F$HIGHLIGHT}$(printf '%b' "\uf073")%{F-} $DATE"
 }
 volume() {
