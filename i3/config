@@ -1,7 +1,6 @@
 # i3 config file
 
-# March 2017 - okubax https://okubax.co.uk
-
+# July 2017 - okubax https://okubax.co.uk
 
 
 #.......
@@ -12,7 +11,7 @@ font pango:monospace 8
 
 #..........
 # Look
-#..........
+#.......... 
 new_window pixel 3
 focus_follows_mouse  yes
 
@@ -23,10 +22,18 @@ gaps inner 20
 gaps outer 20
 
 # Window colors
-client.focused              #2E3440 #2E3440 #ffffff #2E3440
-client.focused_inactive     #212121 #212121 #868686 #212121
-client.unfocused            #212121 #212121 #868686 #212121
-client.urgent               #BF616A #BF616A #ffffff #BF616A
+set_from_resource $fg i3wm.color0 #f0f0f0
+set_from_resource $bg i3wm.color1 #f0f0f0
+set_from_resource $ug i3wm.color5 #f0f0f0
+
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $fg     $bg  $bg       $bg
+client.urgent           $fg     $ug     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
 
 # Principal mod key (Super = Win key)
 # mod1 = Alt (xmodmap to show)
@@ -45,12 +52,12 @@ popup_during_fullscreen smart
 #.......
 bindsym $MOD+Return exec --no-startup-id urxvt
 bindsym $MOD+SHIFT+f exec thunar
-bindsym $mod+w exec chromium
-bindsym Mod1+w exec firefox
+bindsym $mod+w exec qutebrowser --backend webengine
+bindsym Mod1+w exec chromium
+bindsym $Mod+Shift+w exec firefox
 bindsym $mod+b exec $HOME/downloads/tor-browser_en-US/Browser/start-tor-browser
 bindsym $mod+e exec code
 bindsym Mod1+l exec i3lock -i $HOME/.Xresources.d/lock.png
-bindsym Mod1+m exec claws-mail
 bindsym Mod1+e exec urxvt -e mutt
 bindsym $mod+i exec urxvt -e irssi
 bindsym $mod+c exec gsimplecal
@@ -65,8 +72,7 @@ bindsym $MOD+SHIFT+plus move scratchpad
 # SCRATCHPAD SHOW
 bindsym $MOD+plus scratchpad show
 # start dmenu (a program launcher)
-bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b -sb '#B48EAD' -sf '#D8DEE9' -nb '#3B4252' -nf '#D8DEE9' -fn 'FiraMono-10'"
-#bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b -sb '#b7a462' -sf '#1b1b1b' -nb '#1b1b1b' -nf '#6fa6ab' -nf '#839496' -fn 'FiraMono-10'"
+bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b  -sb '$bg' -sf '$fg' -nb '$fg' -nf '$bg' -fn 'FiraMono-10'"
 
 # multimedia keys
 bindsym XF86AudioPlay exec "mpc toggle"
@@ -107,6 +113,7 @@ assign [class="VirtualBox|Qemu-system-x86_64|Gnome-disks|Gnome-boxes|qemu-system
 assign [instance="syncbackup|bleachbit|gparted|hardinfo|truecrypt"] $WS6
 assign [instance="VCLSalFrame|libreoffice"] $WS7
 assign [class="libreoffice*|Zathura|libreoffice-writer"] $WS7
+assign [class="Claws-mail"] $WS8
 assign [class="Wine|Steam|dontstarve"] $WS9
 
 # Layout
@@ -248,5 +255,5 @@ bar {
 
 # autostart
 exec --no-startup-id sh conky_displays
-exec --no-startup-id sh ~/.fehbg
+#exec --no-startup-id sh ~/.fehbg
 #exec --no-startup-id xpad

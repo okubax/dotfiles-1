@@ -22,13 +22,10 @@ anamnesis --start &
 mpd &
 mpdscribble &
 xrandr --dpi 120 &
+redshift &
+wal -i ~/.wallpapers
+
 
 exec i3
-
-#compton --config ~/.config/compton.conf -b &
-#clipit &
-#volumeicon &
-#nm-applet &
-#blueman-applet &
+#exec i3 -V -d all >> ~/logs/i3/i3log-$(date +'%F-%k-%M-%S') 2>&1
 #exec i3 -V >> ~/logs/i3/i3log-$(date +'%F-%k-%M-%S') 2>&1
-

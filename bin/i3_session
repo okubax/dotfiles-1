@@ -1,17 +1,16 @@
-#!/bin/bash
+#!/bin/sh
 #
 # a simple dmenu session script 
 #
 ###
 
-#!/bin/sh
+source $HOME/.cache/wal/colors.sh
+
 lock() {
-    i3lock -i $HOME/.wl/lock.png
+    i3lock -i $HOME/.Xresources.d/lock.png
 }
 
-#DMENU='dmenu -i -b -fn -xos4-terminus-medium-r-*--12-*-*-*-*-*-iso10646-1 -nb #000000 -nf #999999 -sb #000000 -sf #31658C'
-DMENU='dmenu -b -sb '#BF616A' -sf '#D8DEE9' -nb '#3B4252' -nf '#ffffff' -fn 'FiraMono-10''
-#DMENU='dmenu -b -sb '#b7a462' -sf '#1b1b1b' -nb '#1b1b1b' -nf '#6fa6ab' -nf '#839496' -fn 'FiraMono-10''
+DMENU='dmenu -b -sb '$color1' -sf '$color0' -nb '$color0' -nf '$color1' -fn 'FiraMono-10''
 choice=$(echo -e "lock\nlogout\nsuspend\nhibernate\nreboot\nshutdown" | $DMENU)
 
 case "$choice" in
@@ -39,4 +38,3 @@ case "$choice" in
 esac
 
 exit 0
-

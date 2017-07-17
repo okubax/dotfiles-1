@@ -1,12 +1,15 @@
 #!/bin/bash
-HIGHLIGHT="#D8DEE9"
+source "$HOME/.cache/wal/colors.sh"
+
+HIGHLIGHT="$color0"
 clock() {
 	TIME=$(date "+%H:%M")
-    DATE=$(date "+%a, %b %d")
+    DATE=$(date "+%a, %b %d ")
 	echo -n "%{F$HIGHLIGHT}$(printf '%b' "\uf017")%{F-} $TIME  %{F$HIGHLIGHT}$(printf '%b' "\uf073")%{F-} $DATE"
 }
 volume() {
 	VOL=$(amixer get Master | grep % | sed -n 1p | awk -F '[' '{print $2}' | awk -F ']' '{print $1}')
+#    VOL=$(pactl list sinks | grep "Volume: front-left" | cut -d " " -f6)
 	if [ $VOL = '0%' ]; then
 		echo -n "%{F$HIGHLIGHT}$(printf '%b' "\uf026")%{F-} Mute"
 	else
@@ -37,7 +40,7 @@ workspace() {
                 | awk '/ / {print $2 $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20}' ORS=''\
                 | sed -e 's/\s*  //g' \
                 -e 's/\*[ 0-9A-Za-z]*[^ -~]*/  &  /g' \
-                -e 's/\-[ 0-9A-Za-z]*[^ -~]*/%{F#525252}%{A:i3-msg workspace &:}  &  %{A}%{F#A0A0A0}/g' \
+                -e 's/\-[ 0-9A-Za-z]*[^ -~]*/%{F'$color10'}%{A:i3-msg workspace &:}  &  %{A}%{F'$color0'}/g' \
                 -e 's/\*//g' \
                 -e 's/ -/ /g' \
                 )
@@ -76,21 +79,11 @@ bat() {
     fi
 }
 while true; do
-    echo "%{B#2E3440} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#3B4252}$(music)%{B#2E3440} $(windowtitle) %{B-}"
-#    echo "%{B#c0303048} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#3b3b4b}$(music)%{B#c0303048} $(windowtitle) %{B-}"
-	#echo "%{B#c0303048} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B#5d6383}$(music)%{B#c0303048} $(windowtitle) %{B-}"
+    echo "%{B$color7} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B$color5}$(music)%{B$color7} $(windowtitle) %{B-}"
 	sleep 2;
 done |
-# -f '-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1'\
-#old one was '-g 1280x20+45'
-#lemonbar -p -d -B#c0262626 -F#A0A0A0 -g 1834x20+45+0\
-# -f '-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1'\
-# -f '-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1'\
-# eDP-1\
-# | zsh
- 
- 
-lemonbar -p -d -B#2E3440 -F#A0A0A0 -g 1834x25+45+0\
+
+ lemonbar -p -d -B "$color7" -F "$color0" -g 1834x25+45+0\
  -f FiraMono:size=11\
  -f FontAwesome:size=13\
  eDP-1\
