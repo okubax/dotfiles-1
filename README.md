@@ -65,7 +65,7 @@ cd dotfiles
 ![screenshot](/screenshot.png)
 
 
-[Wallpaper](/vincent-burkhead-141499.jpg)
+[Wallpaper](/vincent-burkhead-141499.jpg) 
 [Lockscreen Image](/Xresources.d/lock.png)
 
 
