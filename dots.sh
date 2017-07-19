@@ -76,7 +76,10 @@ ln -s ${BASEDIR}/todo $HOME/.todo
 ln -s ${BASEDIR}/vimrc $HOME/.vimrc
 ln -s ${BASEDIR}/vim/ $HOME/.vim
 
-#Xresources.d
+# wal
+ln -s $BASEDIR}/Xresources.d/wal $HOME/.cache/wal
+
+# Xresources.d
 ln -s ${BASEDIR}/Xresources.d $HOME/.Xresources.d
 
 # zsh

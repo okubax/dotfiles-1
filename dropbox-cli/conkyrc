@@ -10,7 +10,8 @@ conky.config = {
     minimum_width = 5,
     own_window = true,
     own_window_class = 'Conky',
-    own_window_colour = '2E3440',
+    own_window_colour = '121111',
+    color1 = 'D8DEE9',
     own_window_argb_visual = true,
     own_window_argb_value = 255,
     own_window_type = 'override',
@@ -23,5 +24,5 @@ conky.config = {
 }
 
 conky.text = [[
-${font FontAwesome:size=9} ${font} ${execpi 6 dropbox-cli status | sed -n 1p}
+${color1}${font FontAwesome:size=9} ${font} ${execpi 6 dropbox-cli status | sed -n 1p}
 ]]
