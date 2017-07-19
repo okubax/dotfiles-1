@@ -1,2 +1,2 @@
 #!/bin/sh
-scrot -t 20 -d 5 -e 'mv *.png ~/Dropbox/Screenshots'
+scrot -t 10 -d 5 -e 'mv *.png ~/screenshots'
