@@ -136,28 +136,31 @@
       { key: 'a', name: 'ArchLinux', url: 'https://www.archlinux.org', search: '/s/?field-keywords=' },
       { key: 'b', name: 'BBC', url: 'https://www.bbc.co.uk', search: '/search?q=' },
       { key: 'd', name: 'Drive', url: 'https://drive.google.com/drive', search: '/search?q=' },
+      { key: 'c', name: 'Calender', url: 'https://calendar.google.com/calendar/render#main_7', search: 'search?q=' },
       { key: 'e', name: 'Egghead', url: 'https://egghead.io', search: '/search?q=' },
       { key: 'f', name: 'Facebook', url: 'https://www.facebook.com', search: '/search/top/?q=' },
       { key: 'g', name: 'GitHub', url: 'https://github.com', search: '/search?q=' },
       { key: 'G', name: 'Guardian', url: 'http://www.theguardian.com/uk', search: '/search?q=' },
-      { key: 'h', name: 'Hacker News', url: 'https://hn.algolia.com', search: '/?query=' },
+      { key: 'h', name: 'Hacker News', url: 'https://news.ycombinator.com/news', search: '/?query=' },
       { key: 'i', name: 'Inbox', url: 'https://inbox.google.com', search: '/search/' },
       { key: 'k', name: 'Keep', url: 'https://keep.google.com', search: '/#search/text=' },
-      { key: 'K', name: 'Kickass', url: 'https://kat.cr', search: '/usearch/' },
+      { key: 'm', name: 'Gmail', url: 'https://mail.google.com/mail/u/0/#inbox', search: '/search?q=' },
+      { key: 'o', name: 'Outlook', url: 'http://outlook.com/', search: '/search?q=' },
       { key: 'p', name: 'Product Hunt', url: 'https://www.producthunt.com', search: '/search?q=' },
+      { key: 'R', name: 'Reader', url: 'https://okubax.co.uk/reader', search: '/search?q=' },
       { key: 'r', name: 'Reddit', url: 'https://www.reddit.com', search: '/search?q=' },
       { key: 's', name: 'Stack Exchange', url: 'https://stackexchange.com', search: '/search?q=' },
       { key: 'S', name: 'SoundCloud', url: 'https://soundcloud.com', search: '/search?q=' },
       { key: 't', name: 'Twitter', url: 'https://twitter.com', search: '/search?q=' },
       { key: 'u', name: 'Unsplash', url: 'https://unsplash.com', search: '/search?keyword=' },
-      { key: 'U', name: 'UoPeole', url: 'http://my.uopeople.edu/', search: '/search?keyword=' },
+      { key: 'U', name: 'UoPeople', url: 'http://my.uopeople.edu/', search: '/search?keyword=' },
       { key: 'y', name: 'YouTube', url: 'https://www.youtube.com', search: '/weather?search_query=' },
-      { key: 'Y', name: 'YTS', url: 'https://yts.ag', search: '/browse-movies/' }
     ],
 
     // if none of the keys are matched, this is triggered
     // for DuckDuckGo use: https://duckduckgo.com/?q=
-    defaultCommand: 'https://www.google.com/search?q=',
+    defaultCommand: 'https://duckduckgo.com/?q=',
+    //defaultCommand: 'https://www.google.com/search?q=',
 
     // the delimiter between the key and your search query
     // e.g. to search GitHub for potatoes you'd type "g:potatoes"
