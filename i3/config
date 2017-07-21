@@ -22,7 +22,7 @@ gaps inner 20
 gaps outer 20
 
 # Window colors
-set_from_resource $fg i3wm.color0 #f0f0f0
+set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color1 #f0f0f0
 set_from_resource $ug i3wm.color5 #f0f0f0
 
