@@ -4,7 +4,7 @@
 
 
 #.......
-# Font
+# Window Font
 #.......
 font pango:monospace 8
 
@@ -27,9 +27,9 @@ set_from_resource $bg i3wm.color1 #f0f0f0
 set_from_resource $ug i3wm.color5 #f0f0f0
 
 # class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused          $bg     $fg     $bg  $bg       $bg
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $fg     $bg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $fg     $ug     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 
@@ -67,6 +67,7 @@ bindsym $MOD+SHIFT+x exec $HOME/bin/i3_session
 bindsym $MOD+SHIFT+a exec $HOME/development/android-studio/bin/studio.sh
 bindsym $mod+Shift+b bar mode toggle
 bindsym $MOD+Tab focus right
+bindsym $mod+n exec wal -i ~/.wallpapers
 # SCRATCHPAD CREATE
 bindsym $MOD+SHIFT+plus move scratchpad
 # SCRATCHPAD SHOW
@@ -100,31 +101,28 @@ bindsym Mod1+p exec $HOME/bin/screen active
 bindsym Mod1+f exec $HOME/bin/screen2
 
 # Move to workspace
-assign [instance="xfce4-terminal|urxvt"] $WS1
+assign [instance="urxvt"] $WS1
 assign [instance="Navigator|Dialog"] $WS2
-assign [class="Chromium|jetbrains-android-studio|Firefox|qutebrowser"] $WS2
-assign [class="Atom|sublime_text|Brackets|Code"] $WS3
+assign [class="Chromium|Firefox|qutebrowser|jetbrains-studio"] $WS2
+assign [class="Code"] $WS3
 assign [instance="mousepad|leafpad|geany"] $WS3
-assign [instance="shotwell|simple-scan|brasero|devede|imagination|picard|wxcam|google-musicmanager|goobox"] $WS4
-assign [class="Gthumb|MPlayer|Rhythmbox|mpv|Xfburn|Pitivi|Popcorntime|Gmusicbrowser|Ogmrip|Spotify|Blender"] $WS4
-assign [class="kdenlive|Kamoso|digikam"] $WS4
-assign [class="Thunar|Eclipse|Pinta|Blender|Catfish|Codeblocks"] $WS5
-assign [class="VirtualBox|Qemu-system-x86_64|Gnome-disks|Gnome-boxes|qemu-system-x86_64|Spicy"] $WS6
-assign [instance="syncbackup|bleachbit|gparted|hardinfo|truecrypt"] $WS6
+assign [instance="simple-scan|picard|google-musicmanager"] $WS4
+assign [class="MPlayer|mpv|Xfburn|Pitivi|Spotify"] $WS4
+assign [class="kdenlive|Kamoso"] $WS4
+assign [class="Thunar"] $WS5
+assign [class="Qemu-system-x86_64"] $WS6
+assign [instance="bleachbit|gparted|truecrypt"] $WS6
 assign [instance="VCLSalFrame|libreoffice"] $WS7
-assign [class="libreoffice*|Zathura|libreoffice-writer"] $WS7
-assign [class="Claws-mail"] $WS8
+assign [class="libreoffice*|Zathura|libreoffice-writer|calibre"] $WS7
 assign [class="Wine|Steam|dontstarve"] $WS9
 
 # Layout
 for_window [class="xpad" instance="scratchpad"] move scratchpad
-for_window [class="MPlayer|Galculator|Gsimplecal|Viewnior|Alarm-clock|Skype|xpad|Java|Clamtk|Blueman-manager|Spotify|Google-musicmanager"] floating enable
-for_window [class="File-roller|Lxappearance|Nitrogen|Arandr|Caffeine|Pavucontrol|emulator64-arm|Transmission-gtk|Kamoso|Cheese|PkgBrowser|Seahorse"] floating enable
-for_window [class="Gimp|Filezilla|Gnome-multi-writer|Rhythmbox|Main.py|Imagewriter|qemu-system-x86_64|Blueberry.py|libprs500"] floating enable
-for_window [title="Xfce-notifyd|TrueCrypt|Catfish|Google Keep|Xarchiver"] floating enable
+for_window [class="MPlayer|Galculator|Gsimplecal|Viewnior|xpad|calibre|Java|Spotify|Google-musicmanager"] floating enable
+for_window [class="File-roller|Lxappearance|Arandr|Pavucontrol|emulator64-arm|Kamoso|PkgBrowser"] floating enable
+for_window [class="Gimp|Filezilla|Main.py|qemu-system-x86_64"] floating enable
+for_window [title="TrueCrypt|Google Keep"] floating enable
 for_window [title="File Operation Progress" class="Thunar"] floating enable
-#for_window [title="Share a link on Twitter - Mozilla Firefox" class="Firefox"] floating enable
-#for_window [title="Press This - Mozilla Firefox" class="Firefox"] floating enable
 for_window [window_role="pop-up"] floating enable,move absolute center
 
 #...........
