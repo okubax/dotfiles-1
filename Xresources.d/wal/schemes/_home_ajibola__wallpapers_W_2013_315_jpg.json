@@ -1,0 +1,26 @@
+{
+    "wallpaper": "/home/ajibola/.wallpapers/W_2013_315.jpg",
+    "special": {
+        "background": "#020202",
+        "foreground": "#D1EDED",
+        "cursor": "#D1EDED"
+    },
+    "colors": {
+        "color0": "#020202",
+        "color1": "#3FA0BC",
+        "color2": "#2A9EED",
+        "color3": "#37DBF5",
+        "color4": "#4EF9FC",
+        "color5": "#61E7F4",
+        "color6": "#96F5FA",
+        "color7": "#D1EDED",
+        "color8": "#666666",
+        "color9": "#3FA0BC",
+        "color10": "#2A9EED",
+        "color11": "#37DBF5",
+        "color12": "#4EF9FC",
+        "color13": "#61E7F4",
+        "color14": "#96F5FA",
+        "color15": "#D1EDED"
+    }
+}

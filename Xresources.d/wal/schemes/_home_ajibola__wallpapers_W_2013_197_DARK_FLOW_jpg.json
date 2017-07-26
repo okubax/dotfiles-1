@@ -1,0 +1,26 @@
+{
+    "wallpaper": "/home/ajibola/.wallpapers/W_2013_197_DARK_FLOW.jpg",
+    "special": {
+        "background": "#290054",
+        "foreground": "#76828A",
+        "cursor": "#76828A"
+    },
+    "colors": {
+        "color0": "#290054",
+        "color1": "#F32A5E",
+        "color2": "#B34273",
+        "color3": "#4A0B84",
+        "color4": "#666186",
+        "color5": "#A16982",
+        "color6": "#C56081",
+        "color7": "#76828A",
+        "color8": "#757575",
+        "color9": "#F32A5E",
+        "color10": "#B34273",
+        "color11": "#4A0B84",
+        "color12": "#666186",
+        "color13": "#A16982",
+        "color14": "#C56081",
+        "color15": "#76828A"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "wallpaper": "/home/ajibola/.wallpapers/W_2013_004_FUZZ.jpg",
+    "special": {
+        "background": "#3B253A",
+        "foreground": "#FDF9D0",
+        "cursor": "#FDF9D0"
+    },
+    "colors": {
+        "color0": "#3B253A",
+        "color1": "#CDA98C",
+        "color2": "#FAB38C",
+        "color3": "#FBCD93",
+        "color4": "#F9CFAB",
+        "color5": "#FDEBB2",
+        "color6": "#F2D8C4",
+        "color7": "#FDF9D0",
+        "color8": "#999999",
+        "color9": "#CDA98C",
+        "color10": "#FAB38C",
+        "color11": "#FBCD93",
+        "color12": "#F9CFAB",
+        "color13": "#FDEBB2",
+        "color14": "#F2D8C4",
+        "color15": "#FDF9D0"
+    }
+}

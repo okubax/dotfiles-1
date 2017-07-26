@@ -77,7 +77,10 @@ ln -s ${BASEDIR}/vimrc $HOME/.vimrc
 ln -s ${BASEDIR}/vim/ $HOME/.vim
 
 # wal
-ln -s $BASEDIR}/Xresources.d/wal $HOME/.cache/wal
+ln -s ${BASEDIR}/Xresources.d/wal $HOME/.cache/wal
+
+# wallpapers
+ln -s ${BASEDIR}/Xresources.d/wallpapers $HOME/.wallpapers
 
 # Xresources.d
 ln -s ${BASEDIR}/Xresources.d $HOME/.Xresources.d

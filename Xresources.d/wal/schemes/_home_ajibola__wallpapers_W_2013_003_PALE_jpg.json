@@ -1,0 +1,26 @@
+{
+    "wallpaper": "/home/ajibola/.wallpapers/W_2013_003_PALE.jpg",
+    "special": {
+        "background": "#130F32",
+        "foreground": "#26E2E8",
+        "cursor": "#26E2E8"
+    },
+    "colors": {
+        "color0": "#130F32",
+        "color1": "#33C49F",
+        "color2": "#38CCA2",
+        "color3": "#44DAA2",
+        "color4": "#4DE8A3",
+        "color5": "#5BFBA5",
+        "color6": "#60FEA6",
+        "color7": "#26E2E8",
+        "color8": "#666666",
+        "color9": "#33C49F",
+        "color10": "#38CCA2",
+        "color11": "#44DAA2",
+        "color12": "#4DE8A3",
+        "color13": "#5BFBA5",
+        "color14": "#60FEA6",
+        "color15": "#26E2E8"
+    }
+}
