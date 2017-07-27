@@ -1,0 +1,26 @@
+{
+    "wallpaper": "/home/ajibola/.wallpapers/papers.co-mr67-australia-capital-city-blue-view-sky-nature-2560x1600.jpg",
+    "special": {
+        "background": "#08080F",
+        "foreground": "#D1EFE1",
+        "cursor": "#D1EFE1"
+    },
+    "colors": {
+        "color0": "#08080F",
+        "color1": "#64CEF0",
+        "color2": "#A49EA0",
+        "color3": "#D6B294",
+        "color4": "#E9D0A9",
+        "color5": "#93B7CE",
+        "color6": "#A4DFED",
+        "color7": "#D1EFE1",
+        "color8": "#666666",
+        "color9": "#64CEF0",
+        "color10": "#A49EA0",
+        "color11": "#D6B294",
+        "color12": "#E9D0A9",
+        "color13": "#93B7CE",
+        "color14": "#A4DFED",
+        "color15": "#D1EFE1"
+    }
+}

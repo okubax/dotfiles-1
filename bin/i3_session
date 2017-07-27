@@ -10,7 +10,7 @@ lock() {
     i3lock -i $HOME/.Xresources.d/lock.png
 }
 
-DMENU='dmenu -b -sb '$color1' -sf '$color7' -nb '$color7' -nf '$color1' -fn 'FiraMono-10''
+DMENU='dmenu -b -sb '$color0' -sf '$color7' -nb '$color7' -nf '$color0' -fn 'FiraMono-10''
 choice=$(echo -e "lock\nlogout\nsuspend\nhibernate\nreboot\nshutdown" | $DMENU)
 
 case "$choice" in
