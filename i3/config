@@ -1,6 +1,6 @@
-# i3 config file
-
-# July 2017 - okubax https://okubax.co.uk
+#....... 
+#okubax i3 config
+#.......
 
 
 #.......
@@ -12,10 +12,8 @@ font pango:monospace 8
 #..........
 # Look
 #.......... 
-new_window pixel 3
 focus_follows_mouse  yes
-
-#for_window [class="^.*"] border pixel 0
+for_window [class=".*"] border pixel 2
 
 # gaps
 gaps inner 20
@@ -24,13 +22,13 @@ gaps outer 20
 # Window colors
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color0 #f0f0f0
-set_from_resource $ug i3wm.color5 #f0f0f0
+set_from_resource $bg1 i3wm.color10 #f0f0f0
 
 # class                 border  backgr. text indicator child_border
 client.focused          $bg     $fg     $bg  $bg       $bg
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $fg     $ug     $fg  $bg       $bg
+client.urgent           $fg     $bg1    $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 
 client.background       $bg
@@ -67,13 +65,14 @@ bindsym $MOD+SHIFT+x exec $HOME/bin/i3_session
 bindsym $MOD+SHIFT+a exec $HOME/development/android-studio/bin/studio.sh
 bindsym $mod+Shift+b bar mode toggle
 bindsym $MOD+Tab focus right
-bindsym $mod+n exec wal -i ~/.wallpapers
+# change wallpaper & reload lemonbar
+bindsym $mod+n exec wal -i ~/.wallpapers && pkill lemonbar && i3-msg restart
 # SCRATCHPAD CREATE
 bindsym $MOD+SHIFT+plus move scratchpad
 # SCRATCHPAD SHOW
 bindsym $MOD+plus scratchpad show
 # start dmenu (a program launcher)
-bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b  -sb '$bg' -sf '$fg' -nb '$fg' -nf '$bg' -fn 'FiraMono-10'"
+bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b  -sb '$bg1' -sf '$fg' -nb '$fg' -nf '$bg' -fn 'FiraMono-10'"
 
 # multimedia keys
 bindsym XF86AudioPlay exec "mpc toggle"

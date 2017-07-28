@@ -18,8 +18,8 @@ color	tree		brightblack default         # thread tree
 color   tilde       cyan default                # blank line padding
 
 color	hdrdefault	black cyan                  # default headers
-color   header      brightwhite cyan "^From:"
-color   header      brightwhite cyan "^Subject:"
+color   header      default default "^From:"
+color   header      default default "^Subject:"
 
 color	quoted		cyan default                # quote colours
 color   quoted1     brightcyan default

@@ -1,5 +1,7 @@
 #!/bin/bash
-source "$HOME/.cache/wal/colors.sh"
+
+. "${HOME}/.cache/wal/colors.sh"
+
 
 HIGHLIGHT="$color0"
 clock() {
@@ -79,7 +81,7 @@ bat() {
     fi
 }
 while true; do
-    echo "%{B$color7} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B$color5}$(music)%{B$color7} $(windowtitle) %{B-}"
+    echo "%{B$color7} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B$color6}$(music)%{B$color7} $(windowtitle) %{B-}"
 	sleep 2;
 done |
 

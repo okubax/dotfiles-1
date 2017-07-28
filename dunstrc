@@ -1,5 +1,5 @@
 [global]
-    font = "Fira Mono 8"
+    font = "Fira Mono 9"
     format = "<b>%s %p</b>\n%b"
     sort = yes
     indicate_hidden = true
@@ -15,7 +15,7 @@
     padding = 10
     horizontal_padding = 10
     separator_color = frame
-    startup_notification = true
+    startup_notification = false
     dmenu = "/usr/bin/dmenu -p dunst: -nb #FFFFFF -nf #000000 -sb #94DBFF -sf #000000"
  
  
@@ -41,4 +41,3 @@
     background = "#333333"
     foreground = "#F1113F"
     timeout = 5
-

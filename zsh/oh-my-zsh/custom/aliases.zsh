@@ -36,10 +36,20 @@ Stop() { sudo systemctl stop "$1"; sudo systemctl status "$1"; }
 Restart() { sudo systemctl restart "$1"; sudo systemctl status "$1"; }
 #userlevel
 ustart() { systemctl --user start "$1"; }
+urestart() { systemctl --user restart "$1"; }
 ustop() { systemctl --user stop "$1"; }
 ustatus() { systemctl --user status "$1"; }
 uenabled() { systemctl --user enable "$1"; }
 udisabled() { systemctl --user disable "$1"; }
+#network
+alias rnetw="sudo systemctl restart wpa_supplicant@wlp1s0"
+alias rnetn="sudo systemctl restart systemd-networkd"
+alias rnetr="sudo systemctl restart systemd-resolved"
+alias snetw="sudo systemctl status wpa_supplicant@wlp1s0"
+alias snetn="sudo systemctl status systemd-networkd"
+alias snetr="sudo systemctl status systemd-resolved"
+alias vnetw="sudo vim /etc/wpa_supplicant/wpa_supplicant-wlp1s0.conf"
+alias vnetnw="sudo vim /etc/systemd/network/25-wireless.network"
 #samba
 alias startsamba="systemctl start smbd"
 alias stopsamba="systemctl stop smbd"
@@ -128,6 +138,7 @@ alias valias="vim ~/.oh-my-zsh/custom/aliases.zsh"
 alias vi3="vim ~/.config/i3/config"
 alias vbar="vim ~/.config/i3/bar/bar.sh"
 alias vmutt="vim ~/.mutt/muttrc"
+alias vpaclog="vim /var/log/pacman.log"
 #fix permissions
 fix() {
   [[ -d "$1" ]] &&
@@ -148,7 +159,8 @@ alias neofetch2="neofetch \
 alias pipl="pip list --user"
 alias pipi="pip install --user"
 alias pipo="pip list --user --outdated"
-alias pipu="pip install --user --upgrade"
+alias pipup="pip install --user --upgrade"
+alias pipun="pip-autoremove -y"
 #xprop
 alias xp='xprop | grep "WM_WINDOW_ROLE\|WM_CLASS" && echo "WM_CLASS(STRING) = \"NAME\", \"CLASS\""'
 #anamnesis
@@ -158,12 +170,7 @@ alias clipb="anamnesis -b"
 alias clipboard='xclip -o'
 #pcinfo
 alias pcinfo="inxi -v6 -c5"
-#google_calender_(gcalcli)
-alias calm="gcalcli calm"
-alias calw="gcalcli calw"
-alias cald="gcalcli agenda"
-alias calquick="gcalcli quick --calendar ''"
-alias caladd="gcalcli add --calendar ''"
+
 alias histg="history | grep"
 alias myip="curl http://ipecho.net/plain; echo"
 alias myipl="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
@@ -200,23 +207,13 @@ fi
 }
 # }}}
 
-##
-
-# httpd & mysqld
-#alias starth="sudo systemctl start httpd"
-#alias startm="sudo systemctl start mysqld"
-#alias stoph="sudo systemctl stop httpd"
-#alias stath="sudo systemctl status httpd"
-#alias stopm="sudo systemctl stop mysqld"
-
-##
-
 ## Export ## {{{
-export PATH=${PATH}:$HOME/bin:$HOME/.local/bin/
+export PATH=${PATH}:$HOME/bin:$HOME/.local/bin/:$HOME/development/android/sdk/tools/bin/
+export ANDROID_HOME=$HOME/development/android/sdk
 export PATH=${PATH}:$HOME/development/android/sdk/platform-tools/
 export PATH=${PATH}:$HOME/development/android/sdk/tools/
-export ANDROID_HOME=$HOME/development/android/sdk
 export PATH=${PATH}:$HOME/vm/qemu-scripts/
 export QEMU_AUDIO_DRV=pa
+export QT_QPA_PLATFORMTHEME="qt5ct"
 #export PATH=$PATH:$HOME/.config/composer/vendor/bin
 # }}}

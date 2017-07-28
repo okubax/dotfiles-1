@@ -1,0 +1,39 @@
+###################################################################################################################
+##################################################  Colors  #######################################################
+
+! special
+*.foreground:   #ebf0f8
+*.background:   #353845
+*.cursorColor:  #ebf0f8
+
+! black
+*.color0:       #333f52
+*.color8:       #e376e8
+
+! red
+*.color1:       #ebf0f8
+*.color9:       #fa75a2
+
+! green
+*.color2:       #82c5ff
+*.color10:      #82c5ff
+
+! yellow
+*.color3:       #80dbc2
+*.color11:      #82c5ff
+
+! blue
+*.color4:       #ebf0f8
+*.color12:      #e98bee
+
+! magenta
+*.color5:       #ebf0f8
+*.color13:      #53e59c
+
+! cyan
+*.color6:       #72b4ea
+*.color14:      #87ec9b
+
+! white
+*.color7:       #ebf0f8
+*.color15:      #eb76d9

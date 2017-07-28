@@ -13,7 +13,6 @@ fi
 
 xset s 120 &
 xset b off &
-xrdb -merge ~/.Xresources &
 unclutter &
 dunst &
 xss-lock -- i3lock -i $HOME/.Xresources.d/lock.png &
@@ -23,7 +22,12 @@ mpd &
 mpdscribble &
 xrandr --dpi 120 &
 redshift &
-wal -i ~/.wallpapers
+#compton --config /dev/null &
+
+udiskie &
+
+xrdb -merge "${HOME}/.Xresources"
+wal -i "$(< "${HOME}/.cache/wal/wal")" -o wal-set
 
 
 exec i3

@@ -1,6 +1,5 @@
-! Xresources Configuration
-! 1 Sep 2016
-! vim: set xft=xdefaults:
+! okubax Xresources
+
 
 ! XFT - Fonts
 !----------------------------------------------------------------------
@@ -13,26 +12,18 @@ Xft.hinting: 1
 Xft.hintstyle: hintfull
 !Xft.hintstyle:  hintslight
 
-! Colors
-!----------------------------------------------------------------------
-#include "/home/ajibola/.Xresources.d/colors/nord"  
-
 ! URXVT
 !----------------------------------------------------------------------
 URxvt.borderless: false
 URxvt.internalBorder: 3
 URxvt.externalBorder: 3
 URxvt.scrollBar: false
-!URxvt.font: xft:Monospace:pixelsize=12:antialias=true
-!URxvt.boldFont: xft:Monospace:pixelsize=12:antialias=true
-!URxvt.font: xft:Tewi:pixelsize=12:antialias=true
-!URxvt.boldFont: xft:Tewi:pixelsize=12:antialias=true
 URxvt.font: xft:Fira Mono:pixelsize=12:antialias=true
 URxvt.boldFont: xft:Fira Mono:pixelsize=12:antialias=true
 
 ! clickable urls
 URxvt.perl-ext-common: default,matcher,selection-to-clipboard,clipboard
-URxvt.url-launcher: chromium
+URxvt.url-launcher: qutebrowser
 URxvt.matcher.button: 1
 
 URxvt.keysym.M-c:   perl:clipboard:copy

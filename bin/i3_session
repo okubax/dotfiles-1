@@ -1,16 +1,18 @@
 #!/bin/sh
 #
-# a simple dmenu session script 
-#
-###
+#....... 
+#a simple dmenu session script
+#.......
 
-source $HOME/.cache/wal/colors.sh
+
+
+. "${HOME}/.cache/wal/colors.sh"
 
 lock() {
     i3lock -i $HOME/.Xresources.d/lock.png
 }
 
-DMENU='dmenu -b -sb '$color0' -sf '$color7' -nb '$color7' -nf '$color0' -fn 'FiraMono-10''
+DMENU='dmenu -b -sb '$color10' -sf '$color7' -nb '$color7' -nf '$color0' -fn 'FiraMono-10''
 choice=$(echo -e "lock\nlogout\nsuspend\nhibernate\nreboot\nshutdown" | $DMENU)
 
 case "$choice" in
