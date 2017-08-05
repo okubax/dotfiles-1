@@ -106,13 +106,11 @@ assign [class="Chromium|Firefox|qutebrowser|jetbrains-studio"] $WS2
 assign [class="Code"] $WS3
 assign [instance="mousepad|leafpad|geany"] $WS3
 assign [instance="simple-scan|picard|google-musicmanager"] $WS4
-assign [class="MPlayer|mpv|Xfburn|Pitivi|Spotify"] $WS4
-assign [class="kdenlive|Kamoso"] $WS4
+assign [class="MPlayer|mpv|Xfburn|Pitivi|Spotify|kdenlive|kamoso"] $WS4
 assign [class="Thunar"] $WS5
 assign [class="Qemu-system-x86_64"] $WS6
 assign [instance="bleachbit|gparted|truecrypt"] $WS6
-assign [instance="VCLSalFrame|libreoffice"] $WS7
-assign [class="libreoffice*|Zathura|libreoffice-writer|calibre"] $WS7
+assign [class="Zathura|Soffice|calibre"] $WS7
 assign [class="Wine|Steam|dontstarve"] $WS9
 
 # Layout
