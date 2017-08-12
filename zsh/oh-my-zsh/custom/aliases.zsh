@@ -113,17 +113,6 @@ alias takepic="mplayer tv:// -tv driver=v4l2:width=640:height=480:device=/dev/vi
 #webcam video capture
 #alias webcam="mencoder tv:// -tv driver=v4l2:width=800:height=600:device=/dev/video0:fps=30:outfmt=yuy2:forceaudio:alsa:adevice=hw.0,0 -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=1800 -ffourcc xvid -oac mp3lame -lameopts cbr=128 -o output.avi"
 alias webcam="ffmpeg -f alsa -i default -f v4l2 -s 640x480 -i /dev/video0 -acodec flac -vcodec libx264 output.mkv"
-#bbc radio
-#bbcradio() { local s PS3="Select a station: ";select s in 1 1x 2 3 4 4x 5l 5lsp 6 "Asian Network an" "Nations & Local lcl";do break;done;s=($s);play -playlist "http://www.bbc.co.uk/radio/listen/live/r"${s[@]: -1}".asx";}
-#alias bbclondon="play -playlist http://www.bbc.co.uk/radio/listen/live/bbclondon.asx"
-#alias bbcworld="play -playlist http://www.bbc.co.uk/worldservice/meta/live/mp3/eneuk.pls"
-alias bbcr1x='get_iplayer --stream --type=liveradio 80100 --modes=hafmed --player="mplayer -cache 128 -"'
-alias bbc5lx='get_iplayer --stream --type=liveradio 80101 --modes=hafmed --player="mplayer -cache 128 -"'
-alias bbclon='get_iplayer --stream --type=liveradio 80123 --modes=hafmed --player="mplayer -cache 128 -"'
-alias bbcr1='get_iplayer --stream --type=liveradio 80131 --modes=hafmed --player="mplayer -cache 128 -"'
-alias bbcr4='get_iplayer --stream --type=liveradio 80135 --modes=hafmed --player="mplayer -cache 128 -"'
-alias bbc5l='get_iplayer --stream --type=liveradio 80137 --modes=hafmed --player="mplayer -cache 128 -"'
-alias bbcworld='get_iplayer --stream --type=liveradio 80158 --modes=hafmed --player="mplayer -cache 128 -"'
 #youtube-dl/mp4
 alias ytd="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 # }}}
