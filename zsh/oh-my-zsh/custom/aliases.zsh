@@ -74,6 +74,8 @@ getlog() { local file=~/logs/system/log-$(date +%Y%m%d-%H:%M).txt; sudo journalc
 ##
 
 ## System ## {{{
+#wifi scan
+alias wifiscan="sudo wpa_cli -i wlp1s0 scan && sleep 3 && sudo wpa_cli scan_results"
 #battery
 alias bat="upower --show-info /org/freedesktop/UPower/devices/battery_BAT0"
 alias batr="upower --show-info /org/freedesktop/UPower/devices/battery_BAT0 | grep "time""
@@ -88,6 +90,7 @@ alias whichport="sudo netstat -tulpn"
 alias netmon="netstat -nputwc"
 alias wifo="sudo iftop -i wlp1s0"
 alias wistat="slurm -i wlp1s0"
+alias whichnet="sudo nettop --tcp-udp-split --limit-hosts-rows 20"
 #xampp
 alias starth="sudo /opt/lampp/lampp start"
 alias stoph="sudo /opt/lampp/lampp stop"
