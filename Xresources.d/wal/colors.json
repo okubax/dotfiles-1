@@ -1,27 +1,27 @@
 {
-    "wallpaper": "/home/ajibola/.wallpapers/2ecf55.jpg",
+    "wallpaper": "/home/ajibola/.wallpapers/642ta2.jpg",
 
     "special": {
-        "background": "#443E43",
-        "foreground": "#D4CEC8",
-        "cursor": "#D4CEC8"
+        "background": "#0A0A13",
+        "foreground": "#EFEFF1",
+        "cursor": "#EFEFF1"
     },
     "colors": {
-        "color0": "#443E43",
-        "color1": "#976C59",
-        "color2": "#708579",
-        "color3": "#A48E6A",
-        "color4": "#587D86",
-        "color5": "#708F8A",
-        "color6": "#9DA59A",
-        "color7": "#D4CEC8",
-        "color8": "#999999",
-        "color9": "#976C59",
-        "color10": "#708579",
-        "color11": "#A48E6A",
-        "color12": "#587D86",
-        "color13": "#708F8A",
-        "color14": "#9DA59A",
-        "color15": "#D4CEC8"
+        "color0": "#0A0A13",
+        "color1": "#A85892",
+        "color2": "#D35B9D",
+        "color3": "#6C97B4",
+        "color4": "#9C9EAD",
+        "color5": "#B2C0D6",
+        "color6": "#D4D7DD",
+        "color7": "#EFEFF1",
+        "color8": "#6c6c71",
+        "color9": "#A85892",
+        "color10": "#D35B9D",
+        "color11": "#6C97B4",
+        "color12": "#9C9EAD",
+        "color13": "#B2C0D6",
+        "color14": "#D4D7DD",
+        "color15": "#EFEFF1"
     }
 }
