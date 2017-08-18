@@ -14,7 +14,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 
 * `conky` -- Lightweight system monitor for X (for dropbox and todo-cli displays)
 * `dropbox-cli` -- Command line interface for dropbox
-* `fira-mono` -- Mozilla's monospace typeface (for lemonbar, X11, and console)
+* `Consolas` -- Microsoft's monospaced programming font (for lemonbar and console)
 * `Font Awesome` -- Iconic font designed for Bootstrap, used in `lemonbar` | [aur link](https://aur.archlinux.org/packages/ttf-font-awesome)
 * `iw` -- nl80211 based CLI configuration utility for wireless devices, to get wifi's SSID
 * `irssi` -- Modular text mode IRC client with Perl scripting

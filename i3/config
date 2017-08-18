@@ -6,7 +6,7 @@
 #.......
 # Window Font
 #.......
-font pango:monospace 8
+font pango:Consolas 8
 
 
 #..........
@@ -72,7 +72,7 @@ bindsym $MOD+SHIFT+plus move scratchpad
 # SCRATCHPAD SHOW
 bindsym $MOD+plus scratchpad show
 # start dmenu (a program launcher)
-bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b  -sb '$bg1' -sf '$fg' -nb '$fg' -nf '$bg' -fn 'FiraMono-10'"
+bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b  -sb '$bg1' -sf '$fg' -nb '$fg' -nf '$bg' -fn 'Consolas-10'"
 
 # multimedia keys
 bindsym XF86AudioPlay exec "mpc toggle"
