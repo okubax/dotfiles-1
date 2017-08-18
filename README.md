@@ -6,6 +6,8 @@ I use this configuration for my laptop which runs **[i3-gaps window manager](htt
 **[Arch Linux](https://www.archlinux.org/)**.
 Ideas mostly <del>stolen</del> copied from others and modified to fit my use, I have acknowledged some but if I'm using parts or all of your config, **THANKS!**.
 
+*Most if not all of the wallpapers are from [Unsplash]*(https://unsplash.com/)
+
 ## Dependencies
 
 *Note: I hope I've covered all dependencies here, but something might be missing*

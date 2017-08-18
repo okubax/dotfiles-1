@@ -1,5 +1,5 @@
 [global]
-    font = "Fira Mono 9"
+    font = "Consolas 8"
     format = "<b>%s %p</b>\n%b"
     sort = yes
     indicate_hidden = true
