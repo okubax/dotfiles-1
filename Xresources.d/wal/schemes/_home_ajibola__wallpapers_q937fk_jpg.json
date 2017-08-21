@@ -1,0 +1,26 @@
+{
+    "wallpaper": "/home/ajibola/.wallpapers/q937fk.jpg",
+    "special": {
+        "background": "#040404",
+        "foreground": "#DDDDDD",
+        "cursor": "#DDDDDD"
+    },
+    "colors": {
+        "color0": "#040404",
+        "color1": "#6F6F6F",
+        "color2": "#7F7F80",
+        "color3": "#909090",
+        "color4": "#9F9FA0",
+        "color5": "#AFAFAF",
+        "color6": "#BFBFC0",
+        "color7": "#DDDDDD",
+        "color8": "#686868",
+        "color9": "#6F6F6F",
+        "color10": "#7F7F80",
+        "color11": "#909090",
+        "color12": "#9F9FA0",
+        "color13": "#AFAFAF",
+        "color14": "#BFBFC0",
+        "color15": "#DDDDDD"
+    }
+}
