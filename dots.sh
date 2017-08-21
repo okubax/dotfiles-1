@@ -35,6 +35,9 @@ ln -s ${BASEDIR}/fontconfig $HOME/.config/fontconfig
 # i3
 ln -s ${BASEDIR}/i3 $HOME/.config/i3
 
+# icons
+ln -s ${BASEDIR}/Xresources.d/icons $HOME/.icons
+
 # irssi
 ln -s ${BASEDIR}/irssi $HOME/.irssi
 
@@ -71,6 +74,9 @@ ln -s ${BASEDIR}/startpage $HOME/.startpage
 
 # todo
 ln -s ${BASEDIR}/todo $HOME/.todo
+
+# theme
+ln -s ${BASEDIR}/Xresources.d/themes $HOME/.themes
 
 # vim
 ln -s ${BASEDIR}/vimrc $HOME/.vimrc
