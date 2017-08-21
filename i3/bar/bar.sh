@@ -86,7 +86,7 @@ while true; do
 done |
 
  lemonbar -p -d -B "$color7" -F "$color0" -g 1834x25+45+0\
- -f Consolas:size=11\
- -f FontAwesome:size=12\
+ -f Consolas:size=9\
+ -f FontAwesome:size=10\
  eDP-1\
  | zsh

@@ -72,7 +72,7 @@ bindsym $MOD+SHIFT+plus move scratchpad
 # SCRATCHPAD SHOW
 bindsym $MOD+plus scratchpad show
 # start dmenu (a program launcher)
-bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b  -sb '$bg1' -sf '$fg' -nb '$fg' -nf '$bg' -fn 'Consolas-10'"
+bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b  -sb '$bg1' -sf '$fg' -nb '$fg' -nf '$bg' -fn 'Consolas-9'"
 
 # multimedia keys
 bindsym XF86AudioPlay exec "mpc toggle"
@@ -117,7 +117,7 @@ for_window [class="xpad" instance="scratchpad"] move scratchpad
 for_window [class="MPlayer|Galculator|Gsimplecal|Viewnior|xpad|calibre|Java|Spotify|Google-musicmanager"] floating enable
 for_window [class="File-roller|Lxappearance|Arandr|Pavucontrol|emulator64-arm|Kamoso|PkgBrowser"] floating enable
 for_window [class="URxvt|Gimp|Main.py|qemu-system-x86_64|Pinentry"] floating enable
-for_window [class="URxvt"] resize set 780 480
+for_window [class="URxvt"] resize set 820 480
 for_window [title="TrueCrypt|Google Keep"] floating enable
 for_window [title="File Operation Progress" class="Thunar"] floating enable
 for_window [window_role="pop-up"] floating enable,move absolute center
