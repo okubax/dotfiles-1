@@ -1,0 +1,154 @@
+#!/bin/bash
+
+welcome() {
+	clear
+	echo '          "WELCOME TO LADDER PULL-UPS"'
+	echo
+	cat << "EOF"
+______________OOOOo__________oOOOO______________   
+----------------(`,----------\`,----------------
+              )  (            )  (       
+              /  |            |  \       
+              |  |  \\\\\\//  |  |
+              \  /  | -  - |  \  /
+              /  \ (  a  a  ) /  \
+              |   | |  L   | |   |
+              |   | \  ==  / |   |
+              |   /_.\____/._\   |
+               \   ||      ||   /
+                \  | '-..-' |  /
+                |  ;        |
+                | /          \ |
+                 \            /
+                  |          |
+                  |    __    |
+                  |===[LI]===|
+                  )"""`""`"""(
+                 /            \
+                /    ,____,    \
+               /'-._ .'  '. _.-'\
+              /     /      \     \
+              |    /        \    |
+              (_  /          \  _)
+               |  `\        /`  |
+               |___|        |___|
+               |===/        \===|
+             _/\._(          )_./\_
+           /`      |         |    _`\
+           `""""`""           ""`"""`
+EOF
+	echo
+	sleep 3
+}
+
+status() {
+	case $(uname) in
+		Darwin) voice=say    ;;
+		Linux)	voice=espeak ;;
+		*)      voice=:      ;;
+	esac
+	if [ ! -e $state ]; then
+		clear
+		echo -n "How many pull-ups can you perform? "
+		read max
+		if [ $max -lt 5 ]; then
+			clear
+			echo -n "Please come back when you can perfom at least 5 strict pull-ups."
+			sleep 5
+			clear
+			exit 1
+		fi
+		echo $max > $state
+		echo 0 >> $state
+	fi
+}
+
+rest() {
+	for (( countdown = $1; countdown > 0; countdown-- )); do
+		clear
+		echo -n "Countdown to next rep: $countdown"
+		sleep 1
+	done
+	clear
+}
+
+ready() {
+	echo
+	echo -n "Hit ENTER when ready!"
+	read
+}
+
+save() {
+	echo $max > $state
+	echo $day >> $state
+}
+
+RM() {
+	clear
+	for (( pullups = $max; reps >= 1; pullups = pullups - $1 )); do
+		if [ $reps -le $day ]; then
+			clear
+			echo "Complete $(echo $(expr $pullups + $1)) pull-ups"
+			$voice $(echo $(expr $pullups + $1)) > /dev/null 2>&1
+			ready
+			[[ $reps = 1 ]] && break
+			rest $2
+			let reps--
+		else
+			clear
+			echo "Complete $(echo $pullups) pull-ups"
+			$voice $(echo $pullups) > /dev/null 2>&1
+			ready
+			[[ $reps = 1 ]] && break
+			rest $2
+			let reps--
+		fi
+	done
+}
+
+state="$HOME/.pull-ups.txt"
+welcome
+status
+reps=5
+max=$(head -n 1 $state)
+day=$(tail -n 1 $state)
+
+[[ $max -lt 12 ]] && RM 1 120
+[[ $max -gt 11 ]] && [[ $max -lt 20 ]] && RM 2 180
+[[ $max -gt 19 ]] && RM 4 240
+
+answer=''
+while [ "$answer" != "Y|y" ] || [ "$answer" != "N|n" ]; do
+	clear
+	echo -n "Did you successfully complete todays reps? (Y/N) "
+	read answer
+	case $answer in
+		Y|y)
+			if [ $day = 4 ] && [ $max -lt 12 ]; then
+				let max++
+				day=0
+				save
+				clear
+				echo -n "Congratulations! Moving up to ladder -=${max}=-"
+				sleep 3
+			elif [ $day = 4 ] && [ $max -gt 11 ]; then
+				let max=max+2
+				day=0
+				save
+				clear
+				echo -n "Congratulations! Moving up to ladder -=${max}=-"
+				sleep 3
+			else
+				let day++
+				save
+			fi
+			clear
+			break
+			;;
+		
+		N|n)
+			clear
+			break
+			;;
+	esac
+done
