@@ -9,7 +9,7 @@ ln -s ${BASEDIR}/compton.conf $HOME/.config/compton.conf
 ln -s ${BASEDIR}/dunstrc $HOME/.config/dunstrc
 
 # feh
-#ln -s ${BASEDIR}/fehbg $HOME/.fehbg
+ln -s ${BASEDIR}/fehbg $HOME/.fehbg
 
 # goobook
 ln -s ${BASEDIR}/goobookrc $HOME/.goobookrc
@@ -34,9 +34,6 @@ ln -s ${BASEDIR}/fontconfig $HOME/.config/fontconfig
 
 # i3
 ln -s ${BASEDIR}/i3 $HOME/.config/i3
-
-# icons
-ln -s ${BASEDIR}/Xresources.d/icons $HOME/.icons
 
 # irssi
 ln -s ${BASEDIR}/irssi $HOME/.irssi
@@ -75,15 +72,9 @@ ln -s ${BASEDIR}/startpage $HOME/.startpage
 # todo
 ln -s ${BASEDIR}/todo $HOME/.todo
 
-# theme
-ln -s ${BASEDIR}/Xresources.d/themes $HOME/.themes
-
 # vim
 ln -s ${BASEDIR}/vimrc $HOME/.vimrc
 ln -s ${BASEDIR}/vim/ $HOME/.vim
-
-# wal
-ln -s ${BASEDIR}/Xresources.d/wal $HOME/.cache/wal
 
 # wallpapers
 ln -s ${BASEDIR}/Xresources.d/wallpapers $HOME/.wallpapers
