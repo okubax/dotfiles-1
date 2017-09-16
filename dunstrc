@@ -1,5 +1,5 @@
 [global]
-    font = "Consolas 8"
+    font = "Consolas 10"
     format = "<b>%s %p</b>\n%b"
     sort = yes
     indicate_hidden = true
@@ -28,16 +28,16 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the '#' and following  would be interpreted as a comment.
-    background = "#333333"
-    foreground = "#1DCC9F"
+    background = "#fdf6e3"
+    foreground = "#073642"
     timeout = 10
  
 [urgency_normal]
-    background = "#222222"
-    foreground = "#1DCC9F"
+    foreground = "#073642"
+    background = "#eee8d5"
     timeout = 10
  
 [urgency_critical]
-    background = "#333333"
-    foreground = "#F1113F"
+    background = "#fdf6e3"
+    foreground = "#dc322f"
     timeout = 5
