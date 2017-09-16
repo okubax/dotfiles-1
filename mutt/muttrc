@@ -26,10 +26,9 @@ set smart_wrap			 # wrap long lines
 
 # }}}
 # Color Scheme {{{
-source ~/.mutt/colors/okubax.mutt
-
-
+source ~/.mutt/colors/mutt-colors-solarized-dark-16.muttrc
 # }}}
+
 # Sidebar Patch {{{ 
 #set sidebar_visible = yes 
 # set sidebar_delim   = ' | '
@@ -163,8 +162,8 @@ set tilde                   # show tildes like in vim
 unset markers               # no ugly plus signs
 
 set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
-alternative_order text/plain text/enriched text/html
 auto_view text/html
+alternative_order text/plain text/enriched text/html
 
 # Pager Key Bindings
 bind pager k   previous-line
@@ -209,11 +208,15 @@ bind index p recall-message
 
 # GPG
 source ~/.mutt/gpg
+set crypt_use_gpgme=yes
 set pgp_sign_as = 
-set pgp_use_gpg_agent = yes
-set pgp_replyencrypt = yes
-set pgp_timeout = 1800
+set pgp_timeout = 3600
 set pgp_autoinline=yes
+set crypt_autosign = no
+set crypt_replysign
+set crypt_autoencrypt=no
+set crypt_replyencrypt=yes
+set crypt_replysignencrypted=yes
 bind compose e pgp-menu
 
 # Marking all new and old messages as read
