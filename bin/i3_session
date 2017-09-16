@@ -6,13 +6,13 @@
 
 
 
-. "${HOME}/.cache/wal/colors.sh"
+. "${HOME}/.Xresources.d/colors/colors.sh"
 
 lock() {
     i3lock -i $HOME/.Xresources.d/lock.png
 }
 
-DMENU='dmenu -b -sb '$color10' -sf '$color7' -nb '$color7' -nf '$color0' -fn 'Consolas-9''
+DMENU='dmenu -b -sb '$color10' -sf '$color7' -nb '$color7' -nf '$color0' -fn 'Consolas-8''
 choice=$(echo -e "lock\nlogout\nsuspend\nhibernate\nreboot\nshutdown" | $DMENU)
 
 case "$choice" in
