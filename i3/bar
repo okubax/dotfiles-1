@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. "${HOME}/.cache/wal/colors.sh"
+. "${HOME}/.Xresources.d/colors/colors.sh"
 
 
 HIGHLIGHT="$color0"
@@ -30,7 +30,7 @@ music() {
 	if [ -n $SONG ]; then
 		echo -n ""
 	else 
-        echo -n " %{F$HIGHLIGHT}$(printf '%b' "\uf01d")%{F-} $SONG "
+        echo -n " %{F$HIGHLIGHT}$(printf '%b' "\uf001")%{F-} $SONG "
 	fi
 }
 #Copied from /u/Dylan112
@@ -81,12 +81,12 @@ bat() {
     fi
 }
 while true; do
-    echo "%{B$color7} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B$color6}$(music)%{B$color7} $(windowtitle) %{B-}"
+    echo "%{B$color7} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B$color10}$(music)%{B$color7} $(windowtitle) %{B-}"
 	sleep 2;
 done |
 
- lemonbar -p -d -B "$color7" -F "$color0" -g 1834x25+45+0\
- -f Consolas:size=9\
- -f FontAwesome:size=10\
+ lemonbar -p -d -B "$color7" -F "$color0" -g 1834x24+45+0\
+ -f Consolas:size=8\
+ -f FontAwesome:size=9\
  eDP-1\
  | zsh
