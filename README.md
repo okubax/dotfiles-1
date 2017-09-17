@@ -18,7 +18,6 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `Consolas` -- Microsoft's monospaced programming font (for lemonbar and console)
 * `Font Awesome` -- Iconic font designed for Bootstrap, used in `lemonbar` | [aur link](https://aur.archlinux.org/packages/ttf-font-awesome)
 * `iw` -- nl80211 based CLI configuration utility for wireless devices, to get wifi's SSID
-* `irssi` -- Modular text mode IRC client with Perl scripting
 * `lemonbar-sm` -- Fork of lemonbar, with xft support and the ability to select monitor | [aur link](https://aur.archlinux.org/packages/lemonbar-sm-git/)
 * `mpc` -- Client for `mpd`, responsible for telling lemonbar about the currently playing media.
 * `mpd` -- Flexible, powerful, server-side application for playing music with `ncmpcpp` as client
@@ -30,6 +29,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `ranger` -- A simple, vim-like file manager
 * `redshift` -- Adjusts the color temperature of your screen according to your surroundings
 * `vim` -- Vi Improved, a highly configurable, improved version of the vi text editor
+* `weechat` -- Fast, light and extensible IRC client (curses UI)
 * `wmctrl` -- A Tool to control your EWMH compliant window manager from command line (for i3 workspaces on `lemonbar`)
 * `xdotool` -- Command-line X11 automation tool, to show current window title on `lemonbar`
 
