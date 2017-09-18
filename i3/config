@@ -9,9 +9,9 @@ font pango:Consolas 8
 
 set $ws1 
 set $ws2 
-set $ws3 
-set $ws4 
-set $ws5 
+set $ws3 
+set $ws4 
+set $ws5 
 set $ws6 
 
 set $mod Mod4
