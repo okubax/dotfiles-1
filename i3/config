@@ -138,7 +138,7 @@ bindsym $mod+b exec $HOME/downloads/tor-browser_en-US/Browser/start-tor-browser
 bindsym $mod+e exec $HOME/.VSCode-linux-x64/bin/code
 bindsym Mod1+l exec i3lock -i $HOME/.Xresources.d/lock.png
 bindsym Mod1+e exec urxvt -e mutt
-bindsym $mod+i exec urxvt -e irssi
+bindsym $mod+i exec urxvt -e weechat
 bindsym $mod+c exec gsimplecal
 bindsym Mod1+Shift+c exec galculator
 bindsym $MOD+SHIFT+t exec urxvt -e htop
