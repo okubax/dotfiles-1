@@ -128,7 +128,6 @@ bindsym Mod1+i exec --no-startup-id sudo bright_up
 
 bindsym Print exec $HOME/bin/screen root
 bindsym Mod1+p exec $HOME/bin/screen active
-bindsym Mod1+f exec $HOME/bin/screen2
 
 bindsym $MOD+SHIFT+f exec thunar
 bindsym $mod+w exec qutebrowser --backend webengine
