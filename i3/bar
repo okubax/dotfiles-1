@@ -30,7 +30,7 @@ music() {
 	if [ -n $SONG ]; then
 		echo -n ""
 	else 
-        echo -n " %{F$HIGHLIGHT}$(printf '%b' "\uf001")%{F-} $SONG "
+        echo -n " %{F$HIGHLIGHT}$(printf '%b' "\uf144")%{F-} $SONG |
 	fi
 }
 #Copied from /u/Dylan112
