@@ -81,7 +81,7 @@ bat() {
     fi
 }
 while true; do
-    echo "%{B$color7} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B$color15} $(music)%{B$color7} $(windowtitle) %{B-}"
+    echo "%{B$color7} $(clock) $(volume) $(mail) $(bat) $(wifi) %{B-}%{c} $(workspace) %{r}%{B-} %{B$color15}$(music)%{B$color7} $(windowtitle) %{B-}"
 	sleep 2;
 done |
 
