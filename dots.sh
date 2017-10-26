@@ -2,8 +2,14 @@
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# bin
+ln -s ${BASEDIR}/bin $HOME/bin
+
 # compton
 ln -s ${BASEDIR}/compton.conf $HOME/.config/compton.conf
+
+# dropbox-cli
+ln -s ${BASEDIR}/dropbox-cli $HOME/.dropbox-cli
 
 # dunst
 ln -s ${BASEDIR}/dunstrc $HOME/.config/dunstrc
@@ -11,26 +17,11 @@ ln -s ${BASEDIR}/dunstrc $HOME/.config/dunstrc
 # feh
 ln -s ${BASEDIR}/fehbg $HOME/.fehbg
 
-# goobook
-ln -s ${BASEDIR}/goobookrc $HOME/.goobookrc
-
-# urlview
-ln -s ${BASEDIR}/urlview $HOME/.urlview
-
-# xinitrc
-ln -s ${BASEDIR}/xinitrc $HOME/.xinitrc
-
-# Xresources
-ln -s ${BASEDIR}/Xresources $HOME/.Xresources
-
-# bin
-ln -s ${BASEDIR}/bin $HOME/bin
-
-# dropbox-cli
-ln -s ${BASEDIR}/dropbox-cli $HOME/.dropbox-cli
-
 # fontconfig
 ln -s ${BASEDIR}/fontconfig $HOME/.config/fontconfig
+
+# goobook
+ln -s ${BASEDIR}/goobookrc $HOME/.goobookrc
 
 # i3
 ln -s ${BASEDIR}/i3 $HOME/.config/i3
@@ -63,11 +54,17 @@ ln -s ${BASEDIR}/pass $HOME/.password-store
 # ranger
 ln -s ${BASEDIR}/ranger $HOME/.config/ranger
 
-# browser homepage
+# redshift
+ln -s ${BASEDIR}/redshift.conf $HOME/.config/redshift.conf
+
+# startpage
 ln -s ${BASEDIR}/startpage $HOME/.startpage
 
 # todo
 ln -s ${BASEDIR}/todo $HOME/.todo
+
+# urlview
+ln -s ${BASEDIR}/urlview $HOME/.urlview
 
 # vim
 ln -s ${BASEDIR}/vimrc $HOME/.vimrc
@@ -78,6 +75,12 @@ ln -s ${BASEDIR}/Xresources.d/wallpapers $HOME/.wallpapers
 
 # weechat
 ln -s ${BASEDIR}/weechat $HOME/.weechat
+
+# xinitrc
+ln -s ${BASEDIR}/xinitrc $HOME/.xinitrc
+
+# Xresources
+ln -s ${BASEDIR}/Xresources $HOME/.Xresources
 
 # Xresources.d
 ln -s ${BASEDIR}/Xresources.d $HOME/.Xresources.d
