@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#
+# rofi with flags for my PC/Laptop.
+
+rofi -show run \
+     -font "${font:-Inconsolata 10}" \
+     -separator-style none \
+     -scrollbar-width 0 \
+     -location 1 \
+     -yoffset "${BAR_HEIGHT:-30}" \
+     -lines 10 \
+     -width 20 \
+     -bw 0 \

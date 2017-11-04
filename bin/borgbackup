@@ -1,0 +1,52 @@
+#!/bin/sh
+REPOSITORY=/run/media/ajibola/fsck/yhvh
+
+# Setting this, so you won't be asked for your repository passphrase:
+#export BORG_PASSPHRASE=''
+# or this to ask an external program to supply the passphrase:
+#export BORG_PASSCOMMAND='pass show backup'
+export BORG_PASSCOMMAND='pass show borgbackup'
+
+# Backup all of /home except a few
+# excluded directories
+borg create -v --stats --compression lz4       				\
+    $REPOSITORY::'{hostname}-{now:%Y-%m-%d}'    			\
+    /home/ajibola                                  			\
+    --exclude /home/ajibola/.android            			\
+	--exclude /home/ajibola/.appdata						\
+	--exclude /home/ajibola/.bundle							\
+	--exclude /home/ajibola/.cache							\
+	--exclude /home/ajibola/.ccache							\
+	--exclude /home/ajibola/.config/chromium				\
+	--exclude /home/ajibola/.config/Code					\
+	--exclude /home/ajibola/.config/libreoffice 			\
+	--exclude /home/ajibola/.dropbox						\
+	--exclude /home/ajibola/.dropbox-dist					\
+	--exclude /home/ajibola/.firefox						\
+	--exclude /home/ajibola/.gem							\
+	--exclude /home/ajibola/.gimp-2.8						\
+	--exclude /home/ajibola/.gnome							\
+	--exclude /home/ajibola/.gradle							\
+	--exclude /home/ajibola/.jack-server					\
+	--exclude /home/ajibola/.java							\
+	--exclude /home/ajibola/.local/share/Steam  			\
+	--exclude /home/ajibola/.macromedia						\
+	--exclude /home/ajibola/.mozilla						\
+	--exclude /home/ajibola/.npm							\
+	--exclude /home/ajibola/.steam							\
+	--exclude /home/ajibola/.thumbnails						\
+	--exclude /home/ajibola/.vscode							\
+	--exclude /home/ajibola/.VSCode-linux-x64				\
+	--exclude /home/ajibola/.wine							\
+	--exclude /home/ajibola/development/android/sdk			\
+	--exclude /home/ajibola/downloads/misc_ignore			\
+	--exclude /home/ajibola/downloads/tor-browser_en-US/	\
+	--exclude /home/ajibola/nodejs							\
+	--exclude /home/ajibola/yhvhborg
+
+# Use the `prune` subcommand to maintain 7 daily, 4 weekly and 6 monthly
+# archives of THIS machine. The '{hostname}-' prefix is very important to
+# limit prune's operation to this machine's archives and not apply to
+# other machine's archives also.
+borg prune -v --list $REPOSITORY --prefix '{hostname}-' \
+    --keep-daily=1 --keep-weekly=2 --keep-monthly=1
