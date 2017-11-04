@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# ~/.xinitrc
+#
+# Executed by startx (run your window manager from here)
+
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
+
+xset s 120 &
+xset b off &
+
+export DUNST_FONT='Artwiz Lemon 7'
+export DUNST_SIZE='300x30-40+70'
+
+xrdb -merge "${HOME}/.Xresources"
+wal -n -R
+
+exec i3
+#exec i3 -V -d all >> ~/logs/i3/i3log-$(date +'%F-%k-%M-%S') 2>&1
+#exec i3 -V >> ~/logs/i3/i3log-$(date +'%F-%k-%M-%S') 2>&1

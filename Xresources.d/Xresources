@@ -1,0 +1,24 @@
+! Xresources
+
+! Laptop Settings.
+URxvt*font: xft:inconsolata:size=8
+URxvt*boldFont: xft:inconsolata:bold:size=8
+Xft.dpi: 120
+
+
+Xft.autohint: 0
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+URxvt.scrollBar: false
+URxvt.internalBorder: 15
+
+! Enables copy/paste with Ctrl-Shift-C/V
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.perl-ext-common: default,clipboard
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste

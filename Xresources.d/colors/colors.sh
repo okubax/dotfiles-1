@@ -20,6 +20,3 @@ color12='#839496'
 color13='#6c71c4'
 color14='#93a1a1'
 color15='#fdf6e3'
-
-
-

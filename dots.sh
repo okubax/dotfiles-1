@@ -8,9 +8,6 @@ ln -s ${BASEDIR}/bin $HOME/bin
 # compton
 ln -s ${BASEDIR}/compton.conf $HOME/.config/compton.conf
 
-# dropbox-cli
-ln -s ${BASEDIR}/dropbox-cli $HOME/.dropbox-cli
-
 # dunst
 ln -s ${BASEDIR}/dunstrc $HOME/.config/dunstrc
 
@@ -76,13 +73,10 @@ ln -s ${BASEDIR}/Xresources.d/wallpapers $HOME/.wallpapers
 # weechat
 ln -s ${BASEDIR}/weechat $HOME/.weechat
 
-# xinitrc
+# X
+ln -s ${BASEDIR}/Xresources.d/wall $HOME/.cache/wall
 ln -s ${BASEDIR}/xinitrc $HOME/.xinitrc
-
-# Xresources
-ln -s ${BASEDIR}/Xresources $HOME/.Xresources
-
-# Xresources.d
+ln -s ${BASEDIR}/Xresources.d/Xresources $HOME/.Xresources
 ln -s ${BASEDIR}/Xresources.d $HOME/.Xresources.d
 
 # zsh

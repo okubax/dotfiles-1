@@ -1,43 +1,17 @@
+# vim: ft=cfg
 [global]
-    font = "Consolas 10"
-    format = "<b>%s %p</b>\n%b"
-    sort = yes
-    indicate_hidden = true
-    # geometry = "x5"
-    idle_threshold = 0
-    geometry = "300x5-30-30"
     alignment = center
-    show_age_threshold = 60
-    sticky_history = yes
-    follow = mouse
+    follow = none
+    format = "%s\n%b"
+    horizontal_padding = 8
+    indicate_hidden = yes
+    line_height = 5
+    markup = no
+    monitor = 0
+    notification_height = 30
+    padding = 8
+    plain_text = no
+    separator_height = 0
+    shrink = no
+    sort = yes
     word_wrap = yes
-    separator_height = 2
-    padding = 10
-    horizontal_padding = 10
-    separator_color = frame
-    startup_notification = false
-    dmenu = "/usr/bin/dmenu -p dunst: -nb #FFFFFF -nf #000000 -sb #94DBFF -sf #000000"
- 
- 
-[shortcuts]
-    close = ctrl+space
-    close_all = ctrl+shift+space
-    history = ctrl+grave
-    context = ctrl+shift+period
- 
-[urgency_low]
-    # IMPORTANT: colors have to be defined in quotation marks.
-    # Otherwise the '#' and following  would be interpreted as a comment.
-    background = "#fdf6e3"
-    foreground = "#073642"
-    timeout = 10
- 
-[urgency_normal]
-    foreground = "#073642"
-    background = "#eee8d5"
-    timeout = 10
- 
-[urgency_critical]
-    background = "#fdf6e3"
-    foreground = "#dc322f"
-    timeout = 5

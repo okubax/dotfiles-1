@@ -1,2 +1,2 @@
 #!/bin/sh
-feh  --bg-fill '/home/ajibola/.wallpapers/Deer1-1280.jpg' 
+'feh' '--bg-fill' '/home/ajibola/.Xresources.d/wall_images/b24q8oe.jpg' 
