@@ -1,89 +1,103 @@
 #okubax
 
 
-#.......
-# Settings
-#.......
+# GENERAL {{{
 
-font pango:Consolas 8
-
-set $ws1 
-set $ws2 
-set $ws3 
-set $ws4 
-set $ws5 
-set $ws6 
 
 set $mod Mod4
-
-gaps inner 20
-gaps outer 20
-
-popup_during_fullscreen smart
 floating_modifier $mod
-focus_follows_mouse  yes
+popup_during_fullscreen smart
 
-for_window [class=".*"] border pixel 2
+gaps inner 10
+gaps outer 10
 
-set_from_resource $fg color7 #f0f0f0
-set_from_resource $bg color0 #f0f0f0
-set_from_resource $bg1 color10 #f0f0f0
+font pango: inconsolata 10
+for_window [class=".*"] title_format "<span font='inconsolata 8'> > %title</span>"
+
+
+# Set colors from Xresources
+# Change 'color7' and 'color2' to whatever colors you want i3 to use 
+# from the generated scheme.
+# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
+# it fails to get colors from Xresources.
+set_from_resource $fg i3wm.color2 #f0f0f0
+set_from_resource $bg i3wm.color7 #f0f0f0
+
 
 # class                 border  backgr. text indicator child_border
 client.focused          $bg     $fg     $bg  $bg       $bg
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $fg     $bg1    $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 
 client.background       $bg
 
-#
-# i3+lemonbar keybindings
-#
+# WINDOW RULES {{{
+
+
+for_window [class="xpad" instance="scratchpad"] move scratchpad
+for_window [class="Chromium|Firefox|MPlayer|Galculator|Code|Gsimplecal|Viewnior|xpad|calibre|Java|Spotify|Google-musicmanager|File-roller|Lxappearance|Arandr|Pavucontrol|emulator64-arm|Kamoso|PkgBrowser|Gimp|Main.py|qemu-system-x86_64|Pinentry"] floating enable
+for_window [class="URxvt"] floating enable,resize set 820 480
+for_window [class="Thunar"] floating enable,resize set 880 640
+for_window [title="TrueCrypt|Google Keep"] floating enable
+for_window [title="File Operation Progress" class="Thunar"] floating enable
+for_window [window_role="pop-up"] floating enable,move absolute center
+# force floating for all new windows
+#for_window [class="[.]*"] floating enable
+
+
+# }}}
+
+
+
+
+# KEYBINDS {{{
+
 
 bindsym $mod+Shift+C reload
 bindsym $mod+Shift+R restart
 bindsym $mod+q kill
 bindsym $mod+Shift+E exit
-bindsym mod1+j exec $HOME/.config/i3/bar | zsh
-bindsym mod1+k exec pkill lemonbar
-
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+Tab workspace back_and_forth
-
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-
+bindsym $mod+f fullscreen
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+bar split h
+bindsym $mod+underscore split v
 bindsym $mod+s layout stacking
 bindsym $mod+x layout tabbed
 bindsym $mod+z layout default
 
-bindsym $mod+f fullscreen
-bindsym $mod+Shift+space floating toggle
-bindsym $mod+space focus mode_toggle
 
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
-bindsym $mod+Shift+H move left
-bindsym $mod+Shift+J move down
-bindsym $mod+Shift+K move up
-bindsym $mod+Shift+L move right
+# workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
 
-bindsym $mod+bar split h
-bindsym $mod+underscore split v
+bindsym $mod+Tab workspace back_and_forth
+
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+
+
+assign [class="Qemu-system-x86_64"] → 5
+assign [class="Zathura|Soffice|calibre|libreoffice-writer|libreoffice-calc"] → 4
+assign [instance="libreoffice"] → 4
+assign [class="Wine|Steam|dontstarve"] → 6
+
 
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -102,13 +116,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#
-# misc keybindings
-#
-
-bindsym $MOD+Return exec --no-startup-id urxvt
-bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b  -sb '$bg1' -sf '$fg' -nb '$fg' -nf '$bg' -fn 'Consolas-8'"
-
+# Audio Controls
 bindsym XF86AudioPlay exec "mpc toggle"
 bindsym XF86AudioStop exec "mpc stop"
 bindsym XF86AudioNext exec "mpc next"
@@ -121,18 +129,19 @@ bindsym mod1+s exec playerctl pause
 bindsym mod1+x exec playerctl next
 bindsym mod1+z exec playerctl previous
 
+#Backlight Controls
 #bindsym XF86MonBrightnessUp exec "xbacklight +10"
 #bindsym XF86MonBrightnessDown exec "xbacklight -10"
 bindsym Mod1+d exec --no-startup-id sudo bright_down
 bindsym Mod1+i exec --no-startup-id sudo bright_up
 
-bindsym Print exec $HOME/bin/screen root
-bindsym Mod1+p exec $HOME/bin/screen active
-
+#APPS
+bindsym $MOD+Return exec --no-startup-id urxvt
+#bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b  -sb '$bg1' -sf '$fg' -nb '$fg' -nf '$bg' -fn 'Consolas-9'"
+bindsym $mod+p exec $HOME/bin/dmen.sh
 bindsym $MOD+SHIFT+f exec thunar
-bindsym $mod+w exec qutebrowser --backend webengine
 bindsym Mod1+w exec chromium
-bindsym $Mod+Shift+w exec firefox
+bindsym $mod+w exec $HOME/.firefox/firefox
 bindsym $mod+b exec $HOME/downloads/tor-browser_en-US/Browser/start-tor-browser
 bindsym $mod+e exec $HOME/.VSCode-linux-x64/bin/code
 bindsym Mod1+l exec i3lock -i $HOME/.Xresources.d/lock.png
@@ -145,30 +154,14 @@ bindsym $MOD+SHIFT+x exec $HOME/bin/i3_session
 bindsym $mod+Shift+b bar mode toggle
 bindsym $MOD+SHIFT+plus move scratchpad
 bindsym $MOD+plus scratchpad show
+bindsym Print exec $HOME/bin/screen root
+bindsym Mod1+p exec $HOME/bin/screen active
 
-#
-# i3wm layout
-# 
 
-for_window [class="xpad" instance="scratchpad"] move scratchpad
-for_window [class="MPlayer|Galculator|Gsimplecal|Viewnior|xpad|calibre|Java|Spotify|Google-musicmanager|File-roller|Lxappearance|Arandr|Pavucontrol|emulator64-arm|Kamoso|PkgBrowser|URxvt|Gimp|Main.py|qemu-system-x86_64|Pinentry"] floating enable
-for_window [class="URxvt"] resize set 820 480
-for_window [title="TrueCrypt|Google Keep"] floating enable
-for_window [title="File Operation Progress" class="Thunar"] floating enable
-for_window [window_role="pop-up"] floating enable,move absolute center
+# }}}
 
-assign [instance="Navigator|Dialog"] → $ws1
-assign [class="Chromium|Firefox|qutebrowser"] → $ws1
-assign [instance="code|geany"] → $ws2
-assign [class="Thunar|Bleachbit|GParted"] → $ws3
-assign [class="Qemu-system-x86_64"] → $ws4
-assign [class="Zathura|Soffice|calibre|libreoffice-writer|libreoffice-calc"] → $ws5
-assign [instance="libreoffice"] → $ws5
-assign [class="Wine|Steam|dontstarve"] → $ws6
 
-#
-# i3bar
-#
+
 
 #bar {
 #    mode hide
@@ -178,11 +171,29 @@ assign [class="Wine|Steam|dontstarve"] → $ws6
 #    workspace_buttons no
 #}
 
-#
-# exec
-#
 
-exec --no-startup-id sh conky_displays
-exec_always --no-startup-id killall lemonbar; sh ~/.config/i3/bar &
-exec --no-startup-id sh ~/.fehbg
+
+
+# PROGRAM AUTOSTART {{{
+
+
+exec_always --no-startup-id $HOME/bin/wal-set &
+exec --no-startup-id sh $HOME/bin/hashwall
+exec --no-startup-id sh $HOME/.todo/todo-conky
+exec --no-startup-id unclutter &
+exec --no-startup-id xss-lock -- i3lock -i $HOME/.Xresources.d/lock.png &
+exec --no-startup-id $HOME/.dropbox-dist/dropboxd &
+exec --no-startup-id anamnesis --start &
+exec --no-startup-id mpd &
+exec --no-startup-id mpdscribble &
+exec --no-startup-id xrandr --dpi 120 &
+exec --no-startup-id redshift &
+exec --no-startup-id udiskie &
+exec --no-startup-id dunst -fn "$DUNST_FONT" -geometry "$DUNST_SIZE" &
+#exec --no-startup-id compton --config ~/.compton.conf -b 
 #exec --no-startup-id xpad
+
+
+# }}}
+
+# vim:filetype=i3
