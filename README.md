@@ -11,9 +11,9 @@ Ideas mostly <del>stolen</del> copied from others and modified to fit my use, I 
 
 This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Airblader. I haven't tested it with regular i3-- you'll probably have to make a few changes if you want to use that. Only tested on ArchLinux-- I can't make any guarantees about its compatibility with other distros.
 
-* `hsetroot` --  A tool which allows you to compose wallpapers for X | [aur link](https://aur.archlinux.org/packages/hsetroot)
 * `conky` -- Lightweight system monitor for X (for dropbox and todo-cli displays)
 * `dropbox-cli` -- Command line interface for dropbox
+* `hsetroot` --  A tool which allows you to compose wallpapers for X | [aur link](https://aur.archlinux.org/packages/hsetroot)
 * `j4-dmenu-desktop` -- A much faster replacement for i3-dmenu-desktop
 * `lemonbar` -- A featherweight, lemon-scented, bar based on xcb | [aur link](https://aur.archlinux.org/packages/lemonbar-git/)
 * `mpc` -- Client for `mpd`, responsible for telling lemonbar about the currently playing media.
@@ -29,7 +29,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `weechat` -- Fast, light and extensible IRC client (curses UI)
 * `wmctrl` -- A Tool to control your EWMH compliant window manager from command line (for i3 workspaces on `lemonbar`)
 * `xdotool` -- Command-line X11 automation tool, to show current window title on `lemonbar`
-### fonts
+### ~/.fonts
 * `Inconsolata` -- Monospace font for pretty code listings and for the terminal (console)
 * `Lemon Font` -- Lemon and Uushi fonts by phallus (lemonbar) | [aur link](https://aur.archlinux.org/packages/phallus-fonts-git)
 * `Siji Font` -- Iconic bitmap font based on stlarch with additional glyphs (lemonbar) | [aur link](https://aur.archlinux.org/packages/siji-git)
