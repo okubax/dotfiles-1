@@ -1,3 +1,0 @@
-#!/bin/sh
-export DISPLAY=:0
-bfgminer -o http://stratum.bitcoin.cz:3333 -u okubax.worker1 -p gqqWstxC
