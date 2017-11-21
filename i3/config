@@ -11,8 +11,8 @@ popup_during_fullscreen smart
 gaps inner 10
 gaps outer 10
 
-font pango: inconsolata 10
-for_window [class=".*"] title_format "<span font='inconsolata 8'> > %title</span>"
+font pango: mononoki 10
+for_window [class=".*"] title_format "<span font='mononoki 7'> > %title</span>"
 
 
 # Set colors from Xresources

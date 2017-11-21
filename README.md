@@ -30,7 +30,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `wmctrl` -- A Tool to control your EWMH compliant window manager from command line (for i3 workspaces on `lemonbar`)
 * `xdotool` -- Command-line X11 automation tool, to show current window title on `lemonbar`
 ### ~/.fonts
-* `Inconsolata` -- Monospace font for pretty code listings and for the terminal (console)
+* `Mononoki` -- A font for programming and code review (console) | [aur link](https://aur.archlinux.org/packages/ttf-mononoki-git/)
 * `Lemon Font` -- Lemon and Uushi fonts by phallus (lemonbar) | [aur link](https://aur.archlinux.org/packages/phallus-fonts-git)
 * `Siji Font` -- Iconic bitmap font based on stlarch with additional glyphs (lemonbar) | [aur link](https://aur.archlinux.org/packages/siji-git)
 

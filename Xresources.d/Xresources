@@ -1,8 +1,8 @@
 ! Xresources
 
 ! Laptop Settings.
-URxvt*font: xft:inconsolata:size=8
-URxvt*boldFont: xft:inconsolata:bold:size=8
+URxvt*font: xft:mononoki:size=7
+URxvt*boldFont: xft:mononoki:bold:size=7
 Xft.dpi: 120
 
 
