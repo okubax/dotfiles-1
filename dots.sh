@@ -75,7 +75,7 @@ ln -s ${BASEDIR}/weechat $HOME/.weechat
 
 # X
 ln -s ${BASEDIR}/Xresources.d/wall $HOME/.cache/wall
-ln -s ${BASEDIR}/xinitrc $HOME/.xinitrc
+ln -s ${BASEDIR}/Xresources.d/xinitrc $HOME/.xinitrc
 ln -s ${BASEDIR}/Xresources.d/Xresources $HOME/.Xresources
 ln -s ${BASEDIR}/Xresources.d $HOME/.Xresources.d
 
