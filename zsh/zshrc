@@ -85,11 +85,3 @@ fi
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
-# Import colorscheme from 'wal'
-# &   # Run the process in the background.
-# ( ) # Hide shell job control messages.
-(wal -r &)
-
-# If the command above doesn't work,
-# try this alternative.
-# setsid wal -r
