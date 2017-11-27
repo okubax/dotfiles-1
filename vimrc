@@ -356,7 +356,7 @@ if has("gui_running")
 else
 	set t_Co=256
 	set background=dark
-	colorscheme wal
+	colorscheme nord
 	set mouse=a
 endif
 

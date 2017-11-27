@@ -16,6 +16,9 @@ Xft.lcdfilter: lcddefault
 URxvt.scrollBar: false
 URxvt.internalBorder: 15
 
+! Colors
+#include "/home/ajibola/.Xresources.d/colors/nord/nord.Xresources"
+
 ! Enables copy/paste with Ctrl-Shift-C/V
 URxvt.iso14755: false
 URxvt.iso14755_52: false

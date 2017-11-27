@@ -20,8 +20,8 @@ for_window [class=".*"] title_format "<span font='mononoki 7'> > %title</span>"
 # from the generated scheme.
 # NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
 # it fails to get colors from Xresources.
-set_from_resource $fg i3wm.color2 #f0f0f0
 set_from_resource $bg i3wm.color7 #f0f0f0
+set_from_resource $fg i3wm.color6 #f0f0f0
 
 
 # class                 border  backgr. text indicator child_border
@@ -162,20 +162,7 @@ bindsym Mod1+p exec $HOME/bin/screen active
 
 
 
-
-#bar {
-#    mode hide
-#    hidden_state hide
-#    modifier Mod1
-#    position bottom
-#    workspace_buttons no
-#}
-
-
-
-
 # PROGRAM AUTOSTART {{{
-
 
 exec_always --no-startup-id $HOME/bin/wal-set &
 exec --no-startup-id sh $HOME/bin/hashwall
