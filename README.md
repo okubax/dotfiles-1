@@ -44,7 +44,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 
 4. You need to have [gnupg](https://www.archlinux.org/packages/core/x86_64/gnupg/) installed and configured properly for [pass](https://www.archlinux.org/packages/community/any/pass/) to work.
 
-5. Xresources colors are generated using [pywal](https://github.com/dylanaraps/pywal)
+5. Using [Nord colors](https://github.com/arcticicestudio/nord) for Xresources and terminal colors
 
 6. Using [xero's hashwall script](https://github.com/xero/dotfiles/blob/master/bin/bin/hashwall) to generate and set wallpaper
 
