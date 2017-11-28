@@ -18,7 +18,6 @@ export DUNST_FONT='Artwiz Lemon 7'
 export DUNST_SIZE='300x30-40+70'
 
 xrdb -merge "${HOME}/.Xresources"
-#wal -n -R
 
 exec i3
 #exec i3 -V -d all >> ~/logs/i3/i3log-$(date +'%F-%k-%M-%S') 2>&1

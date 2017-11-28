@@ -164,7 +164,7 @@ bindsym Mod1+p exec $HOME/bin/screen active
 
 # PROGRAM AUTOSTART {{{
 
-exec_always --no-startup-id $HOME/bin/wal-set &
+exec_always --no-startup-id $HOME/bin/color-set &
 exec --no-startup-id sh $HOME/bin/hashwall
 exec --no-startup-id sh $HOME/.todo/todo-conky
 exec --no-startup-id unclutter &
