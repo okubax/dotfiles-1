@@ -80,7 +80,7 @@ get_bat() {
     elif [ "$status" == "Full" ]; then
         printf "%s\\n" "$(icon "") ${capacity}"
     elif (("$capacity" <= "20")); then
-        printf "%s\\n" "$(icon "") ${capacity}"
+        printf "%s\\n" "$(icon2 "") ${capacity}"
     elif (("$capacity" <= "60")); then
         printf "%s\\n" "$(icon "") ${capacity}"
     elif (("$capacity" <= "100")); then
@@ -98,7 +98,12 @@ get_wifi() {
 
 icon() {
     # Format an icon.
-    printf "%s\\n" "%{F${color3:-#F0F0F0}}${1}%{F}"
+    printf "%s\\n" "%{F${color8:-#F0F0F0}}${1}%{F}"
+}
+
+icon2() {
+    # Format an icon.
+    printf "%s\\n" "%{F${color11:-#F0F0F0}}${1}%{F}"
 }
 
 
