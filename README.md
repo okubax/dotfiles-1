@@ -44,9 +44,11 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 
 4. You need to have [gnupg](https://www.archlinux.org/packages/core/x86_64/gnupg/) installed and configured properly for [pass](https://www.archlinux.org/packages/community/any/pass/) to work.
 
-5. Using [Nord](https://github.com/arcticicestudio/nord) for Xresources and terminal colors
+5. Vim plugins and resources are from [spf13-vim](https://github.com/spf13/spf13-vim)
 
-6. Using [xero's hashwall script](https://github.com/xero/dotfiles/blob/master/bin/bin/hashwall) to generate and set wallpaper
+6. Using [Nord](https://github.com/arcticicestudio/nord) for Xresources and terminal colors
+
+7. Using [xero's hashwall script](https://github.com/xero/dotfiles/blob/master/bin/bin/hashwall) to generate and set wallpaper
 
 ### Installation
 ```
