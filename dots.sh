@@ -11,9 +11,6 @@ ln -s ${BASEDIR}/compton.conf $HOME/.config/compton.conf
 # dunst
 ln -s ${BASEDIR}/dunstrc $HOME/.config/dunstrc
 
-# feh
-ln -s ${BASEDIR}/fehbg $HOME/.fehbg
-
 # fontconfig
 ln -s ${BASEDIR}/fontconfig $HOME/.config/fontconfig
 
@@ -45,9 +42,6 @@ ln -s ${BASEDIR}/ncmpcpp $HOME/.ncmpcpp
 ln -s ${BASEDIR}/offlineimap.py $HOME/.offlineimap.py
 ln -s ${BASEDIR}/offlineimaprc $HOME/.offlineimaprc
 
-# pass
-ln -s ${BASEDIR}/pass $HOME/.password-store
-
 # ranger
 ln -s ${BASEDIR}/ranger $HOME/.config/ranger
 
@@ -64,11 +58,8 @@ ln -s ${BASEDIR}/todo $HOME/.todo
 ln -s ${BASEDIR}/urlview $HOME/.urlview
 
 # vim
-ln -s ${BASEDIR}/vimrc $HOME/.vimrc
-ln -s ${BASEDIR}/vim/ $HOME/.vim
-
-# wallpapers
-ln -s ${BASEDIR}/Xresources.d/wallpapers $HOME/.wallpapers
+ln -s ${BASEDIR}/spf13-vim-3 $HOME/.spf13-vim-3
+ln -s ${BASEDIR}/spf13-vim-3/vimrc $HOME/.vimrc
 
 # weechat
 ln -s ${BASEDIR}/weechat $HOME/.weechat
