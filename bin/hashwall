@@ -30,8 +30,9 @@ usage() {
 #args
 res=24
 step=4
-bg="#272e38"
-fg="#C9BEB4"
+
+bg="#2E3440"
+fg="#D8DEE9"
 
 # evaluate
 while [ $# -gt 0 ]

@@ -14,7 +14,7 @@ height="${BAR_HEIGHT:-36}"
 
 get_workspaces() {
     # Create a dynamic workspace switcher.
-    workspaces="$(wmctrl -d | awk -v fg="${color8:-#F0F0F0}" \
+    workspaces="$(wmctrl -d | awk -v fg="${color3:-#F0F0F0}" \
                                   '$6!="0,0"{next}
                                    $2=="-"{printf "  %{F"fg"}" $NF "  %{F}"}
                                    $2=="*"{printf "  " $NF "  "}')"
@@ -99,6 +99,7 @@ get_wifi() {
 icon() {
     # Format an icon.
     printf "%s\\n" "%{F${color8:-#F0F0F0}}${1}%{F}"
+
 }
 
 icon2() {
@@ -110,9 +111,8 @@ icon2() {
 main() {
     # Main script function.
 
-    # Import colors from 'wal'.
-    # https://github.com/dylanaraps/pywal
-    . "${HOME}/.cache/wal/colors.sh"
+    # Import colors from 'nord'.
+    . "${HOME}/.Xresources.d/colors/nord/nord.sh"
 
     # Loop and print the info.
     while :; do
@@ -135,7 +135,7 @@ main() {
 
     # Launch lemonbar.
     lemonbar -g "x${height}" \
-             -B "${color0:-#000000}" -F "${color15:-#F0F0F0}"\
+             -B "${color0:-#000000}" -F "${color4:-#F0F0F0}"\
              -n "bar" -f "$font" -f "$icon"
 }
 

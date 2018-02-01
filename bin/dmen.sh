@@ -1,6 +1,6 @@
 #!/bin/sh
 
 # Import the colors
-. "${HOME}/.cache/wal/colors.sh"
+. "${HOME}/.Xresources.d/colors/nord/nord.sh"
 
-j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b  -sb '$color1' -sf '$color15' -nb '$color0' -nf '$color15' -fn 'mononoki-7'"
+j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b  -sb '$color8' -sf '$color0' -nb '$color0' -nf '$color4' -fn 'mononoki-7'"

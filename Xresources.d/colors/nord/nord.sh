@@ -5,7 +5,6 @@ background='#2E3440'
 foreground='#D8DEE9'
 cursor='#D8DEE9'
 
-
 # Colors
 color0='#2E3440'
 color1='#3B4252'

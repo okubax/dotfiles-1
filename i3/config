@@ -23,7 +23,6 @@ for_window [class=".*"] title_format "<span font='mononoki 7'> > %title</span>"
 set_from_resource $bg i3wm.color7 #f0f0f0
 set_from_resource $fg i3wm.color6 #f0f0f0
 
-
 # class                 border  backgr. text indicator child_border
 client.focused          $bg     $fg     $bg  $bg       $bg
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
@@ -37,7 +36,7 @@ client.background       $bg
 
 
 for_window [class="xpad" instance="scratchpad"] move scratchpad
-for_window [class="Chromium|Firefox|MPlayer|Galculator|Code|Gsimplecal|Viewnior|xpad|calibre|Java|Spotify|Google-musicmanager|File-roller|Lxappearance|Arandr|Pavucontrol|emulator64-arm|Kamoso|PkgBrowser|Gimp|Main.py|qemu-system-x86_64|Pinentry"] floating enable
+for_window [class="Chromium|Firefox|qutebrowser|MPlayer|Galculator|Code|Gsimplecal|Viewnior|xpad|calibre|Java|Spotify|Google-musicmanager|File-roller|Lxappearance|Arandr|Pavucontrol|emulator64-arm|Kamoso|PkgBrowser|Gimp|Main.py|qemu-system-x86_64|Pinentry"] floating enable
 for_window [class="URxvt"] floating enable,resize set 820 480
 for_window [class="Thunar"] floating enable,resize set 880 640
 for_window [title="TrueCrypt|Google Keep"] floating enable
@@ -175,7 +174,6 @@ exec --no-startup-id mpd &
 exec --no-startup-id mpdscribble &
 exec --no-startup-id xrandr --dpi 120 &
 exec --no-startup-id redshift &
-exec --no-startup-id udiskie &
 exec --no-startup-id dunst -fn "$DUNST_FONT" -geometry "$DUNST_SIZE" &
 #exec --no-startup-id compton --config ~/.compton.conf -b 
 #exec --no-startup-id xpad
