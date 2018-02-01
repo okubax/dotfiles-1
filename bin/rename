@@ -1,0 +1,6 @@
+#!/bin/bash
+num=1
+for file in *.png; do
+       mv "$file" "$(printf "%u" $num).png"
+       let num=$num+1
+done
