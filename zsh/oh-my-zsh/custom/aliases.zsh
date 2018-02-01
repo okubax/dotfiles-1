@@ -59,7 +59,7 @@ alias emailstatus="systemctl --user status offlineimap"
 alias startprint="systemctl start org.cups.cupsd.service"
 alias stopprint="systemctl stop org.cups.cupsd.service"
 #Look for high priority errors in the systemd journal
-alias errors="sudo journalctl -p 3 -xb"
+alias errors="sudo journalctl -b -p4"
 listd() {
   echo -e "${BLD}${RED} --> SYSTEM LEVEL <--${NRM}"
   find /etc/systemd/system -mindepth 1 -type d | sed '/getty.target/d' | xargs ls -gG --color
@@ -75,7 +75,7 @@ getlog() { local file=~/logs/system/log-$(date +%Y%m%d-%H:%M).txt; sudo journalc
 
 ## System ## {{{
 #wifi scan
-alias wifiscan="sudo wpa_cli -i wlp1s0 scan && sleep 3 && sudo wpa_cli scan_results"
+alias wifiscan="sudo wpa_cli -i wlp1s0 scan && sleep 3 && sudo wpa_cli -i wlp1s0 scan_results"
 #battery
 alias bat="upower --show-info /org/freedesktop/UPower/devices/battery_BAT0"
 alias batr="upower --show-info /org/freedesktop/UPower/devices/battery_BAT0 | grep "time""
@@ -123,14 +123,21 @@ alias ytd="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 ##
 
 ## Misc ## {{{
+# python server
+alias pyserv="python -m http.server 6677"
+
 #gen_rand_password
 alias genpass="strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 10 | tr -d '\n'; echo"
+alias genpass6="cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 6 | head -n 1"
+
 #quickies
 alias valias="vim ~/.oh-my-zsh/custom/aliases.zsh"
 alias vi3="vim ~/.config/i3/config"
-alias vbar="vim ~/.config/i3/bar/bar.sh"
+alias vbar="vim ~/bin/bar"
 alias vmutt="vim ~/.mutt/muttrc"
 alias vpaclog="vim /var/log/pacman.log"
+alias makex="chmod +x"
+alias gith="cd $HOME/git"
 #fix permissions
 fix() {
   [[ -d "$1" ]] &&
@@ -142,28 +149,34 @@ source ~/bin/todo_completion
 export TODOTXT_DEFAULT_ACTION=ls
 alias t='todo.sh -d ~/.todo/todo.cfg'
 #complete -F _todo t
-#neofetch
-alias neofetch2="neofetch \
---config on \
---backend w3m \
-"
+
 #pip_user_commands
-alias pipl="pip list --user"
+alias pipl="pip list --format=columns --user"
 alias pipi="pip install --user"
-alias pipo="pip list --user --outdated"
+alias pipo="pip list --format=columns --user --outdated"
 alias pipup="pip install --user --upgrade"
 alias pipun="pip-autoremove -y"
-#xprop
+alias pips="pip search"
+
+#npm
+alias npml="npm list --depth=0"
+
+#cryptocoin
+alias ccoin="coinmon"
+#xpropm
 alias xp='xprop | grep "WM_WINDOW_ROLE\|WM_CLASS" && echo "WM_CLASS(STRING) = \"NAME\", \"CLASS\""'
 #anamnesis
 alias clip="anamnesis -l 10"
 alias clipb="anamnesis -b"
 #xclip
 alias clipboard='xclip -o'
-#pcinfo
-alias pcinfo="inxi -v6 -c5"
-
+alias pcinfo="inxi -v6 -c7"
+#google_calender_(gcalcli)
+alias calm="gcalcli calm"
+alias calw="gcalcli calw"
+alias cald="gcalcli agenda"
 alias histg="history | grep"
+alias neofetch2="neofetch --w3m ~/.Xresources.d/c652q0.jpg"
 alias myip="curl http://ipecho.net/plain; echo"
 alias myipl="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
 function extract {
@@ -200,7 +213,9 @@ fi
 # }}}
 
 ## Export ## {{{
-export PATH=${PATH}:$HOME/bin:$HOME/.local/bin/:$HOME/development/android/sdk/tools/bin/
+export PATH=${PATH}:$HOME/bin/:$HOME/.local/bin/:$HOME/development/android/sdk/tools/bin/:$HOME/.VSCode-linux-x64/bin/:$HOME/node_modules/.bin/:$HOME/.gradle/wrapper/dists/gradle-3.5-bin/daoimhu7k5rlo48ntmxw2ok3e/gradle-3.5/bin/
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 export ANDROID_HOME=$HOME/development/android/sdk
 export PATH=${PATH}:$HOME/development/android/sdk/platform-tools/
 export PATH=${PATH}:$HOME/development/android/sdk/tools/
