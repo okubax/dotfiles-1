@@ -14,6 +14,7 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `conky` -- Lightweight system monitor for X (for dropbox and todo-cli displays)
 * `dropbox-cli` -- Command line interface for dropbox
 * `hsetroot` --  A tool which allows you to compose wallpapers for X | [aur link](https://aur.archlinux.org/packages/hsetroot)
+* `ii` -- A minimalist FIFO and filesystem-based IRC client, from [suckless](https://tools.suckless.org/ii/)
 * `j4-dmenu-desktop` -- A much faster replacement for i3-dmenu-desktop
 * `lemonbar` -- A featherweight, lemon-scented, bar based on xcb | [aur link](https://aur.archlinux.org/packages/lemonbar-git/)
 * `mpc` -- Client for `mpd`, responsible for telling lemonbar about the currently playing media.
@@ -26,7 +27,6 @@ This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Air
 * `ranger` -- A simple, vim-like file manager
 * `redshift` -- Adjusts the color temperature of your screen according to your surroundings
 * `vim` -- Vi Improved, a highly configurable, improved version of the vi text editor
-* `weechat` -- Fast, light and extensible IRC client (curses UI)
 * `wmctrl` -- A Tool to control your EWMH compliant window manager from command line (for i3 workspaces on `lemonbar`)
 * `xdotool` -- Command-line X11 automation tool, to show current window title on `lemonbar`
 ### ~/.fonts

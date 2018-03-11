@@ -1,13 +1,9 @@
 #!/bin/sh
 # script to run multiple offlineimap instances
 
-offlineimap -a Gmail & pid1=$!
-offlineimap -a Okubax & pid2=$!
-offlineimap -a Outlook & pid1=$!
-offlineimap -a Gmail2 & pid2=$!
-offlineimap -a Yahoo & pid1=$!
-offlineimap -a Yahoo2 & pid2=$!
-offlineimap -a Gmail3 & pid2=$!
+offlineimap -a Mail1 & pid1=$!
+offlineimap -a Mail2 & pid2=$!
+offlineimap -a Mail3 & pid1=$!
 
 wait $pid1
 wait $pid2

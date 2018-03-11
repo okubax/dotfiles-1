@@ -61,9 +61,6 @@ ln -s ${BASEDIR}/urlview $HOME/.urlview
 ln -s ${BASEDIR}/spf13-vim-3 $HOME/.spf13-vim-3
 ln -s ${BASEDIR}/spf13-vim-3/vimrc $HOME/.vimrc
 
-# weechat
-ln -s ${BASEDIR}/weechat $HOME/.weechat
-
 # X
 ln -s ${BASEDIR}/Xresources.d/xinitrc $HOME/.xinitrc
 ln -s ${BASEDIR}/Xresources.d/Xresources $HOME/.Xresources
