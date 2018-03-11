@@ -1,0 +1,8 @@
+#!/bin/sh
+ii -n nick -s 127.0.0.1 -p 6667 &
+sleep 10
+echo "/j nickserv identify password"> $HOME/irc/127.0.0.1/in
+sleep 10
+echo "/j #archlinux" > $HOME/irc/127.0.0.1/in
+echo "/j #android" > $HOME/irc/127.0.0.1/in
+
