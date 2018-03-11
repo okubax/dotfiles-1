@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Hi!
+#
+# In order to have a perfect working mutt with all your settings you should
+# replace:  /change/this/path/.muttrc
+# with your own muttrc file.
+#
+# Red.
+
+exec urxvt -e mutt -F $HOME/.mutt/muttrc "$@"
+
