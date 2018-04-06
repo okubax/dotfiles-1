@@ -11,9 +11,9 @@ popup_during_fullscreen smart
 gaps inner 10
 gaps outer 10
 
-font pango: mononoki 10
-for_window [class=".*"] title_format "<span font='mononoki 7'> > %title</span>"
-
+font pango: mononoki 7
+#for_window [class=".*"] title_format "<span font='mononoki 7'> > %title</span>"
+new_window pixel 3
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use 
@@ -36,7 +36,7 @@ client.background       $bg
 
 
 for_window [class="xpad" instance="scratchpad"] move scratchpad
-for_window [class="Chromium|Firefox|qutebrowser|MPlayer|Galculator|Code|Gsimplecal|Viewnior|xpad|calibre|Java|Spotify|Google-musicmanager|File-roller|Lxappearance|Arandr|Pavucontrol|emulator64-arm|Kamoso|PkgBrowser|Gimp|Main.py|qemu-system-x86_64|Pinentry"] floating enable
+for_window [class="Chromium|Google-chrome-unstable|Firefox|qutebrowser|MPlayer|Galculator|Code|Gsimplecal|Viewnior|xpad|calibre|Java|Spotify|Google-musicmanager|File-roller|Lxappearance|Arandr|Pavucontrol|emulator64-arm|Kamoso|PkgBrowser|Gimp|Main.py|qemu-system-x86_64|Pinentry"] floating enable
 for_window [class="URxvt"] floating enable,resize set 820 480
 for_window [class="Thunar|electrum"] floating enable,resize set 880 640
 for_window [title="TrueCrypt|Google Keep"] floating enable
@@ -140,13 +140,13 @@ bindsym $MOD+Return exec --no-startup-id urxvt
 bindsym $mod+p exec $HOME/bin/dmen.sh
 bindsym $MOD+SHIFT+f exec urxvt -e ranger
 bindsym Mod1+Shift+f exec thunar
-bindsym Mod1+w exec chromium
+bindsym Mod1+w exec google-chrome-unstable
 bindsym $mod+w exec $HOME/.firefox/firefox
 bindsym $mod+b exec $HOME/downloads/tor-browser_en-US/Browser/start-tor-browser
 bindsym $mod+e exec urxvt -e vim $HOME/Dropbox/dots
 bindsym Mod1+l exec i3lock -i $HOME/.Xresources.d/lock.png
 bindsym Mod1+e exec urxvt -e mutt
-bindsym $mod+i exec urxvt -e multitail -CS irc -f $HOME/irc/127.0.0.1/#archlinux/out -f $HOME/irc/127.0.0.1/#android/out
+bindsym $mod+i exec "urxvt -e multitail -s 0 -CS irc -f $HOME/irc/127.0.0.1/#archlinux/out -f $HOME/irc/127.0.0.1/#android/out -f $HOME/irc/127.0.0.1/#bash/out -f $HOME/irc/127.0.0.1/#bitcoin/out"
 bindsym $mod+c exec gsimplecal
 bindsym Mod1+Shift+c exec galculator
 bindsym $MOD+SHIFT+t exec urxvt -e htop
