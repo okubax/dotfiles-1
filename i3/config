@@ -8,9 +8,6 @@ set $mod Mod4
 floating_modifier $mod
 popup_during_fullscreen smart
 
-gaps inner 10
-gaps outer 10
-
 font pango: mononoki 7
 #for_window [class=".*"] title_format "<span font='mononoki 7'> > %title</span>"
 new_window pixel 3
@@ -36,10 +33,8 @@ client.background       $bg
 
 
 for_window [class="xpad" instance="scratchpad"] move scratchpad
-for_window [class="Chromium|Google-chrome-unstable|Firefox|qutebrowser|MPlayer|Galculator|Code|Gsimplecal|Viewnior|xpad|calibre|Java|Spotify|Google-musicmanager|File-roller|Lxappearance|Arandr|Pavucontrol|emulator64-arm|Kamoso|PkgBrowser|Gimp|Main.py|qemu-system-x86_64|Pinentry"] floating enable
+for_window [class="MPlayer|Galculator|Gsimplecal|Viewnior|xpad|calibre|Java|Google-musicmanager|File-roller|Lxappearance|Arandr|Pavucontrol|emulator64-arm|Kamoso|PkgBrowser|Main.py|Pinentry"] floating enable
 for_window [class="URxvt"] floating enable,resize set 820 480
-for_window [class="Thunar|electrum"] floating enable,resize set 880 640
-for_window [title="TrueCrypt|Google Keep"] floating enable
 for_window [title="File Operation Progress" class="Thunar"] floating enable
 for_window [window_role="pop-up"] floating enable,move absolute center
 # force floating for all new windows
