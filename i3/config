@@ -7,10 +7,8 @@
 set $mod Mod4
 floating_modifier $mod
 popup_during_fullscreen smart
-
 font pango: mononoki 7
-#for_window [class=".*"] title_format "<span font='mononoki 7'> > %title</span>"
-new_window pixel 3
+new_window pixel 2
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use 
