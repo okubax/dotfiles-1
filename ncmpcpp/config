@@ -11,38 +11,41 @@ mpd_music_dir                               = ~/music
 mpd_connection_timeout = "5"
 mpd_crossfade_time = "3"
 
-# General
-autocenter_mode = "yes"
-message_delay_time = "1"
-external_editor = "/usr/bin/nvim"
-use_console_editor = "yes"
-regular_expressions = "extended"
+[visualizer]
+visualizer_fifo_path = /tmp/mpd.fifo
+visualizer_in_stereo = no
+visualizer_type = spectrum
+visualizer_look = ●┃
+visualizer_color = cyan, green, yellow, magenta, red
 
-# Playlist
-playlist_disable_highlight_delay = 1
-song_columns_list_format = "(40)[blue]{a} (25)[blue]{t|f}"
-song_list_format = "$3{%A}$R$2{%t}"
-playlist_display_mode = "classic"
-centered_cursor = "yes"
+[header]
+header_visibility = no
+header_window_color = default
+playlist_shorten_total_times = yes
+volume_color = default
+state_line_color = black
 
-# Now Playing
-jump_to_now_playing_song_at_start = "yes"
-now_playing_prefix = "$5> "
-# now_playing_suffix = ""
+[playlist]
+playlist_display_mode = classic
+song_list_format = "{{%a - %t}|{%f}}{$R%l}"
+now_playing_prefix = "$b$5"
+now_playing_suffix = "$/b$9"
 
-# Bars
-progressbar_color = "black"
-progressbar_elapsed_color = "blue"
-progressbar_look = "__"
+[statusbar]
+progressbar_look = "─╼ "
+progressbar_elapsed_color = red
+progressbar_color = black
+statusbar_visibility = no
+statusbar_color = default
+song_status_format = "{{%a{ - %t}}|{ - %f}{ - %b{ (%y)}}}"
 
-# UI
-header_visibility = "no"
-titles_visibility = "no"
-statusbar_visibility = "no"
+[library]
+song_library_format = "{{%a - %t}|{%f}}{$R%l}"
+empty_tag_color = black
 
-# visualizer
-visualizer_fifo_path = "/tmp/mpd.fifo"
-visualizer_output_name = "my_fifo"
-#visualizer_sync_interval = "1"
-#visualizer_type = "wave" (spectrum/wave)
-visualizer_type = "spectrum" (spectrum/wave)
+[global]
+colors_enabled = yes
+main_window_color = default
+centered_cursor = yes
+enable_window_title = yes
+external_editor = vim
