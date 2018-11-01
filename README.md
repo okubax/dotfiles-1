@@ -9,7 +9,7 @@ Ideas mostly <del>stolen</del> copied from others and modified to fit my use, I 
 ## Dependencies
 *Note: I hope I've covered all dependencies here, but something might be missing*
 
-This setup is intended for **[i3-gaps](https://github.com/Airblader/i3)** by Airblader. I haven't tested it with regular i3-- you'll probably have to make a few changes if you want to use that. Only tested on ArchLinux-- I can't make any guarantees about its compatibility with other distros.
+This setup is intended for regular [i3](https://i3wm.org), I haven't tested it with **[i3-gaps](https://github.com/Airblader/i3)** by Airblader so you'll probably have to make a few changes if you want to use that. Only tested on ArchLinux-- I can't make any guarantees about its compatibility with other distros.
 
 * `conky` -- Lightweight system monitor for X (for dropbox and todo-cli displays)
 * `dropbox-cli` -- Command line interface for dropbox
