@@ -58,8 +58,8 @@ ln -s ${BASEDIR}/todo $HOME/.todo
 ln -s ${BASEDIR}/urlview $HOME/.urlview
 
 # vim
-ln -s ${BASEDIR}/spf13-vim-3 $HOME/.spf13-vim-3
-ln -s ${BASEDIR}/spf13-vim-3/vimrc $HOME/.vimrc
+ln -s ${BASEDIR}/vim $HOME/.vim
+ln -s ${BASEDIR}/vimrc $HOME/.vimrc
 
 # X
 ln -s ${BASEDIR}/Xresources.d/xinitrc $HOME/.xinitrc
