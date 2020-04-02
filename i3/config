@@ -163,7 +163,7 @@ exec --no-startup-id sh $HOME/.todo/todo-conky
 exec --no-startup-id unclutter &
 exec --no-startup-id xss-lock -- i3lock -i $HOME/.Xresources.d/lock.png &
 exec --no-startup-id $HOME/.dropbox-dist/dropboxd &
-exec --no-startup-id anamnesis --start &
+exec --no-startup-id clipmenud &
 exec --no-startup-id mpd &
 exec --no-startup-id mpdscribble &
 exec --no-startup-id xrandr --dpi 120 &
