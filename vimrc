@@ -2,11 +2,14 @@ execute pathogen#infect()
 
 "general
 "-------
-syntax enable           " enable syntax processing
-set tabstop=4       " number of visual spaces per TAB
-set softtabstop=4   " number of spaces in tab when editing
-set expandtab       " tabs are spaces
-set mouse=a         " enable mouse
+syntax enable               " enable syntax processing
+set tabstop=4               " number of visual spaces per TAB
+set softtabstop=4           " number of spaces in tab when editing
+set expandtab               " tabs are spaces
+set mouse=a                 " enable mouse
+set undofile                " Maintain undo history between sessions
+set undodir=~/.vim/undodir  " persistent undo
+
 
 "ui
 "--
@@ -40,13 +43,6 @@ inoremap jk <esc>
 " save session
 nnoremap <leader>s :mksession<CR>
 
-"backups
-"-------
-set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set backupskip=/tmp/*,/private/tmp/*
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set writebackup
 
 "statusline
 "----------
@@ -75,4 +71,6 @@ set statusline+=%#Cursor#       " colour
 set statusline+=\ %3p%%\                " percentage
 
 " mappings
-map <C-o> :NERDTreeToggle<CR>
+
+" jump to last edied position
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
