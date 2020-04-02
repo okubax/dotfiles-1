@@ -14,7 +14,7 @@ fi
 xset s 120 &
 xset b off &
 
-export DUNST_FONT='Artwiz Lemon 7'
+export DUNST_FONT='Lemon 7'
 export DUNST_SIZE='300x30-40+70'
 
 xrdb -merge "${HOME}/.Xresources"
