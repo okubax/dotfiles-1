@@ -36,7 +36,7 @@ get_date() {
 
 get_song() {
     # Get the current song from mopidy/mpd.
-    printf "%.100s\\n" "$(mpc current -f '%albumartist% - %title%')"
+    printf "%.100s\\n" "$(mpc current)"
 }
 
 get_dbx() {
