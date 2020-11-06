@@ -3,7 +3,7 @@ conky.config = {
     background = true,
     border_width = 5,
     double_buffer = true,
-    font = 'mononoki:size=7',
+    font = 'cascadia code:size=7',
     gap_x = 50,
     gap_y = 70,
     minimum_height = 5,
