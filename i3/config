@@ -7,8 +7,8 @@
 set $mod Mod4
 floating_modifier $mod
 popup_during_fullscreen smart
-font pango: mononoki 7
-new_window pixel 2
+font pango: Cascadia Code 7
+new_window pixel 1
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use 
@@ -31,8 +31,9 @@ client.background       $bg
 
 
 for_window [class="xpad" instance="scratchpad"] move scratchpad
-for_window [class="MPlayer|Galculator|Gsimplecal|Viewnior|xpad|calibre|Java|Google-musicmanager|File-roller|Lxappearance|Arandr|Pavucontrol|emulator64-arm|Kamoso|PkgBrowser|Main.py|Pinentry"] floating enable
-for_window [class="URxvt"] floating enable,resize set 820 480
+for_window [class="MPlayer|Galculator|Gsimplecal|Viewnior|xpad|feh|mpv|Qalculate-gtk|Java|Google-musicmanager|File-roller|Lxappearance|Arandr|Pavucontrol|FF Password Exporter|emulator64-arm|Kamoso|PkgBrowser|Main.py|Pinentry|MouseWhisperer|Quiz|Tor Browser"] floating enable
+for_window [class="(?i)MouseWhisperer"] border normal 0
+for_window [class="St"] floating enable,resize set 850 500
 for_window [title="File Operation Progress" class="Thunar"] floating enable
 for_window [window_role="pop-up"] floating enable,move absolute center
 # force floating for all new windows
@@ -128,21 +129,23 @@ bindsym Mod1+d exec --no-startup-id sudo bright_down
 bindsym Mod1+i exec --no-startup-id sudo bright_up
 
 #APPS
-bindsym $MOD+Return exec --no-startup-id urxvt
-#bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -b  -sb '$bg1' -sf '$fg' -nb '$fg' -nf '$bg' -fn 'Consolas-9'"
+bindsym $MOD+Return exec --no-startup-id st
+#bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term st --display-binar --dmenu "dmenu -b  -sb '$bg1' -sf '$fg' -nb '$fg' -nf '$bg' -fn 'Consolas-9'"
+bindsym $mod+c exec $HOME/bin/clipmenu.sh
 bindsym $mod+p exec $HOME/bin/dmen.sh
-bindsym $MOD+SHIFT+f exec urxvt -e ranger
+bindsym $MOD+SHIFT+f exec st -e ranger
 bindsym Mod1+Shift+f exec thunar
-bindsym Mod1+w exec google-chrome-unstable
-bindsym $mod+w exec $HOME/.firefox/firefox
+bindsym Mod1+w exec $HOME/.firefox/firefox
+bindsym $mod+t exec st -e tuir
+bindsym $mod+w exec firefox
 bindsym $mod+b exec $HOME/downloads/tor-browser_en-US/Browser/start-tor-browser
-bindsym $mod+e exec urxvt -e vim $HOME/Dropbox/dots
 bindsym Mod1+l exec i3lock -i $HOME/.Xresources.d/lock.png
-bindsym Mod1+e exec urxvt -e mutt
-bindsym $mod+i exec "urxvt -e multitail -s 0 -CS irc -f $HOME/irc/127.0.0.1/#archlinux/out -f $HOME/irc/127.0.0.1/#android/out -f $HOME/irc/127.0.0.1/#bash/out -f $HOME/irc/127.0.0.1/#bitcoin/out"
-bindsym $mod+c exec gsimplecal
-bindsym Mod1+Shift+c exec galculator
-bindsym $MOD+SHIFT+t exec urxvt -e htop
+bindsym Mod1+e exec st -e mutt
+bindsym $mod+i exec "st -e multitail -s 0 -CS irc -ts -f $HOME/irc/fn/127.0.0.1/#archlinux/out -ts -f $HOME/irc/fn/127.0.0.1/#bash/out -ts -f $HOME/irc/sn/127.0.0.1/#f1/out"
+#bindsym $mod+i exec "st -e multitail -s 0 -CS irc -f $HOME/irc/fn/127.0.0.1/#archlinux/out  -f $HOME/irc/fn/127.0.0.1/#android/out -f $HOME/irc/fn/127.0.0.1/#bash/out -f $HOME/irc/fn/127.0.0.1/#bitcoin/out"
+bindsym $mod+a exec gsimplecal
+bindsym $mod+g exec qalculate-gtk
+bindsym $MOD+SHIFT+t exec st -e bashtop
 bindsym $MOD+SHIFT+x exec $HOME/bin/i3_session
 bindsym $mod+Shift+b bar mode toggle
 bindsym $MOD+SHIFT+plus move scratchpad
