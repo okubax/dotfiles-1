@@ -25,15 +25,15 @@ This setup is intended for regular [i3](https://i3wm.org), I haven't tested it w
 * `offlineimap` -- Synchronizes emails between two repositories
 * `pass` -- Stores, retrieves, generates, and synchronizes passwords securely
 * `playerctl` -- mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others
+* `st terminal` -- a simple terminal implementation for X, from [suckless](https://st.suckless.org/) with added [patches](https://github.com/okubax/st)
 * `ranger` -- A simple, vim-like file manager
 * `redshift` -- Adjusts the color temperature of your screen according to your surroundings
 * `vim` -- Vi Improved, a highly configurable, improved version of the vi text editor
 * `wmctrl` -- A Tool to control your EWMH compliant window manager from command line (for i3 workspaces on `lemonbar`)
 * `xdotool` -- Command-line X11 automation tool, to show current window title on `lemonbar`
 ### ~/.fonts
-* `Mononoki` -- A font for programming and code review (console) | [aur link](https://aur.archlinux.org/packages/ttf-mononoki-git/)
-* `Lemon Font` -- Lemon and Uushi fonts by phallus (lemonbar) | [aur link](https://aur.archlinux.org/packages/phallus-fonts-git)
-* `Siji Font` -- Iconic bitmap font based on stlarch with additional glyphs (lemonbar) | [aur link](https://aur.archlinux.org/packages/siji-git)
+* `Cascadia Code` -- A monospaced font by Microsoft that includes programming ligatures
+* `Font Awesome` -- Iconic font designed for Bootstrap
 
 
 ## Housekeeping
