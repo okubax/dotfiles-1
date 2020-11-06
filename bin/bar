@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 # vim: set ft=sh:
 #
-# Dylan's bar script
-#
-# Created by Dylan Araps.
 #
 # Depends on: xorg-xrandr, wmctrl, mpc, lemonbar, ip, xdotool
 
-font="${BAR_FONT:-"-*-lemon-*"}"
-icon="${BAR_ICON:-"-*-siji-*"}"
+font="Cascadia Code:size=7"
+icon="Font Awesome 5 Free Solid:size=7"
+
 height="${BAR_HEIGHT:-36}"
 
 
@@ -23,8 +21,10 @@ get_workspaces() {
 
 
 get_window() {
-    # Get title of focused window.
-    printf "%.75s\\n" "$(xdotool getwindowfocus getwindowname)"
+        window="$(xdotool getwindowfocus getwindowname)"
+       window_icon=""
+       # Get title of focused window.
+       printf "%.75s\\n" "$(icon "$window_icon") ${window}"
 }
 
 
@@ -35,37 +35,44 @@ get_date() {
 
 
 get_song() {
-    # Get the current song from mopidy/mpd.
-    printf "%.100s\\n" "$(mpc current)"
+    song="$(mpc current)"
+    song_status=$(mpc status | sed -n 2p | cut -c2-8)
+    song_status2=$(mpc status | sed -n 2p | cut -c2-7)
+
+  if [ "$song_status" == "playing" ]; then
+          printf "%.100s\\n" "$(icon "") ${song}"
+          elif [ "$song_status2" == "paused" ]; then
+                 printf "%.100s\\n" "$(icon "") ${song}"
+    fi
 }
 
 get_dbx() {
     dbx="$(echo -e $(dropbox-cli status | sed -n 1p))"
-
-    dbx_icon=""
-
+    dbx_icon=""
     printf "%s\\n" "$(icon "$dbx_icon") ${dbx}"
 }
 
 get_mail() {
     # Get new mail from offlineimap folder.
     mail="$(echo -e $(ls /home/ajibola/.mail/Gmail/INBOX/new | wc -l))"
-
-    mail_icon=""
-
+    mail_icon=""
     printf "%s\\n" "$(icon "$mail_icon") ${mail}"
 }
 
 get_volume() {
-    # Get the system volume.
-    volume="$(amixer sget Master | grep -o -m 1 -E "[[:digit:]]+%")"
+        volstat="$(amixer get Master | awk 'END{gsub(/\[|\]|%/,""); print $6}')"
+        volume="$(amixer sget Master | grep -o -m 1 -E "[[:digit:]]+%")"
 
-    case "$volume" in
-        0%|[0-9]%)   vol_icon=" " ;;
-        1?%|2?%|3?%) vol_icon="" ;;
-        4?%|5?%|6?%) vol_icon="" ;;
-        *) vol_icon="" ;;
-    esac
+        if [[ $volstat = "on" ]]; then
+                case "$volume" in
+                        0%|[0-9]%)   vol_icon="" ;;
+                        1?%|2?%|3?%) vol_icon="" ;;
+                        4?%|5?%|6?%) vol_icon="" ;;
+                        *) vol_icon="";;
+                esac
+
+        else vol_icon=""
+        fi
 
     printf "%s\\n" "$(icon "$vol_icon") ${volume}"
 
@@ -76,30 +83,28 @@ get_bat() {
     capacity=$(cat /sys/class/power_supply/BAT0/capacity)
 
     if [ "$status" == "Charging" ]; then
-        printf "%s\\n" "$(icon "") ${capacity}"
+        printf "%s\\n" "$(icon "") ${capacity}"
     elif [ "$status" == "Full" ]; then
-        printf "%s\\n" "$(icon "") ${capacity}"
+        printf "%s\\n" "$(icon "") ${capacity}"
     elif (("$capacity" <= "20")); then
-        printf "%s\\n" "$(icon2 "") ${capacity}"
+        printf "%s\\n" "$(icon "") ${capacity}"
     elif (("$capacity" <= "60")); then
-        printf "%s\\n" "$(icon "") ${capacity}"
+        printf "%s\\n" "$(icon "") ${capacity}"
     elif (("$capacity" <= "100")); then
-        printf "%s\\n" "$(icon "") ${capacity}"
+        printf "%s\\n" "$(icon "") ${capacity}"
     fi
 }
 
 get_wifi() {
     wifi="$(echo -e $(iw wlp1s0 link | grep 'SSID' | cut -c 8-))"
-    wifi_icon=""
-
+    wifi_icon=""
     printf "%s\\n" "$(icon "$wifi_icon") ${wifi}"
 }
 
 
 icon() {
     # Format an icon.
-    printf "%s\\n" "%{F${color8:-#F0F0F0}}${1}%{F}"
-
+   printf "%s\\n" "%{F${color8:-#F0F0F0}}${1}%{F}"
 }
 
 icon2() {
@@ -119,7 +124,7 @@ main() {
         workspaces="$(get_workspaces)"
         window="$(icon "") $(get_window)"
         date="$(get_date)"
-        song="$(icon "") $(get_song)"
+        song="$(get_song)"
         dbx="$(get_dbx)"
         mail="$(get_mail)"
         volume="$(get_volume)"
@@ -129,14 +134,14 @@ main() {
         printf "%s%s%s\\n" \
                "%{l}   ${workspaces}  |  ${window}" \
                "%{c}${date}" \
-               "%{r}${song}  |  ${dbx} ${mail} ${volume} ${bat} ${wifi}    "
+               "%{r}${song}    ${dbx} ${mail} ${volume} ${bat} ${wifi}    "
         sleep .1s
     done |\
 
     # Launch lemonbar.
     lemonbar -g "x${height}" \
              -B "${color0:-#000000}" -F "${color4:-#F0F0F0}"\
-             -n "bar" -f "$font" -f "$icon"
+             -n "bar" -o 1 -f "$font" -o -0.5 -f "$icon"
 }
 
 
