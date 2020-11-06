@@ -41,7 +41,13 @@ let mapleader=","       " leader is comma
 " jk is escape
 inoremap jk <esc>
 " save session
-nnoremap <leader>s :mksession<CR>
+nnoremap <leader>ss :mksession<CR>
+" Toggle spell checking on and off
+nmap <silent> <leader>s :set spell!<CR>
+" Set region to British English
+set spelllang=en_gb
+" activate spell check for composing emails in mutt
+autocmd FileType mail set spell
 
 
 "statusline
@@ -71,6 +77,9 @@ set statusline+=%#Cursor#       " colour
 set statusline+=\ %3p%%\                " percentage
 
 " mappings
+map w1 :.w >>\#archlinux/in
+map w2 :.w >>\#bash/in
+map w3 :.w >>\#f1/in
 
 " jump to last edied position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
