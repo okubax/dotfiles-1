@@ -101,46 +101,7 @@ folder-hook Gmail/*		source ~/.mutt/accounts/Gmail
 folder-hook Outlook/*	source ~/.mutt/accounts/Outlook
 folder-hook Yahoo/*		source ~/.mutt/accounts/Yahoo
 
-# Mailboxes to show in the sidebar.
-#mailboxes "+-- Work ---------------" \
-#          +Gmail/INBOX \
-#          +Gmail/Call\ log \
-#          +Gmail/[Google\ Mail].All\ Mail \
-#          +Gmail/[Google\ Mail].Sent\ Mail \
-#          +Gmail/[Google\ Mail].Starred \
-#          +Gmail/PayPal \
-#          +Gmail/SMS \
-#          +Gmail/UoPeople \
-#          +Gmail/UoPeople.Forums \
-#          +Gmail/Web\ Hosting \
-#          +Gmail/Web\ Orders \
-#          +Gmail/Work.Troxy \
-#          "+-- Gmail2 ---------------" \
-#          +Gmail2/INBOX \
-#          +Gmail2/[Google\ Mail].All\ Mail \
-#          +Gmail2/Ebay \
-#          +Gmail2/[Google\ Mail].Sent\ Mail \
-#          +Gmail2/[Google\ Mail].Starred \
-#          "+-- Personal ----------" \
-#          +Okubax/INBOX \
-#          +Okubax/INBOX.Drafts \
-#          +Okubax/INBOX.Sent \
-#          "+-- Outlook ----------" \
-#          +Outlook/Inbox \
-#          +Outlook/drafts \
-#          +Outlook/Inbox.Trash \
-#          +Outlook/Sent \
-#          "+-- Yahoo ----------" \
-#          +Yahoo/Inbox \
-#          +Yahoo/Sent \
-#          "+-- Mum ---------------" \
-#          +Yahoo2/Inbox \
-#          +Yahoo2/Sent \
-#          +Yahoo2/Junk \
-#          "+-- Mum2 ---------------" \
-#          +Gmail3/INBOX \
-#          +Gmail3/[Gmail].All\ Mail \
-          
+         
 # Other special folders
 # set mbox      = "+codeprole/archive"
 # set postponed = "+codeprole/drafts"
