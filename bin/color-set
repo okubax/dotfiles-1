@@ -14,7 +14,7 @@ reload_dunst() {
         -bf "${color8:=#000000}" \
         -cf "${color8:=#000000}" \
         -nf "${color8:=#000000}" \
-        -fn "${DUNST_FONT:-Artwiz Lemon 7}" \
+        -fn "${DUNST_FONT:-Cascadia Code 9}" \
         -geometry "${DUNST_SIZE:-300x30-40+70}" &
 }
 

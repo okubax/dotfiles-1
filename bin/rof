@@ -3,7 +3,7 @@
 # rofi with flags for my PC/Laptop.
 
 rofi -show run \
-     -font "${font:-Inconsolata 10}" \
+     -font "${font:-Cascadia Code 15}" \
      -separator-style none \
      -scrollbar-width 0 \
      -location 1 \

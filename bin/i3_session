@@ -13,7 +13,7 @@ lock() {
     i3lock -i $HOME/.Xresources.d/lock.png
 }
 
-DMENU='dmenu -b -sb '$color8' -sf '$color0' -nb '$color0' -nf '$color4' -fn 'cascadiacode-7''
+DMENU='dmenu -b -sb '$color8' -sf '$color0' -nb '$color0' -nf '$color4' -fn 'cascadiacode-9''
 choice=$(echo -e "lock\nlogout\nsuspend\nhibernate\nreboot\nshutdown" | $DMENU)
 
 case "$choice" in

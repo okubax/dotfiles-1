@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+#
+# Script to set nord colors & load bar
+
+
+start_offlineimap() {
+        systemctl --user start offlineimap
+}
+        
+start_dropbox() {
+        dropbox-cli start
+}
+
+load_bar() {
+    pkill bar
+    bar 2>/dev/null &
+}
+
+main() {
+    start_offlineimap &
+    start_dropbox &
+    load_bar &
+}
+
+main
