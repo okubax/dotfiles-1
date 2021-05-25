@@ -172,7 +172,6 @@ exec --no-startup-id mpdscribble &
 exec --no-startup-id xrandr --dpi 17
 exec --no-startup-id redshift &
 exec --no-startup-id dunst -fn "$DUNST_FONT" -geometry "$DUNST_SIZE" &
-exec --no-startup-id picom --config ~/.config/picom/picom.conf &
 #exec --no-startup-id xpad
 
 
