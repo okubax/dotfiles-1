@@ -11,7 +11,6 @@ Ideas mostly <del>stolen</del> copied from others and modified to fit my use, I 
 
 This setup is intended for regular [i3](https://i3wm.org), I haven't tested it with **[i3-gaps](https://github.com/Airblader/i3)** by Airblader so you'll probably have to make a few changes if you want to use that. Only tested on ArchLinux-- I can't make any guarantees about its compatibility with other distros.
 
-* `pamixer` -- Pulseaudio command-line mixer like amixer
 * `clipmenu` -- Clipboard management using dmenu
 * `conky` -- Lightweight system monitor for X (for dropbox and todo-cli displays)
 * `dropbox-cli` -- Command line interface for dropbox
@@ -24,6 +23,7 @@ This setup is intended for regular [i3](https://i3wm.org), I haven't tested it w
 * `msmtp` -- A mini smtp client
 * `mutt` -- Small but very powerful text-based mail client
 * `offlineimap` -- Synchronizes emails between two repositories
+* `pamixer` -- Pulseaudio command-line mixer like amixer
 * `pass` -- Stores, retrieves, generates, and synchronizes passwords securely
 * `playerctl` -- mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others
 * `st terminal` -- a simple terminal implementation for X, from [suckless](https://st.suckless.org/) with added [patches](https://github.com/okubax/st)
