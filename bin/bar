@@ -60,14 +60,14 @@ get_mail() {
 }
 
 get_volume() {
-        volstat="$(amixer get Master | awk 'END{gsub(/\[|\]|%/,""); print $6}')"
-        volume="$(amixer sget Master | grep -o -m 1 -E "[[:digit:]]+%")"
+        volstat="$(pamixer --get-mute)"
+        volume="$(pamixer --get-volume)"
 
-        if [[ $volstat = "on" ]]; then
+        if [[ $volstat = "false" ]]; then
                 case "$volume" in
-                        0%|[0-9]%)   vol_icon="" ;;
-                        1?%|2?%|3?%) vol_icon="" ;;
-                        4?%|5?%|6?%) vol_icon="" ;;
+                        0|[0-9])   vol_icon="" ;;
+                        1?|2?|3?) vol_icon="" ;;
+                        4?|5?|6?) vol_icon="" ;;
                         *) vol_icon="";;
                 esac
 
