@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Script to set nord colors & load bar
+# Battery saving script to stop dropbox, offlineimap and unload the bar
 
 
 stop_offlineimap() {

@@ -1,0 +1,7 @@
+#!/bin/sh
+sleep 5
+echo "/quit"> $HOME/irc/lb/127.0.0.1/in
+echo "/quit"> $HOME/irc/sn/127.0.0.1/in
+#echo "/quit"> $HOME/irc/moz/127.0.0.1/in
+exit 0
+

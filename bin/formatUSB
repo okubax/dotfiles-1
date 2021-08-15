@@ -1,0 +1,155 @@
+#!/usr/bin/env python3
+
+#  Format removeable media, optionally with LUKS encryption
+
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+import subprocess
+import tempfile
+import os
+import uuid
+import optparse
+
+def run_cmd(cmd):
+	return subprocess.run(cmd, shell=True, capture_output=True)
+
+#  Handle command line options and arguments.  Prompt for any missing bits.
+usage = '\u001b[1m%prog\u001b[0m [-h|--help] [-d|--debug] [usb_device]'
+description = 'Format a USB device with a single FAT32 partition or with a single LUKS-encrypted EXT4 partition.  If you do not specify the device to be formatted on the command line, you will be prompted.'
+parser = optparse.OptionParser(usage=usage, description=description)
+parser.add_option('-d', '--debug', action='store_true', dest='debug', default=False, 
+	help='print the commands that would be executed to format the device, but don\'t actually execute those commands.')
+parser.add_option('-e', '--encrypt', action='store_true', dest='luks', default=False,
+	help='format the device with a single LUKS-encrypted EXT4 partition.')
+parser.add_option('-l', '--label', dest='label', help='specify the disk label to be used for the partition.  If you do not specify a label on the command line, you will be prompted.')
+(opts, args) = parser.parse_args()
+if len(args) > 1:
+	parser.error('Please specify only one device to be formated on the command line.')
+	exit(1)
+if len(args) > 0:
+	if os.path.exists(args[0]):
+		device = args[0]
+	else:
+		parser.error('{} does not exist'.format(args[0]))
+		exit(1)
+else:
+	#  Find out what device they want to format
+	print('Available Devices:')
+	subprocess.run('lsblk')
+	result = run_cmd('lsblk --nodeps --raw --output name --noheadings')
+	devices = list(filter(None, str(result.stdout, 'utf-8').split('\n')))
+	device = ''
+	while device not in devices:
+		print('\nEnter the name of the device to be formatted:')
+		device = input(', '.join(devices) + ': ')
+	device = '/dev/{}'.format(device)
+
+answ = input('Are you sure that you want to format "{}"? [y|N]: '.format(device))
+if answ.upper() != 'Y':
+	exit() 
+
+if not opts.luks:
+	#  Find out if they want LUKS encryption or not
+	luks = input('Would you like the device to be LUKS encrypted? [y|N]: ')
+	if luks.upper() == 'Y':
+		part_type = 'ext4'
+		tempdir = tempfile.mkdtemp()
+		uu_id = 'luks-' + str(uuid.uuid4())
+		luks = True
+	else:
+		part_type = 'fat32'
+		luks = False
+
+#  Find out what disk label to use
+if not opts.label:
+	label = input('What name (disk label) do you want to give this device?: ')
+else:
+	label = opts.label
+
+#  Create the list of commands that need to be run to format the device
+cmd_list = []
+result = run_cmd('lsblk --raw --output name,type,mountpoint --noheadings {}'.format(device))
+mountpoints = list(filter(None, str(result.stdout, 'utf-8').split('\n')))
+for mountpoint in mountpoints:
+	(name, ptype, mp) = mountpoint.split(' ', 2)
+	if mp != '':
+		mp = mp.replace('\\x20', ' ')
+		cmd_list.append({
+			'command': 'sudo umount \'{}\''.format(mp),
+			'ignore_returncode': True
+		})
+	if ptype == 'crypt':
+		cmd_list.append({
+			'command': 'sudo cryptsetup close \'/dev/mapper/{}\''.format(name),
+		})
+
+cmd_list.extend([
+	{
+		'command': 'sudo parted {} mklabel msdos'.format(device)
+	},
+	{
+		'message': 'Creating new disk partition',
+		'command': 'sudo parted {} mkpart primary {} 1MiB 100%'.format(device, part_type)
+	},
+	{
+		'message': 'Setting partition boot flag on',
+		'command': 'sudo parted {} set 1 boot on'.format(device)
+	}
+])
+
+#  Depending on whether it's a LUKS or FAT32 partition ...
+if luks:
+	cmd_list.extend([
+		{
+			'message': 'Creating an encrypted partition using LUKS',
+			'command': 'sudo cryptsetup luksFormat {}1'.format(device)
+		},
+		{
+			'message': '\nConnecting to the encrypted partition',
+			'command': 'sudo cryptsetup luksOpen {}1 "{}"'.format(device, uu_id)
+		},
+		{
+			'message': '\nCreating an ext4 filesystem in the encrypted partition',
+			'command': 'sudo mkfs.ext4 "/dev/mapper/{}" -L "{}"'.format(uu_id, label)
+		},
+		{
+			'command': 'sudo mount "/dev/mapper/{}" {}'.format(uu_id, tempdir)
+		},
+		{
+			'command': 'sudo chmod 777 {}'.format(tempdir)
+		},
+		{
+			'command': 'sudo umount "/dev/mapper/{}"'.format(uu_id)
+		},
+		{
+			'command': 'sudo cryptsetup close "{}"'.format(uu_id)
+		}
+	])
+else:
+	cmd_list.append({
+			'message': 'Creating a fat32 filesystem in the new partition',
+			'command': 'sudo mkfs.vfat -n "{}" {}1'.format(label, device)
+	})
+	
+#  Eject the disk at the end
+cmd_list.append({
+	'command': 'sudo eject {}'.format(device)
+})
+
+#  Execute each command in the list
+for cmd in cmd_list:
+	if 'message' in cmd:
+		print(cmd['message'])
+	if opts.debug:
+		print('\u001b[1m{}\u001b[0m'.format(cmd['command']))
+	else:
+		result = subprocess.run(cmd['command'], shell=True)
+		if not ('ignore_returncode' in cmd and cmd['ignore_returncode']):
+			if result.returncode != 0:
+				exit(result.returncode)
+if luks:
+	os.rmdir(tempdir)
+	
+print('\nYou should remove and reinsert the device before using it')

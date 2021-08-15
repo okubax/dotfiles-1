@@ -1,0 +1,11 @@
+#!/bin/sh
+
+ii -i $HOME/irc/lb/ -n user -s 127.0.0.1 -p 6698 &
+ii -i $HOME/irc/sn/ -n user -s 127.0.0.1 -p 6697 &
+sleep 10
+echo "/j nickserv identify password"> $HOME/irc/lb/127.0.0.1/in
+echo "/j nickserv identify password"> $HOME/irc/sn/127.0.0.1/in
+sleep 10
+echo "/j #archlinux" > $HOME/irc/lb/127.0.0.1/in
+echo "/j #bash" > $HOME/irc/lb/127.0.0.1/in
+echo "/j #f1" > $HOME/irc/sn/127.0.0.1/in
