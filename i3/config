@@ -11,8 +11,6 @@ font pango: Cascadia Code 9
 new_window pixel 1
 
 # Set colors from Xresources
-# Change 'color7' and 'color2' to whatever colors you want i3 to use 
-# from the generated scheme.
 # NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
 # it fails to get colors from Xresources.
 set_from_resource $bg i3wm.color7 #f0f0f0
@@ -31,9 +29,9 @@ client.background       $bg
 
 
 for_window [class="xpad" instance="scratchpad"] move scratchpad
-for_window [class="MPlayer|Galculator|Gsimplecal|Viewnior|xpad|feh|mpv|Qalculate-gtk|Java|Google-musicmanager|File-roller|Lxappearance|Arandr|Pavucontrol|FF Password Exporter|emulator64-arm|Kamoso|PkgBrowser|Main.py|Pinentry|MouseWhisperer|Quiz|Tor Browser|Seahorse|Thunar"] floating enable
+for_window [class="MPlayer|Galculator|Gsimplecal|Viewnior|xpad|feh|mpv|Qalculate-gtk|Java|Google-musicmanager|File-roller|Lxappearance|Arandr|Pavucontrol|FF Password Exporter|emulator64-arm|Kamoso|PkgBrowser|Main.py|Pinentry|MouseWhisperer|Quiz|Tor Browser|Seahorse"] floating enable
 for_window [class="(?i)MouseWhisperer"] border normal 0
-for_window [class="St"] floating enable,resize set 1200 700
+for_window [class="St"] floating enable,resize set 1100 700
 for_window [title="File Operation Progress" class="Thunar"] floating enable
 for_window [window_role="pop-up"] floating enable,move absolute center
 # force floating for all new windows
@@ -61,7 +59,6 @@ bindsym $mod+s layout stacking
 bindsym $mod+x layout tabbed
 bindsym $mod+z layout default
 
-
 # move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
@@ -78,6 +75,7 @@ bindsym $mod+6 workspace 6
 
 bindsym $mod+Tab workspace back_and_forth
 
+# switch to workspace
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
@@ -86,7 +84,7 @@ bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 
 
-assign [class="Qemu-system-x86_64"] → 5
+assign [class="Qemu-system-x86_64|qemu-system-x86_64"] → 5
 assign [class="Zathura|Soffice|calibre|libreoffice-writer|libreoffice-calc"] → 4
 assign [instance="libreoffice"] → 4
 assign [class="Wine|Steam|dontstarve"] → 6
@@ -145,7 +143,7 @@ bindsym $mod+i exec "st -e multitail -s 0 -CS irc -ts -f $HOME/irc/lb/127.0.0.1/
 bindsym $mod+a exec gsimplecal
 bindsym $mod+g exec qalculate-gtk
 bindsym $mod+shift+t exec st -e htop
-bindsym mod1+shift+r exec st -e tuir --enable-media
+bindsym mod1+shift+t exec st -e bpytop
 bindsym $mod+shift+x exec $HOME/bin/i3_session
 bindsym $mod+shift+b bar mode toggle
 bindsym $mod+shift+plus move scratchpad
@@ -169,9 +167,10 @@ exec --no-startup-id $HOME/.dropbox-dist/dropboxd &
 exec --no-startup-id clipmenud &
 exec --no-startup-id mpd &
 exec --no-startup-id mpdscribble &
-exec --no-startup-id xrandr --dpi 17
+exec --no-startup-id xrandr --dpi 170
 exec --no-startup-id redshift &
 exec --no-startup-id dunst -fn "$DUNST_FONT" -geometry "$DUNST_SIZE" &
+exec --no-startup-id picom --config ~/.config/picom/picom.conf &
 #exec --no-startup-id xpad
 
 
