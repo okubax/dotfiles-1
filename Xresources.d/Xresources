@@ -1,8 +1,8 @@
 ! Xresources
 
-*.font:	Cascadia Code:pixelsize=12:antialias=true:autohint=true;
+*.font:	Cascadia Code:pixelsize=20:antialias=true:autohint=true;
 
-Xft.dpi: 120
+Xft.dpi: 170
 Xft.autohint: 0
 Xft.antialias: 1
 Xft.hinting: true

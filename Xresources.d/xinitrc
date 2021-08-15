@@ -14,8 +14,8 @@ fi
 xset s 120 &
 xset b off &
 
-export DUNST_FONT='Cascadia Code 7'
-export DUNST_SIZE='300x30-40+70'
+export DUNST_FONT='Cascadia Code 9'
+export DUNST_SIZE='350x60-40+70'
 
 xrdb -merge "${HOME}/.Xresources"
 
