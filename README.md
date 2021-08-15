@@ -24,6 +24,7 @@ This setup is intended for regular [i3](https://i3wm.org), I haven't tested it w
 * `mutt` -- Small but very powerful text-based mail client
 * `offlineimap` -- Synchronizes emails between two repositories
 * `pamixer` -- Pulseaudio command-line mixer like amixer
+* `picom` -- X compositor that may fix tearing issues
 * `pass` -- Stores, retrieves, generates, and synchronizes passwords securely
 * `playerctl` -- mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others
 * `st terminal` -- a simple terminal implementation for X, from [suckless](https://st.suckless.org/) with added [patches](https://github.com/okubax/st)
