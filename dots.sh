@@ -55,9 +55,6 @@ ln -s ${BASEDIR}/offlineimaprc $HOME/.offlineimaprc
 # pass
 ln -s ${BASEDIR}/pass $HOME/.password-store
 
-# picom
-ln -s ${BASEDIR}/picom $HOME/.config/picom
-
 # ranger
 ln -s ${BASEDIR}/ranger $HOME/.config/ranger
 
