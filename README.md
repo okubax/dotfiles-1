@@ -17,6 +17,7 @@ This setup is intended for regular [i3](https://i3wm.org), I haven't tested it w
 * `hsetroot` --  A tool which allows you to compose wallpapers for X | [aur link](https://aur.archlinux.org/packages/hsetroot)
 * `ii` -- A minimalist FIFO and filesystem-based IRC client, from [suckless](https://tools.suckless.org/ii/)
 * `j4-dmenu-desktop` -- A much faster replacement for i3-dmenu-desktop
+* `kitty` -- A modern, hackable, featureful, OpenGL-based terminal emulator
 * `lemonbar` -- A featherweight, lemon-scented, bar based on xcb | [aur link](https://aur.archlinux.org/packages/lemonbar-git/)
 * `mpc` -- Client for `mpd`, responsible for telling lemonbar about the currently playing media.
 * `mpd` -- Flexible, powerful, server-side application for playing music with `ncmpcpp` as client
@@ -27,14 +28,13 @@ This setup is intended for regular [i3](https://i3wm.org), I haven't tested it w
 * `picom` -- X compositor that may fix tearing issues
 * `pass` -- Stores, retrieves, generates, and synchronizes passwords securely
 * `playerctl` -- mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others
-* `st terminal` -- a simple terminal implementation for X, from [suckless](https://st.suckless.org/) with added [patches](https://github.com/okubax/st)
 * `ranger` -- A simple, vim-like file manager
 * `redshift` -- Adjusts the color temperature of your screen according to your surroundings
 * `vim` -- Vi Improved, a highly configurable, improved version of the vi text editor
 * `wmctrl` -- A Tool to control your EWMH compliant window manager from command line (for i3 workspaces on `lemonbar`)
 * `xdotool` -- Command-line X11 automation tool, to show current window title on `lemonbar`
 ### ~/.fonts
-* `Cascadia Code` -- A monospaced font by Microsoft that includes programming ligatures
+* `Jetbrains Mono` -- Typeface for developers, by JetBrains
 * `Font Awesome` -- Iconic font designed for Bootstrap
 
 

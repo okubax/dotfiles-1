@@ -1,0 +1,86 @@
+#Apps
+super + Return
+  kitty
+
+super + @p
+  rofi -show
+
+super + @w
+  firefox
+
+super + @b
+  $HOME/ajibola/.firefox-developer/firefox
+
+alt + b
+  $HOME/downloads/tor-browser_en-US/Browser/start-tor-browser
+
+super + @f
+  kitty -e ranger
+
+alt + shift + f
+  thunar
+
+super + @c
+  CM_LAUNCHER=rofi clipmenu
+
+super + shift + t
+  kitty -e htop
+
+super + shift + x
+  $HOME/bin/bspwm_session
+
+alt + e
+  kitty -e mutt
+
+alt + i
+  "kitty -e multitail -s 0 -CS irc -ts -f $HOME/irc/lb/127.0.0.1/#archlinux/out -ts -f $HOME/irc/lb/127.0.0.1/#bash/out -ts -f $HOME/irc/sn/127.0.0.1/#f1/out"
+
+#Screenshot
+Print
+  $HOME/bin/screen root
+alt + @p
+  $HOME/bin/screen active
+
+#Workspaces
+super + {_,shift + }{1-9,0}
+  bspc {desktop -f,node -d} '^{1-9,10}'paces 
+
+super + shift + l
+  i3lock -i $HOME/.Xresources.d/lock.png
+
+super + shift + e
+  bspc quit
+
+super + shift + r
+  bspc wm -r
+
+#Hardware
+XF86AudioRaiseVolume
+  pactl set-sink-volume @DEFAULT_SINK@ +5%
+XF86AudioLowerVolume 
+  pactl set-sink-volume @DEFAULT_SINK@ -5%
+XF86AudioMute
+  pactl set-sink-mute 0 toggle
+XF86MonBrightnessUp
+  xbacklight +5
+XF86MonBrightnessDown
+  xbacklight -5
+
+#Window Management
+super + Tab
+  bspc node -t {floating,tiled}
+
+super + q
+  bspc node -{c,k}
+
+alt + Tab
+  bspc node -f next.local.!hidden.window
+
+super + {Up,Down,Left,Right}
+  {bspc node -z top 10 10; bspc node -z bottom -10 -10, bspc node -z bottom 10 10; bspc node -z top -10 -10, bspc node -z left 10 10; bspc node -z right -10 -10, bspc node -z right 10 10; bspc node -z left -10 -10 }
+
+super + shift + {Up,Down,Left,Right}
+  bspc node -s {north,south,west,east}
+
+super + space
+  bspc node -t \~fullscreen

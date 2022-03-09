@@ -20,6 +20,9 @@ ln -s ${BASEDIR}/gnupg $HOME/.gnupg
 # i3
 ln -s ${BASEDIR}/i3 $HOME/.config/i3
 
+# kitty
+ln -s ${BASEDIR}/kitty $HOME/.config/kitty
+
 # mpd
 ln -s ${BASEDIR}/mpd $HOME/.mpd
 
@@ -54,6 +57,9 @@ ln -s ${BASEDIR}/offlineimaprc $HOME/.offlineimaprc
 
 # pass
 ln -s ${BASEDIR}/pass $HOME/.password-store
+
+# picom
+ln -s ${BASEDIR}/picom $HOME/.config/picom
 
 # ranger
 ln -s ${BASEDIR}/ranger $HOME/.config/ranger

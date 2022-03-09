@@ -7,7 +7,7 @@
 set $mod Mod4
 floating_modifier $mod
 popup_during_fullscreen smart
-font pango: Cascadia Code 9
+font pango: JetBrains Mono Medium 7
 new_window pixel 1
 
 # Set colors from Xresources
@@ -31,7 +31,7 @@ client.background       $bg
 for_window [class="xpad" instance="scratchpad"] move scratchpad
 for_window [class="MPlayer|Galculator|Gsimplecal|Viewnior|xpad|feh|mpv|Qalculate-gtk|Java|Google-musicmanager|File-roller|Lxappearance|Arandr|Pavucontrol|FF Password Exporter|emulator64-arm|Kamoso|PkgBrowser|Main.py|Pinentry|MouseWhisperer|Quiz|Tor Browser|Seahorse"] floating enable
 for_window [class="(?i)MouseWhisperer"] border normal 0
-for_window [class="St"] floating enable,resize set 1100 700
+for_window [class="kitty"] floating enable,resize set 1200 800
 for_window [title="File Operation Progress" class="Thunar"] floating enable
 for_window [window_role="pop-up"] floating enable,move absolute center
 # force floating for all new windows
@@ -127,23 +127,23 @@ bindsym XF86MonBrightnessDown exec "xbacklight -10"
 #bindsym mod1+i exec --no-startup-id sudo bright_up
 
 #APPS
-bindsym $MOD+Return exec --no-startup-id st
+bindsym $MOD+Return exec --no-startup-id kitty
 #bindsym $mod+p exec --no-startup-id j4-dmenu-desktop --term st --display-binar --dmenu "dmenu -b  -sb '$bg1' -sf '$fg' -nb '$fg' -nf '$bg' -fn 'Consolas-9'"
 bindsym $mod+c exec $HOME/bin/clipmenu.sh
 bindsym $mod+p exec $HOME/bin/dmen.sh
-bindsym $mod+shift+f exec st -e ranger
+bindsym $mod+shift+f exec kitty -e ranger
 bindsym mod1+shift+f exec thunar
 bindsym $mod+w exec firefox
 bindsym mod1+w exec $HOME/.firefox-developer/firefox
 bindsym $mod+b exec $HOME/downloads/tor-browser_en-US/Browser/start-tor-browser
 bindsym mod1+l exec i3lock -i $HOME/.Xresources.d/lock.png
-bindsym mod1+e exec st -e mutt
-bindsym $mod+i exec "st -e multitail -s 0 -CS irc -ts -f $HOME/irc/lb/127.0.0.1/#archlinux/out -ts -f $HOME/irc/lb/127.0.0.1/#bash/out -ts -f $HOME/irc/sn/127.0.0.1/#f1/out"
-#bindsym $mod+i exec "st -e multitail -s 0 -CS irc -f $HOME/irc/fn/127.0.0.1/#archlinux/out  -f $HOME/irc/fn/127.0.0.1/#android/out -f $HOME/irc/fn/127.0.0.1/#bash/out -f $HOME/irc/fn/127.0.0.1/#bitcoin/out"
+bindsym mod1+e exec kitty -e mutt
+bindsym $mod+i exec "kitty -e multitail -s 0 -CS irc -ts -f $HOME/irc/lb/127.0.0.1/#archlinux/out -ts -f $HOME/irc/lb/127.0.0.1/#bash/out -ts -f $HOME/irc/sn/127.0.0.1/#f1/out"
+#bindsym $mod+i exec "kitty -e multitail -s 0 -CS irc -f $HOME/irc/fn/127.0.0.1/#archlinux/out  -f $HOME/irc/fn/127.0.0.1/#android/out -f $HOME/irc/fn/127.0.0.1/#bash/out -f $HOME/irc/fn/127.0.0.1/#bitcoin/out"
 bindsym $mod+a exec gsimplecal
 bindsym $mod+g exec qalculate-gtk
-bindsym $mod+shift+t exec st -e htop
-bindsym mod1+shift+t exec st -e bpytop
+bindsym $mod+shift+t exec kitty -e htop
+bindsym mod1+shift+t exec kitty -e bpytop
 bindsym $mod+shift+x exec $HOME/bin/i3_session
 bindsym $mod+shift+b bar mode toggle
 bindsym $mod+shift+plus move scratchpad
@@ -159,7 +159,10 @@ bindsym Mod1+p exec $HOME/bin/screen active
 # PROGRAM AUTOSTART {{{
 
 exec_always --no-startup-id $HOME/bin/color-set &
+exec --no-startup-id sh $HOME/.config/dunst/load.sh
 exec --no-startup-id sh $HOME/bin/hashwall
+exec --no-startup-id picom --config $HOME/.config/picom/picom.conf &
+#exec --no-startup-id ~/.fehbg &
 exec --no-startup-id sh $HOME/.todo/todo-conky
 exec --no-startup-id unclutter &
 exec --no-startup-id xss-lock -- i3lock -i $HOME/.Xresources.d/lock.png &
@@ -167,10 +170,8 @@ exec --no-startup-id $HOME/.dropbox-dist/dropboxd &
 exec --no-startup-id clipmenud &
 exec --no-startup-id mpd &
 exec --no-startup-id mpdscribble &
-exec --no-startup-id xrandr --dpi 170
+exec --no-startup-id xrandr --dpi 192
 exec --no-startup-id redshift &
-exec --no-startup-id dunst -fn "$DUNST_FONT" -geometry "$DUNST_SIZE" &
-exec --no-startup-id picom --config ~/.config/picom/picom.conf &
 #exec --no-startup-id xpad
 
 
